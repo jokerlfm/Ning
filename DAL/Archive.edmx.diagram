@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0c70c878f8924f62a6492ba1fe0409d9" Name="Diagram1">
+        <EntityTypeShape EntityType="archiveModel.account_data" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.account_instance_times" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.account_tutorial" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.arena_team" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.arena_team_member" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.auctionhouse" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.blackmarket_auctions" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.bugreport" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.calendar_events" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.calendar_invites" Width="1.5" PointX="7.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.channel" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_account_data" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_achievement" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_achievement_progress" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_action" Width="1.5" PointX="11.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_arena_stats" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_aura" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_aura_effect" Width="1.5" PointX="4.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_banned" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_battleground_data" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_battleground_random" Width="1.5" PointX="13.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_cuf_profiles" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_currency" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_declinedname" Width="1.5" PointX="6.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_equipmentsets" Width="1.5" PointX="8.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_fishingsteps" Width="1.5" PointX="13.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_garrison" Width="1.5" PointX="15.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_garrison_blueprints" Width="1.5" PointX="15.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_garrison_buildings" Width="1.5" PointX="15.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_garrison_follower_abilities" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_garrison_followers" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_gifts" Width="1.5" PointX="10.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_glyphs" Width="1.5" PointX="15.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_homebind" Width="1.5" PointX="15.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_instance" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_inventory" Width="1.5" PointX="2.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_pet" Width="1.5" PointX="17.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_pet_declinedname" Width="1.5" PointX="4.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus" Width="1.5" PointX="17.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_daily" Width="1.5" PointX="17.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_monthly" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_objectives" Width="1.5" PointX="17.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_objectives_criteria" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_objectives_criteria_progress" Width="1.5" PointX="14.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_rewarded" Width="1.5" PointX="16.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_seasonal" Width="1.5" PointX="18.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_queststatus_weekly" Width="1.5" PointX="0.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_reputation" Width="1.5" PointX="19.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_skills" Width="1.5" PointX="19.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_social" Width="1.5" PointX="19.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_spell" Width="1.5" PointX="19.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_spell_cooldown" Width="1.5" PointX="19.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_stats" Width="1.5" PointX="10.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_talent" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_transmog_outfits" Width="1.5" PointX="20.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_void_storage" Width="1.5" PointX="2.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.corpse" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.corpse_phases" Width="1.5" PointX="4.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.creature_respawn" Width="1.5" PointX="6.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.game_event_condition_save" Width="1.5" PointX="21.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.game_event_save" Width="1.5" PointX="21.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.gameobject_respawn" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.gm_bug" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.gm_complaint" Width="1.5" PointX="16.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.gm_complaint_chatlog" Width="1.5" PointX="21.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.gm_suggestion" Width="1.5" PointX="22.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.group_instance" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.group_member" Width="1.5" PointX="22.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.group" Width="1.5" PointX="23.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild" Width="1.5" PointX="23.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_achievement" Width="1.5" PointX="23.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_achievement_progress" Width="1.5" PointX="24.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_bank_eventlog" Width="1.5" PointX="4.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_bank_item" Width="1.5" PointX="6.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_bank_right" Width="1.5" PointX="24.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_bank_tab" Width="1.5" PointX="24.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_eventlog" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_finder_applicant" Width="1.5" PointX="25.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_finder_guild_settings" Width="1.5" PointX="25.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_member_withdraw" Width="1.5" PointX="25.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_newslog" Width="1.5" PointX="18.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_rank" Width="1.5" PointX="20.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.instance" Width="1.5" PointX="0.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.instance_reset" Width="1.5" PointX="26.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.instance_scenario_progress" Width="1.5" PointX="12.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_instance" Width="1.5" PointX="14.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_instance_artifact" Width="1.5" PointX="26.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_instance_artifact_powers" Width="1.5" PointX="26.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_instance_gems" Width="1.5" PointX="26.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_instance_modifiers" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_instance_transmog" Width="1.5" PointX="27.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_loot_items" Width="1.5" PointX="6.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_loot_money" Width="1.5" PointX="27.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_refund_instance" Width="1.5" PointX="8.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.item_soulbound_trade_data" Width="1.5" PointX="27.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.lfg_data" Width="1.5" PointX="22.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.mail" Width="1.5" PointX="2.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.mail_items" Width="1.5" PointX="28.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pet_aura" Width="1.5" PointX="28.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pet_aura_effect" Width="1.5" PointX="28.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pet_spell" Width="1.5" PointX="28.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pet_spell_cooldown" Width="1.5" PointX="28.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.petition" Width="1.5" PointX="28.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.petition_sign" Width="1.5" PointX="29.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pool_quest_save" Width="1.5" PointX="29.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pvpstats_battlegrounds" Width="1.5" PointX="29.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pvpstats_players" Width="1.5" PointX="10.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.quest_tracker" Width="1.5" PointX="16.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.reserved_name" Width="1.5" PointX="18.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.update" Width="1.5" PointX="24.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.updates_include" Width="1.5" PointX="30.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.warden_action" Width="1.5" PointX="30.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.worldstate" Width="1.5" PointX="30.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.character_spell_charges" Width="1.5" PointX="30.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.guild_member" Width="1.5" PointX="20.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="archiveModel.pet_spell_charges" Width="1.5" PointX="30.75" PointY="21.75" IsExpanded="true" />
+        <AssociationConnector Association="archiveModel.fk_foll_dbid" ManuallyRouted="false" />
+        <AssociationConnector Association="archiveModel.fk_foll_owner" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

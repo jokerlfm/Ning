@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="passportModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sha_pass_hash" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sessionkey" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="v" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="s" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="token_key" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="reg_mail" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="joindate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="last_ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_attempt_ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="failed_logins" Type="Int64" Nullable="false" />
+    <Property Name="locked" Type="Byte" Nullable="false" />
+    <Property Name="lock_country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_login" Type="DateTime" Nullable="false" />
+    <Property Name="online" Type="Byte" Nullable="false" />
+    <Property Name="expansion" Type="Byte" Nullable="false" />
+    <Property Name="mutetime" Type="Int64" Nullable="false" />
+    <Property Name="mutereason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="muteby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="locale" Type="Byte" Nullable="false" />
+    <Property Name="os" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="recruiter" Type="Int64" Nullable="false" />
+    <Property Name="battlenet_account" Type="Int64" />
+    <Property Name="battlenet_index" Type="Byte" />
+    <NavigationProperty Name="rbac_account_permissions" Relationship="Self.fk__rbac_account_permissions__account" FromRole="account" ToRole="rbac_account_permissions" />
+    <NavigationProperty Name="battlenet_accounts" Relationship="Self.fk_bnet_acc" FromRole="account" ToRole="battlenet_accounts" />
+  </EntityType>
+  <EntityType Name="account_access">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="RealmID" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="gmlevel" Type="Byte" Nullable="false" />
+    <Property Name="RealmID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_banned">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="bandate" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="bandate" Type="Int64" Nullable="false" />
+    <Property Name="unbandate" Type="Int64" Nullable="false" />
+    <Property Name="bannedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="banreason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="active" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_last_played_character">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="region" />
+      <PropertyRef Name="battlegroup" />
+    </Key>
+    <Property Name="accountId" Type="Int64" Nullable="false" />
+    <Property Name="region" Type="Byte" Nullable="false" />
+    <Property Name="battlegroup" Type="Byte" Nullable="false" />
+    <Property Name="realmId" Type="Int64" />
+    <Property Name="characterName" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="characterGUID" Type="Decimal" />
+    <Property Name="lastPlayedTime" Type="Int64" />
+  </EntityType>
+  <EntityType Name="account_muted">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="mutedate" />
+    </Key>
+    <Property Name="guid" Type="Int64" Nullable="false" />
+    <Property Name="mutedate" Type="Int64" Nullable="false" />
+    <Property Name="mutetime" Type="Int64" Nullable="false" />
+    <Property Name="mutedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mutereason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="autobroadcast">
+    <Key>
+      <PropertyRef Name="realmid" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="realmid" Type="Int32" Nullable="false" />
+    <Property Name="id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="weight" Type="Byte" />
+    <Property Name="text" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battle_pet_slots">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="battlenetAccountId" />
+    </Key>
+    <Property Name="id" Type="SByte" Nullable="false" />
+    <Property Name="battlenetAccountId" Type="Int32" Nullable="false" />
+    <Property Name="battlePetGuid" Type="Int64" Nullable="false" />
+    <Property Name="locked" Type="SByte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battle_pets">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="Int64" Nullable="false" />
+    <Property Name="battlenetAccountId" Type="Int32" Nullable="false" />
+    <Property Name="species" Type="Int32" Nullable="false" />
+    <Property Name="breed" Type="Int16" Nullable="false" />
+    <Property Name="level" Type="Int16" Nullable="false" />
+    <Property Name="exp" Type="Int16" Nullable="false" />
+    <Property Name="health" Type="Int32" Nullable="false" />
+    <Property Name="quality" Type="SByte" Nullable="false" />
+    <Property Name="flags" Type="Int16" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_bans">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="bandate" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="bandate" Type="Int64" Nullable="false" />
+    <Property Name="unbandate" Type="Int64" Nullable="false" />
+    <Property Name="bannedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="banreason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_heirlooms">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="itemId" />
+    </Key>
+    <Property Name="accountId" Type="Int64" Nullable="false" />
+    <Property Name="itemId" Type="Int64" Nullable="false" />
+    <Property Name="flags" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_mounts">
+    <Key>
+      <PropertyRef Name="battlenetAccountId" />
+      <PropertyRef Name="mountSpellId" />
+    </Key>
+    <Property Name="battlenetAccountId" Type="Int64" Nullable="false" />
+    <Property Name="mountSpellId" Type="Int64" Nullable="false" />
+    <Property Name="flags" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_toys">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="itemId" />
+    </Key>
+    <Property Name="accountId" Type="Int64" Nullable="false" />
+    <Property Name="itemId" Type="Int32" Nullable="false" />
+    <Property Name="isFavourite" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="battlenet_accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="320" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sha_pass_hash" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="joindate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="last_ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="failed_logins" Type="Int64" Nullable="false" />
+    <Property Name="locked" Type="Byte" Nullable="false" />
+    <Property Name="lock_country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_login" Type="DateTime" Nullable="false" />
+    <Property Name="online" Type="Byte" Nullable="false" />
+    <Property Name="locale" Type="Byte" Nullable="false" />
+    <Property Name="os" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastCharacterUndelete" Type="Int64" Nullable="false" />
+    <Property Name="LoginTicket" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LoginTicketExpiry" Type="Int64" />
+    <NavigationProperty Name="accounts" Relationship="Self.fk_bnet_acc" FromRole="battlenet_accounts" ToRole="account" />
+    <NavigationProperty Name="battlenet_item_appearances" Relationship="Self.fk_battlenet_item_appearances" FromRole="battlenet_accounts" ToRole="battlenet_item_appearances" />
+    <NavigationProperty Name="battlenet_item_favorite_appearances" Relationship="Self.fk_battlenet_item_favorite_appearances" FromRole="battlenet_accounts" ToRole="battlenet_item_favorite_appearances" />
+  </EntityType>
+  <EntityType Name="battlenet_item_appearances">
+    <Key>
+      <PropertyRef Name="battlenetAccountId" />
+      <PropertyRef Name="blobIndex" />
+    </Key>
+    <Property Name="battlenetAccountId" Type="Int64" Nullable="false" />
+    <Property Name="blobIndex" Type="Int32" Nullable="false" />
+    <Property Name="appearanceMask" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="battlenet_accounts" Relationship="Self.fk_battlenet_item_appearances" FromRole="battlenet_item_appearances" ToRole="battlenet_accounts" />
+  </EntityType>
+  <EntityType Name="battlenet_item_favorite_appearances">
+    <Key>
+      <PropertyRef Name="battlenetAccountId" />
+      <PropertyRef Name="itemModifiedAppearanceId" />
+    </Key>
+    <Property Name="battlenetAccountId" Type="Int64" Nullable="false" />
+    <Property Name="itemModifiedAppearanceId" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="battlenet_accounts" Relationship="Self.fk_battlenet_item_favorite_appearances" FromRole="battlenet_item_favorite_appearances" ToRole="battlenet_accounts" />
+  </EntityType>
+  <EntityType Name="ip_banned">
+    <Key>
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="bandate" />
+    </Key>
+    <Property Name="ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bandate" Type="Int64" Nullable="false" />
+    <Property Name="unbandate" Type="Int64" Nullable="false" />
+    <Property Name="bannedby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="banreason" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ip2nationcountries">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iso_code_2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="iso_code_3" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="iso_country" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="country" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lat" Type="Single" Nullable="false" />
+    <Property Name="lon" Type="Single" Nullable="false" />
+  </EntityType>
+  <EntityType Name="logs_ip_actions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="account_id" Type="Int64" Nullable="false" />
+    <Property Name="character_guid" Type="Decimal" Nullable="false" />
+    <Property Name="type" Type="Byte" Nullable="false" />
+    <Property Name="ip" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="systemnote" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="unixtime" Type="Int64" Nullable="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="comment" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="rbac_account_permissions">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="permissionId" />
+      <PropertyRef Name="realmId" />
+    </Key>
+    <Property Name="accountId" Type="Int64" Nullable="false" />
+    <Property Name="permissionId" Type="Int64" Nullable="false" />
+    <Property Name="granted" Type="Boolean" Nullable="false" />
+    <Property Name="realmId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="account" Relationship="Self.fk__rbac_account_permissions__account" FromRole="rbac_account_permissions" ToRole="account" />
+    <NavigationProperty Name="rbac_permissions" Relationship="Self.fk__rbac_account_roles__rbac_permissions" FromRole="rbac_account_permissions" ToRole="rbac_permissions" />
+  </EntityType>
+  <EntityType Name="rbac_default_permissions">
+    <Key>
+      <PropertyRef Name="secId" />
+      <PropertyRef Name="permissionId" />
+      <PropertyRef Name="realmId" />
+    </Key>
+    <Property Name="secId" Type="Int64" Nullable="false" />
+    <Property Name="permissionId" Type="Int64" Nullable="false" />
+    <Property Name="realmId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="rbac_permissions" Relationship="Self.fk__rbac_default_permissions__rbac_permissions" FromRole="rbac_default_permissions" ToRole="rbac_permissions" />
+  </EntityType>
+  <EntityType Name="rbac_permissions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="rbac_account_permissions" Relationship="Self.fk__rbac_account_roles__rbac_permissions" FromRole="rbac_permissions" ToRole="rbac_account_permissions" />
+    <NavigationProperty Name="rbac_default_permissions" Relationship="Self.fk__rbac_default_permissions__rbac_permissions" FromRole="rbac_permissions" ToRole="rbac_default_permissions" />
+    <NavigationProperty Name="rbac_permissions1" Relationship="Self.rbac_linked_permissions" FromRole="rbac_permissions" ToRole="rbac_permissions1" />
+    <NavigationProperty Name="rbac_permissions2" Relationship="Self.rbac_linked_permissions" FromRole="rbac_permissions1" ToRole="rbac_permissions" />
+  </EntityType>
+  <EntityType Name="realmcharacter">
+    <Key>
+      <PropertyRef Name="realmid" />
+      <PropertyRef Name="acctid" />
+    </Key>
+    <Property Name="realmid" Type="Int64" Nullable="false" />
+    <Property Name="acctid" Type="Int64" Nullable="false" />
+    <Property Name="numchars" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="realmlist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="localAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="localSubnetMask" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="port" Type="Int32" Nullable="false" />
+    <Property Name="icon" Type="Byte" Nullable="false" />
+    <Property Name="flag" Type="Byte" Nullable="false" />
+    <Property Name="timezone" Type="Byte" Nullable="false" />
+    <Property Name="allowedSecurityLevel" Type="Byte" Nullable="false" />
+    <Property Name="gamebuild" Type="Int64" Nullable="false" />
+    <Property Name="Region" Type="Byte" Nullable="false" />
+    <Property Name="Battlegroup" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="update">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hash" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="timestamp" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="speed" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="updates_include">
+    <Key>
+      <PropertyRef Name="path" />
+    </Key>
+    <Property Name="path" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="uptime">
+    <Key>
+      <PropertyRef Name="realmid" />
+      <PropertyRef Name="starttime" />
+    </Key>
+    <Property Name="realmid" Type="Int64" Nullable="false" />
+    <Property Name="starttime" Type="Int64" Nullable="false" />
+    <Property Name="uptime1" Type="Int64" Nullable="false" />
+    <Property Name="maxplayers" Type="Int32" Nullable="false" />
+    <Property Name="revision" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ip2nation">
+    <Key>
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="country" />
+    </Key>
+    <Property Name="ip" Type="Int64" Nullable="false" />
+    <Property Name="country" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="log">
+    <Key>
+      <PropertyRef Name="time" />
+      <PropertyRef Name="realm" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="level" />
+    </Key>
+    <Property Name="time" Type="Int64" Nullable="false" />
+    <Property Name="realm" Type="Int64" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="level" Type="Byte" Nullable="false" />
+    <Property Name="string" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="fk__rbac_account_permissions__account">
+    <End Role="account" Type="Self.account" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rbac_account_permissions" Type="Self.rbac_account_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_account_permissions">
+        <PropertyRef Name="accountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_bnet_acc">
+    <End Role="battlenet_accounts" Type="Self.battlenet_accounts" Multiplicity="0..1" />
+    <End Role="account" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="battlenet_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="account">
+        <PropertyRef Name="battlenet_account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_battlenet_item_appearances">
+    <End Role="battlenet_accounts" Type="Self.battlenet_accounts" Multiplicity="1" />
+    <End Role="battlenet_item_appearances" Type="Self.battlenet_item_appearances" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="battlenet_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="battlenet_item_appearances">
+        <PropertyRef Name="battlenetAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_battlenet_item_favorite_appearances">
+    <End Role="battlenet_accounts" Type="Self.battlenet_accounts" Multiplicity="1" />
+    <End Role="battlenet_item_favorite_appearances" Type="Self.battlenet_item_favorite_appearances" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="battlenet_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="battlenet_item_favorite_appearances">
+        <PropertyRef Name="battlenetAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk__rbac_account_roles__rbac_permissions">
+    <End Role="rbac_permissions" Type="Self.rbac_permissions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rbac_account_permissions" Type="Self.rbac_account_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rbac_permissions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_account_permissions">
+        <PropertyRef Name="permissionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk__rbac_default_permissions__rbac_permissions">
+    <End Role="rbac_permissions" Type="Self.rbac_permissions" Multiplicity="1" />
+    <End Role="rbac_default_permissions" Type="Self.rbac_default_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rbac_permissions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_default_permissions">
+        <PropertyRef Name="permissionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="rbac_linked_permissions">
+    <End Role="rbac_permissions" Type="Self.rbac_permissions" Multiplicity="*" />
+    <End Role="rbac_permissions1" Type="Self.rbac_permissions" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="passportEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="account_access" EntityType="Self.account_access" />
+    <EntitySet Name="account_banned" EntityType="Self.account_banned" />
+    <EntitySet Name="account_last_played_character" EntityType="Self.account_last_played_character" />
+    <EntitySet Name="account_muted" EntityType="Self.account_muted" />
+    <EntitySet Name="autobroadcasts" EntityType="Self.autobroadcast" />
+    <EntitySet Name="battle_pet_slots" EntityType="Self.battle_pet_slots" />
+    <EntitySet Name="battle_pets" EntityType="Self.battle_pets" />
+    <EntitySet Name="battlenet_account_bans" EntityType="Self.battlenet_account_bans" />
+    <EntitySet Name="battlenet_account_heirlooms" EntityType="Self.battlenet_account_heirlooms" />
+    <EntitySet Name="battlenet_account_mounts" EntityType="Self.battlenet_account_mounts" />
+    <EntitySet Name="battlenet_account_toys" EntityType="Self.battlenet_account_toys" />
+    <EntitySet Name="battlenet_accounts" EntityType="Self.battlenet_accounts" />
+    <EntitySet Name="battlenet_item_appearances" EntityType="Self.battlenet_item_appearances" />
+    <EntitySet Name="battlenet_item_favorite_appearances" EntityType="Self.battlenet_item_favorite_appearances" />
+    <EntitySet Name="ip_banned" EntityType="Self.ip_banned" />
+    <EntitySet Name="ip2nationcountries" EntityType="Self.ip2nationcountries" />
+    <EntitySet Name="logs_ip_actions" EntityType="Self.logs_ip_actions" />
+    <EntitySet Name="rbac_account_permissions" EntityType="Self.rbac_account_permissions" />
+    <EntitySet Name="rbac_default_permissions" EntityType="Self.rbac_default_permissions" />
+    <EntitySet Name="rbac_permissions" EntityType="Self.rbac_permissions" />
+    <EntitySet Name="realmcharacters" EntityType="Self.realmcharacter" />
+    <EntitySet Name="realmlists" EntityType="Self.realmlist" />
+    <EntitySet Name="updates" EntityType="Self.update" />
+    <EntitySet Name="updates_include" EntityType="Self.updates_include" />
+    <EntitySet Name="uptimes" EntityType="Self.uptime" />
+    <EntitySet Name="ip2nation" EntityType="Self.ip2nation" />
+    <EntitySet Name="logs" EntityType="Self.log" />
+    <AssociationSet Name="fk__rbac_account_permissions__account" Association="Self.fk__rbac_account_permissions__account">
+      <End Role="account" EntitySet="accounts" />
+      <End Role="rbac_account_permissions" EntitySet="rbac_account_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="fk_bnet_acc" Association="Self.fk_bnet_acc">
+      <End Role="battlenet_accounts" EntitySet="battlenet_accounts" />
+      <End Role="account" EntitySet="accounts" />
+    </AssociationSet>
+    <AssociationSet Name="fk_battlenet_item_appearances" Association="Self.fk_battlenet_item_appearances">
+      <End Role="battlenet_accounts" EntitySet="battlenet_accounts" />
+      <End Role="battlenet_item_appearances" EntitySet="battlenet_item_appearances" />
+    </AssociationSet>
+    <AssociationSet Name="fk_battlenet_item_favorite_appearances" Association="Self.fk_battlenet_item_favorite_appearances">
+      <End Role="battlenet_accounts" EntitySet="battlenet_accounts" />
+      <End Role="battlenet_item_favorite_appearances" EntitySet="battlenet_item_favorite_appearances" />
+    </AssociationSet>
+    <AssociationSet Name="fk__rbac_account_roles__rbac_permissions" Association="Self.fk__rbac_account_roles__rbac_permissions">
+      <End Role="rbac_permissions" EntitySet="rbac_permissions" />
+      <End Role="rbac_account_permissions" EntitySet="rbac_account_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="fk__rbac_default_permissions__rbac_permissions" Association="Self.fk__rbac_default_permissions__rbac_permissions">
+      <End Role="rbac_permissions" EntitySet="rbac_permissions" />
+      <End Role="rbac_default_permissions" EntitySet="rbac_default_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="rbac_linked_permissions" Association="Self.rbac_linked_permissions">
+      <End Role="rbac_permissions" EntitySet="rbac_permissions" />
+      <End Role="rbac_permissions1" EntitySet="rbac_permissions" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

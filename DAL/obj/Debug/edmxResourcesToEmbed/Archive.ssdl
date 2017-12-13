@@ -1,0 +1,1711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="archiveModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account_data">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="type" />
+    </Key>
+    <Property Name="accountId" Type="uint" Nullable="false" />
+    <Property Name="type" Type="utinyint" Nullable="false" />
+    <Property Name="time" Type="uint" Nullable="false" />
+    <Property Name="data" Type="blob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_instance_times">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="instanceId" />
+    </Key>
+    <Property Name="accountId" Type="uint" Nullable="false" />
+    <Property Name="instanceId" Type="uint" Nullable="false" />
+    <Property Name="releaseTime" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_tutorial">
+    <Key>
+      <PropertyRef Name="accountId" />
+    </Key>
+    <Property Name="accountId" Type="uint" Nullable="false" />
+    <Property Name="tut0" Type="uint" Nullable="false" />
+    <Property Name="tut1" Type="uint" Nullable="false" />
+    <Property Name="tut2" Type="uint" Nullable="false" />
+    <Property Name="tut3" Type="uint" Nullable="false" />
+    <Property Name="tut4" Type="uint" Nullable="false" />
+    <Property Name="tut5" Type="uint" Nullable="false" />
+    <Property Name="tut6" Type="uint" Nullable="false" />
+    <Property Name="tut7" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="arena_team">
+    <Key>
+      <PropertyRef Name="arenaTeamId" />
+    </Key>
+    <Property Name="arenaTeamId" Type="uint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="captainGuid" Type="ubigint" Nullable="false" />
+    <Property Name="type" Type="utinyint" Nullable="false" />
+    <Property Name="rating" Type="usmallint" Nullable="false" />
+    <Property Name="seasonGames" Type="usmallint" Nullable="false" />
+    <Property Name="seasonWins" Type="usmallint" Nullable="false" />
+    <Property Name="weekGames" Type="usmallint" Nullable="false" />
+    <Property Name="weekWins" Type="usmallint" Nullable="false" />
+    <Property Name="rank" Type="uint" Nullable="false" />
+    <Property Name="backgroundColor" Type="uint" Nullable="false" />
+    <Property Name="emblemStyle" Type="utinyint" Nullable="false" />
+    <Property Name="emblemColor" Type="uint" Nullable="false" />
+    <Property Name="borderStyle" Type="utinyint" Nullable="false" />
+    <Property Name="borderColor" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="arena_team_member">
+    <Key>
+      <PropertyRef Name="arenaTeamId" />
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="arenaTeamId" Type="uint" Nullable="false" />
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="weekGames" Type="usmallint" Nullable="false" />
+    <Property Name="weekWins" Type="usmallint" Nullable="false" />
+    <Property Name="seasonGames" Type="usmallint" Nullable="false" />
+    <Property Name="seasonWins" Type="usmallint" Nullable="false" />
+    <Property Name="personalRating" Type="usmallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="auctionhouse">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="auctioneerguid" Type="ubigint" Nullable="false" />
+    <Property Name="itemguid" Type="ubigint" Nullable="false" />
+    <Property Name="itemowner" Type="ubigint" Nullable="false" />
+    <Property Name="buyoutprice" Type="ubigint" Nullable="false" />
+    <Property Name="time" Type="uint" Nullable="false" />
+    <Property Name="buyguid" Type="ubigint" Nullable="false" />
+    <Property Name="lastbid" Type="ubigint" Nullable="false" />
+    <Property Name="startbid" Type="ubigint" Nullable="false" />
+    <Property Name="deposit" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="blackmarket_auctions">
+    <Key>
+      <PropertyRef Name="marketId" />
+    </Key>
+    <Property Name="marketId" Type="int" Nullable="false" />
+    <Property Name="currentBid" Type="ubigint" Nullable="false" />
+    <Property Name="time" Type="int" Nullable="false" />
+    <Property Name="numBids" Type="int" Nullable="false" />
+    <Property Name="bidder" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="bugreport">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="longtext" Nullable="false" />
+    <Property Name="content" Type="longtext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calendar_events">
+    <Key>
+      <PropertyRef Name="EventID" />
+    </Key>
+    <Property Name="EventID" Type="ubigint" Nullable="false" />
+    <Property Name="Owner" Type="ubigint" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="EventType" Type="bool" Nullable="false" />
+    <Property Name="TextureID" Type="int" Nullable="false" />
+    <Property Name="Date" Type="uint" Nullable="false" />
+    <Property Name="Flags" Type="uint" Nullable="false" />
+    <Property Name="LockDate" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="calendar_invites">
+    <Key>
+      <PropertyRef Name="InviteID" />
+    </Key>
+    <Property Name="InviteID" Type="ubigint" Nullable="false" />
+    <Property Name="EventID" Type="ubigint" Nullable="false" />
+    <Property Name="Invitee" Type="ubigint" Nullable="false" />
+    <Property Name="Sender" Type="ubigint" Nullable="false" />
+    <Property Name="Status" Type="bool" Nullable="false" />
+    <Property Name="ResponseTime" Type="uint" Nullable="false" />
+    <Property Name="ModerationRank" Type="bool" Nullable="false" />
+    <Property Name="Note" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="channels">
+    <Key>
+      <PropertyRef Name="name" />
+      <PropertyRef Name="team" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="team" Type="uint" Nullable="false" />
+    <Property Name="announce" Type="utinyint" Nullable="false" />
+    <Property Name="ownership" Type="utinyint" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="32" />
+    <Property Name="bannedList" Type="text" />
+    <Property Name="lastUsed" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_account_data">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="type" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="type" Type="utinyint" Nullable="false" />
+    <Property Name="time" Type="uint" Nullable="false" />
+    <Property Name="data" Type="blob" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_achievement">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="achievement" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="achievement" Type="uint" Nullable="false" />
+    <Property Name="date" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_achievement_progress">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="criteria" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="criteria" Type="uint" Nullable="false" />
+    <Property Name="counter" Type="ubigint" Nullable="false" />
+    <Property Name="date" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_action">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="spec" />
+      <PropertyRef Name="button" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="spec" Type="utinyint" Nullable="false" />
+    <Property Name="button" Type="utinyint" Nullable="false" />
+    <Property Name="action" Type="uint" Nullable="false" />
+    <Property Name="type" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_arena_stats">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="slot" />
+    </Key>
+    <Property Name="guid" Type="bigint" Nullable="false" />
+    <Property Name="slot" Type="tinyint" Nullable="false" />
+    <Property Name="matchMakerRating" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_aura">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="casterGuid" />
+      <PropertyRef Name="itemGuid" />
+      <PropertyRef Name="spell" />
+      <PropertyRef Name="effectMask" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="casterGuid" Type="guid" Nullable="false" />
+    <Property Name="itemGuid" Type="guid" Nullable="false" />
+    <Property Name="spell" Type="uint" Nullable="false" />
+    <Property Name="effectMask" Type="uint" Nullable="false" />
+    <Property Name="recalculateMask" Type="uint" Nullable="false" />
+    <Property Name="stackCount" Type="utinyint" Nullable="false" />
+    <Property Name="maxDuration" Type="int" Nullable="false" />
+    <Property Name="remainTime" Type="int" Nullable="false" />
+    <Property Name="remainCharges" Type="utinyint" Nullable="false" />
+    <Property Name="castItemLevel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_aura_effect">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="casterGuid" />
+      <PropertyRef Name="itemGuid" />
+      <PropertyRef Name="spell" />
+      <PropertyRef Name="effectMask" />
+      <PropertyRef Name="effectIndex" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="casterGuid" Type="guid" Nullable="false" />
+    <Property Name="itemGuid" Type="guid" Nullable="false" />
+    <Property Name="spell" Type="uint" Nullable="false" />
+    <Property Name="effectMask" Type="uint" Nullable="false" />
+    <Property Name="effectIndex" Type="utinyint" Nullable="false" />
+    <Property Name="amount" Type="int" Nullable="false" />
+    <Property Name="baseAmount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_banned">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="bandate" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="bandate" Type="uint" Nullable="false" />
+    <Property Name="unbandate" Type="uint" Nullable="false" />
+    <Property Name="bannedby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="banreason" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="active" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_battleground_data">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="instanceId" Type="uint" Nullable="false" />
+    <Property Name="team" Type="usmallint" Nullable="false" />
+    <Property Name="joinX" Type="float" Nullable="false" />
+    <Property Name="joinY" Type="float" Nullable="false" />
+    <Property Name="joinZ" Type="float" Nullable="false" />
+    <Property Name="joinO" Type="float" Nullable="false" />
+    <Property Name="joinMapId" Type="usmallint" Nullable="false" />
+    <Property Name="taxiStart" Type="uint" Nullable="false" />
+    <Property Name="taxiEnd" Type="uint" Nullable="false" />
+    <Property Name="mountSpell" Type="umediumint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_battleground_random">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_cuf_profiles">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="id" Type="utinyint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="frameHeight" Type="usmallint" Nullable="false" />
+    <Property Name="frameWidth" Type="usmallint" Nullable="false" />
+    <Property Name="sortBy" Type="utinyint" Nullable="false" />
+    <Property Name="healthText" Type="utinyint" Nullable="false" />
+    <Property Name="boolOptions" Type="uint" Nullable="false" />
+    <Property Name="topPoint" Type="utinyint" Nullable="false" />
+    <Property Name="bottomPoint" Type="utinyint" Nullable="false" />
+    <Property Name="leftPoint" Type="utinyint" Nullable="false" />
+    <Property Name="topOffset" Type="usmallint" Nullable="false" />
+    <Property Name="bottomOffset" Type="usmallint" Nullable="false" />
+    <Property Name="leftOffset" Type="usmallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_currency">
+    <Key>
+      <PropertyRef Name="CharacterGuid" />
+      <PropertyRef Name="Currency" />
+    </Key>
+    <Property Name="CharacterGuid" Type="ubigint" Nullable="false" />
+    <Property Name="Currency" Type="usmallint" Nullable="false" />
+    <Property Name="Quantity" Type="uint" Nullable="false" />
+    <Property Name="WeeklyQuantity" Type="uint" Nullable="false" />
+    <Property Name="TrackedQuantity" Type="uint" Nullable="false" />
+    <Property Name="Flags" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_declinedname">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="genitive" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="dative" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="accusative" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="instrumental" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="prepositional" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_equipmentsets">
+    <Key>
+      <PropertyRef Name="setguid" />
+    </Key>
+    <Property Name="guid" Type="bigint" Nullable="false" />
+    <Property Name="setguid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="setindex" Type="utinyint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="31" Nullable="false" />
+    <Property Name="iconname" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ignore_mask" Type="uint" Nullable="false" />
+    <Property Name="AssignedSpecIndex" Type="int" Nullable="false" />
+    <Property Name="item0" Type="ubigint" Nullable="false" />
+    <Property Name="item1" Type="ubigint" Nullable="false" />
+    <Property Name="item2" Type="ubigint" Nullable="false" />
+    <Property Name="item3" Type="ubigint" Nullable="false" />
+    <Property Name="item4" Type="ubigint" Nullable="false" />
+    <Property Name="item5" Type="ubigint" Nullable="false" />
+    <Property Name="item6" Type="ubigint" Nullable="false" />
+    <Property Name="item7" Type="ubigint" Nullable="false" />
+    <Property Name="item8" Type="ubigint" Nullable="false" />
+    <Property Name="item9" Type="ubigint" Nullable="false" />
+    <Property Name="item10" Type="ubigint" Nullable="false" />
+    <Property Name="item11" Type="ubigint" Nullable="false" />
+    <Property Name="item12" Type="ubigint" Nullable="false" />
+    <Property Name="item13" Type="ubigint" Nullable="false" />
+    <Property Name="item14" Type="ubigint" Nullable="false" />
+    <Property Name="item15" Type="ubigint" Nullable="false" />
+    <Property Name="item16" Type="ubigint" Nullable="false" />
+    <Property Name="item17" Type="ubigint" Nullable="false" />
+    <Property Name="item18" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_fishingsteps">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="fishingSteps" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_garrison">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="siteLevelId" Type="uint" Nullable="false" />
+    <Property Name="followerActivationsRemainingToday" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_garrison_blueprints">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="buildingId" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="buildingId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_garrison_buildings">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="plotInstanceId" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="plotInstanceId" Type="uint" Nullable="false" />
+    <Property Name="buildingId" Type="uint" Nullable="false" />
+    <Property Name="timeBuilt" Type="ubigint" Nullable="false" />
+    <Property Name="active" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_garrison_follower_abilities">
+    <Key>
+      <PropertyRef Name="dbId" />
+      <PropertyRef Name="abilityId" />
+      <PropertyRef Name="slot" />
+    </Key>
+    <Property Name="dbId" Type="ubigint" Nullable="false" />
+    <Property Name="abilityId" Type="uint" Nullable="false" />
+    <Property Name="slot" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_garrison_followers">
+    <Key>
+      <PropertyRef Name="dbId" />
+    </Key>
+    <Property Name="dbId" Type="ubigint" Nullable="false" />
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="followerId" Type="uint" Nullable="false" />
+    <Property Name="quality" Type="uint" Nullable="false" />
+    <Property Name="level" Type="uint" Nullable="false" />
+    <Property Name="itemLevelWeapon" Type="uint" Nullable="false" />
+    <Property Name="itemLevelArmor" Type="uint" Nullable="false" />
+    <Property Name="xp" Type="uint" Nullable="false" />
+    <Property Name="currentBuilding" Type="uint" Nullable="false" />
+    <Property Name="currentMission" Type="uint" Nullable="false" />
+    <Property Name="status" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_gifts">
+    <Key>
+      <PropertyRef Name="item_guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="item_guid" Type="ubigint" Nullable="false" />
+    <Property Name="entry" Type="uint" Nullable="false" />
+    <Property Name="flags" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_glyphs">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="talentGroup" />
+      <PropertyRef Name="glyphId" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="talentGroup" Type="utinyint" Nullable="false" />
+    <Property Name="glyphId" Type="usmallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_homebind">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="mapId" Type="usmallint" Nullable="false" />
+    <Property Name="zoneId" Type="usmallint" Nullable="false" />
+    <Property Name="posX" Type="float" Nullable="false" />
+    <Property Name="posY" Type="float" Nullable="false" />
+    <Property Name="posZ" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_instance">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="instance" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="instance" Type="uint" Nullable="false" />
+    <Property Name="permanent" Type="utinyint" Nullable="false" />
+    <Property Name="extendState" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_inventory">
+    <Key>
+      <PropertyRef Name="item" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="bag" Type="ubigint" Nullable="false" />
+    <Property Name="slot" Type="utinyint" Nullable="false" />
+    <Property Name="item" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_pet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="entry" Type="uint" Nullable="false" />
+    <Property Name="owner" Type="ubigint" Nullable="false" />
+    <Property Name="modelid" Type="uint" />
+    <Property Name="CreatedBySpell" Type="umediumint" Nullable="false" />
+    <Property Name="PetType" Type="utinyint" Nullable="false" />
+    <Property Name="level" Type="usmallint" Nullable="false" />
+    <Property Name="exp" Type="uint" Nullable="false" />
+    <Property Name="Reactstate" Type="utinyint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="21" Nullable="false" />
+    <Property Name="renamed" Type="utinyint" Nullable="false" />
+    <Property Name="slot" Type="utinyint" Nullable="false" />
+    <Property Name="curhealth" Type="uint" Nullable="false" />
+    <Property Name="curmana" Type="uint" Nullable="false" />
+    <Property Name="savetime" Type="uint" Nullable="false" />
+    <Property Name="abdata" Type="text" />
+    <Property Name="specialization" Type="usmallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_pet_declinedname">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="owner" Type="uint" Nullable="false" />
+    <Property Name="genitive" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="dative" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="accusative" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="instrumental" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="prepositional" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="quest" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest" Type="uint" Nullable="false" />
+    <Property Name="status" Type="utinyint" Nullable="false" />
+    <Property Name="timer" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_daily">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="quest" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest" Type="uint" Nullable="false" />
+    <Property Name="time" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_monthly">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="quest" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_objectives">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="quest" />
+      <PropertyRef Name="objective" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest" Type="uint" Nullable="false" />
+    <Property Name="objective" Type="utinyint" Nullable="false" />
+    <Property Name="data" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_objectives_criteria">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="questObjectiveId" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="questObjectiveId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_objectives_criteria_progress">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="criteriaId" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="criteriaId" Type="uint" Nullable="false" />
+    <Property Name="counter" Type="ubigint" Nullable="false" />
+    <Property Name="date" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_rewarded">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="quest" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest" Type="uint" Nullable="false" />
+    <Property Name="active" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_seasonal">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="quest" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest" Type="uint" Nullable="false" />
+    <Property Name="event" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_queststatus_weekly">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="quest" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_reputation">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="faction" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="faction" Type="usmallint" Nullable="false" />
+    <Property Name="standing" Type="int" Nullable="false" />
+    <Property Name="flags" Type="usmallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_skills">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="skill" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="skill" Type="usmallint" Nullable="false" />
+    <Property Name="value" Type="usmallint" Nullable="false" />
+    <Property Name="max" Type="usmallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_social">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="friend" />
+      <PropertyRef Name="flags" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="friend" Type="ubigint" Nullable="false" />
+    <Property Name="flags" Type="utinyint" Nullable="false" />
+    <Property Name="note" Type="varchar" MaxLength="48" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_spell">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="spell" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="spell" Type="umediumint" Nullable="false" />
+    <Property Name="active" Type="utinyint" Nullable="false" />
+    <Property Name="disabled" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.archive.character_spell_charges' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="character_spell_charges">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="categoryId" />
+      <PropertyRef Name="rechargeStart" />
+      <PropertyRef Name="rechargeEnd" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="categoryId" Type="uint" Nullable="false" />
+    <Property Name="rechargeStart" Type="uint" Nullable="false" />
+    <Property Name="rechargeEnd" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_spell_cooldown">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="spell" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="spell" Type="uint" Nullable="false" />
+    <Property Name="item" Type="uint" Nullable="false" />
+    <Property Name="time" Type="uint" Nullable="false" />
+    <Property Name="categoryId" Type="uint" Nullable="false" />
+    <Property Name="categoryEnd" Type="uint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'blockPct' in the table 'def.archive.character_stats' was excluded.
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'dodgePct' in the table 'def.archive.character_stats' was excluded.
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'parryPct' in the table 'def.archive.character_stats' was excluded.
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'critPct' in the table 'def.archive.character_stats' was excluded.
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'rangedCritPct' in the table 'def.archive.character_stats' was excluded.
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'spellCritPct' in the table 'def.archive.character_stats' was excluded.-->
+  <EntityType Name="character_stats">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="maxhealth" Type="uint" Nullable="false" />
+    <Property Name="maxpower1" Type="uint" Nullable="false" />
+    <Property Name="maxpower2" Type="uint" Nullable="false" />
+    <Property Name="maxpower3" Type="uint" Nullable="false" />
+    <Property Name="maxpower4" Type="uint" Nullable="false" />
+    <Property Name="maxpower5" Type="uint" Nullable="false" />
+    <Property Name="maxpower6" Type="uint" Nullable="false" />
+    <Property Name="strength" Type="uint" Nullable="false" />
+    <Property Name="agility" Type="uint" Nullable="false" />
+    <Property Name="stamina" Type="uint" Nullable="false" />
+    <Property Name="intellect" Type="uint" Nullable="false" />
+    <Property Name="armor" Type="uint" Nullable="false" />
+    <Property Name="resHoly" Type="uint" Nullable="false" />
+    <Property Name="resFire" Type="uint" Nullable="false" />
+    <Property Name="resNature" Type="uint" Nullable="false" />
+    <Property Name="resFrost" Type="uint" Nullable="false" />
+    <Property Name="resShadow" Type="uint" Nullable="false" />
+    <Property Name="resArcane" Type="uint" Nullable="false" />
+    <Property Name="attackPower" Type="uint" Nullable="false" />
+    <Property Name="rangedAttackPower" Type="uint" Nullable="false" />
+    <Property Name="spellPower" Type="uint" Nullable="false" />
+    <Property Name="resilience" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_talent">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="talentId" />
+      <PropertyRef Name="talentGroup" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="talentId" Type="umediumint" Nullable="false" />
+    <Property Name="talentGroup" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_transmog_outfits">
+    <Key>
+      <PropertyRef Name="setguid" />
+    </Key>
+    <Property Name="guid" Type="bigint" Nullable="false" />
+    <Property Name="setguid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="setindex" Type="utinyint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="iconname" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="ignore_mask" Type="int" Nullable="false" />
+    <Property Name="appearance0" Type="int" Nullable="false" />
+    <Property Name="appearance1" Type="int" Nullable="false" />
+    <Property Name="appearance2" Type="int" Nullable="false" />
+    <Property Name="appearance3" Type="int" Nullable="false" />
+    <Property Name="appearance4" Type="int" Nullable="false" />
+    <Property Name="appearance5" Type="int" Nullable="false" />
+    <Property Name="appearance6" Type="int" Nullable="false" />
+    <Property Name="appearance7" Type="int" Nullable="false" />
+    <Property Name="appearance8" Type="int" Nullable="false" />
+    <Property Name="appearance9" Type="int" Nullable="false" />
+    <Property Name="appearance10" Type="int" Nullable="false" />
+    <Property Name="appearance11" Type="int" Nullable="false" />
+    <Property Name="appearance12" Type="int" Nullable="false" />
+    <Property Name="appearance13" Type="int" Nullable="false" />
+    <Property Name="appearance14" Type="int" Nullable="false" />
+    <Property Name="appearance15" Type="int" Nullable="false" />
+    <Property Name="appearance16" Type="int" Nullable="false" />
+    <Property Name="appearance17" Type="int" Nullable="false" />
+    <Property Name="appearance18" Type="int" Nullable="false" />
+    <Property Name="mainHandEnchant" Type="int" Nullable="false" />
+    <Property Name="offHandEnchant" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="character_void_storage">
+    <Key>
+      <PropertyRef Name="itemId" />
+    </Key>
+    <Property Name="itemId" Type="ubigint" Nullable="false" />
+    <Property Name="playerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="itemEntry" Type="umediumint" Nullable="false" />
+    <Property Name="slot" Type="utinyint" Nullable="false" />
+    <Property Name="creatorGuid" Type="ubigint" Nullable="false" />
+    <Property Name="randomPropertyType" Type="utinyint" Nullable="false" />
+    <Property Name="randomProperty" Type="uint" Nullable="false" />
+    <Property Name="suffixFactor" Type="uint" Nullable="false" />
+    <Property Name="upgradeId" Type="uint" Nullable="false" />
+    <Property Name="fixedScalingLevel" Type="uint" />
+    <Property Name="artifactKnowledgeLevel" Type="uint" />
+    <Property Name="context" Type="utinyint" Nullable="false" />
+    <Property Name="bonusListIDs" Type="text" />
+  </EntityType>
+  <EntityType Name="characters">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="account" Type="uint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="slot" Type="utinyint" Nullable="false" />
+    <Property Name="race" Type="utinyint" Nullable="false" />
+    <Property Name="class" Type="utinyint" Nullable="false" />
+    <Property Name="gender" Type="utinyint" Nullable="false" />
+    <Property Name="level" Type="utinyint" Nullable="false" />
+    <Property Name="xp" Type="uint" Nullable="false" />
+    <Property Name="money" Type="ubigint" Nullable="false" />
+    <Property Name="skin" Type="utinyint" Nullable="false" />
+    <Property Name="face" Type="utinyint" Nullable="false" />
+    <Property Name="hairStyle" Type="utinyint" Nullable="false" />
+    <Property Name="hairColor" Type="utinyint" Nullable="false" />
+    <Property Name="facialStyle" Type="utinyint" Nullable="false" />
+    <Property Name="customDisplay1" Type="utinyint" Nullable="false" />
+    <Property Name="customDisplay2" Type="utinyint" Nullable="false" />
+    <Property Name="customDisplay3" Type="utinyint" Nullable="false" />
+    <Property Name="bankSlots" Type="utinyint" Nullable="false" />
+    <Property Name="restState" Type="utinyint" Nullable="false" />
+    <Property Name="playerFlags" Type="uint" Nullable="false" />
+    <Property Name="playerFlagsEx" Type="uint" Nullable="false" />
+    <Property Name="position_x" Type="float" Nullable="false" />
+    <Property Name="position_y" Type="float" Nullable="false" />
+    <Property Name="position_z" Type="float" Nullable="false" />
+    <Property Name="map" Type="usmallint" Nullable="false" />
+    <Property Name="instance_id" Type="uint" Nullable="false" />
+    <Property Name="dungeonDifficulty" Type="utinyint" Nullable="false" />
+    <Property Name="raidDifficulty" Type="utinyint" Nullable="false" />
+    <Property Name="legacyRaidDifficulty" Type="utinyint" Nullable="false" />
+    <Property Name="orientation" Type="float" Nullable="false" />
+    <Property Name="taximask" Type="text" Nullable="false" />
+    <Property Name="online" Type="utinyint" Nullable="false" />
+    <Property Name="cinematic" Type="utinyint" Nullable="false" />
+    <Property Name="totaltime" Type="uint" Nullable="false" />
+    <Property Name="leveltime" Type="uint" Nullable="false" />
+    <Property Name="logout_time" Type="uint" Nullable="false" />
+    <Property Name="is_logout_resting" Type="utinyint" Nullable="false" />
+    <Property Name="rest_bonus" Type="float" Nullable="false" />
+    <Property Name="resettalents_cost" Type="uint" Nullable="false" />
+    <Property Name="resettalents_time" Type="uint" Nullable="false" />
+    <Property Name="primarySpecialization" Type="uint" Nullable="false" />
+    <Property Name="trans_x" Type="float" Nullable="false" />
+    <Property Name="trans_y" Type="float" Nullable="false" />
+    <Property Name="trans_z" Type="float" Nullable="false" />
+    <Property Name="trans_o" Type="float" Nullable="false" />
+    <Property Name="transguid" Type="ubigint" Nullable="false" />
+    <Property Name="extra_flags" Type="usmallint" Nullable="false" />
+    <Property Name="stable_slots" Type="utinyint" Nullable="false" />
+    <Property Name="at_login" Type="usmallint" Nullable="false" />
+    <Property Name="zone" Type="usmallint" Nullable="false" />
+    <Property Name="death_expire_time" Type="uint" Nullable="false" />
+    <Property Name="taxi_path" Type="text" />
+    <Property Name="totalKills" Type="uint" Nullable="false" />
+    <Property Name="todayKills" Type="usmallint" Nullable="false" />
+    <Property Name="yesterdayKills" Type="usmallint" Nullable="false" />
+    <Property Name="chosenTitle" Type="uint" Nullable="false" />
+    <Property Name="watchedFaction" Type="uint" Nullable="false" />
+    <Property Name="drunk" Type="utinyint" Nullable="false" />
+    <Property Name="health" Type="uint" Nullable="false" />
+    <Property Name="power1" Type="uint" Nullable="false" />
+    <Property Name="power2" Type="uint" Nullable="false" />
+    <Property Name="power3" Type="uint" Nullable="false" />
+    <Property Name="power4" Type="uint" Nullable="false" />
+    <Property Name="power5" Type="uint" Nullable="false" />
+    <Property Name="power6" Type="uint" Nullable="false" />
+    <Property Name="latency" Type="umediumint" Nullable="false" />
+    <Property Name="activeTalentGroup" Type="utinyint" Nullable="false" />
+    <Property Name="lootSpecId" Type="uint" Nullable="false" />
+    <Property Name="exploredZones" Type="longtext" />
+    <Property Name="equipmentCache" Type="longtext" />
+    <Property Name="knownTitles" Type="longtext" />
+    <Property Name="actionBars" Type="utinyint" Nullable="false" />
+    <Property Name="grantableLevels" Type="utinyint" Nullable="false" />
+    <Property Name="deleteInfos_Account" Type="uint" />
+    <Property Name="deleteInfos_Name" Type="varchar" MaxLength="12" />
+    <Property Name="deleteDate" Type="uint" />
+    <Property Name="honor" Type="uint" Nullable="false" />
+    <Property Name="honorLevel" Type="uint" Nullable="false" />
+    <Property Name="prestigeLevel" Type="uint" Nullable="false" />
+    <Property Name="honorRestState" Type="utinyint" Nullable="false" />
+    <Property Name="honorRestBonus" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corpse">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="posX" Type="float" Nullable="false" />
+    <Property Name="posY" Type="float" Nullable="false" />
+    <Property Name="posZ" Type="float" Nullable="false" />
+    <Property Name="orientation" Type="float" Nullable="false" />
+    <Property Name="mapId" Type="usmallint" Nullable="false" />
+    <Property Name="displayId" Type="uint" Nullable="false" />
+    <Property Name="itemCache" Type="text" Nullable="false" />
+    <Property Name="bytes1" Type="uint" Nullable="false" />
+    <Property Name="bytes2" Type="uint" Nullable="false" />
+    <Property Name="flags" Type="utinyint" Nullable="false" />
+    <Property Name="dynFlags" Type="utinyint" Nullable="false" />
+    <Property Name="time" Type="uint" Nullable="false" />
+    <Property Name="corpseType" Type="utinyint" Nullable="false" />
+    <Property Name="instanceId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="corpse_phases">
+    <Key>
+      <PropertyRef Name="OwnerGuid" />
+      <PropertyRef Name="PhaseId" />
+    </Key>
+    <Property Name="OwnerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="PhaseId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="creature_respawn">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="instanceId" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="respawnTime" Type="uint" Nullable="false" />
+    <Property Name="mapId" Type="usmallint" Nullable="false" />
+    <Property Name="instanceId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="game_event_condition_save">
+    <Key>
+      <PropertyRef Name="eventEntry" />
+      <PropertyRef Name="condition_id" />
+    </Key>
+    <Property Name="eventEntry" Type="utinyint" Nullable="false" />
+    <Property Name="condition_id" Type="uint" Nullable="false" />
+    <Property Name="done" Type="float" />
+  </EntityType>
+  <EntityType Name="game_event_save">
+    <Key>
+      <PropertyRef Name="eventEntry" />
+    </Key>
+    <Property Name="eventEntry" Type="utinyint" Nullable="false" />
+    <Property Name="state" Type="utinyint" Nullable="false" />
+    <Property Name="next_start" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gameobject_respawn">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="instanceId" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="respawnTime" Type="uint" Nullable="false" />
+    <Property Name="mapId" Type="usmallint" Nullable="false" />
+    <Property Name="instanceId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gm_bug">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="playerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="note" Type="text" Nullable="false" />
+    <Property Name="createTime" Type="uint" Nullable="false" />
+    <Property Name="mapId" Type="usmallint" Nullable="false" />
+    <Property Name="posX" Type="float" Nullable="false" />
+    <Property Name="posY" Type="float" Nullable="false" />
+    <Property Name="posZ" Type="float" Nullable="false" />
+    <Property Name="facing" Type="float" Nullable="false" />
+    <Property Name="closedBy" Type="bigint" Nullable="false" />
+    <Property Name="assignedTo" Type="ubigint" Nullable="false" />
+    <Property Name="comment" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gm_complaint">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="playerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="note" Type="text" Nullable="false" />
+    <Property Name="createTime" Type="uint" Nullable="false" />
+    <Property Name="mapId" Type="usmallint" Nullable="false" />
+    <Property Name="posX" Type="float" Nullable="false" />
+    <Property Name="posY" Type="float" Nullable="false" />
+    <Property Name="posZ" Type="float" Nullable="false" />
+    <Property Name="facing" Type="float" Nullable="false" />
+    <Property Name="targetCharacterGuid" Type="ubigint" Nullable="false" />
+    <Property Name="complaintType" Type="usmallint" Nullable="false" />
+    <Property Name="reportLineIndex" Type="int" Nullable="false" />
+    <Property Name="closedBy" Type="bigint" Nullable="false" />
+    <Property Name="assignedTo" Type="ubigint" Nullable="false" />
+    <Property Name="comment" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gm_complaint_chatlog">
+    <Key>
+      <PropertyRef Name="complaintId" />
+      <PropertyRef Name="lineId" />
+    </Key>
+    <Property Name="complaintId" Type="uint" Nullable="false" />
+    <Property Name="lineId" Type="uint" Nullable="false" />
+    <Property Name="timestamp" Type="uint" Nullable="false" />
+    <Property Name="text" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="gm_suggestion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="playerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="note" Type="text" Nullable="false" />
+    <Property Name="createTime" Type="uint" Nullable="false" />
+    <Property Name="mapId" Type="usmallint" Nullable="false" />
+    <Property Name="posX" Type="float" Nullable="false" />
+    <Property Name="posY" Type="float" Nullable="false" />
+    <Property Name="posZ" Type="float" Nullable="false" />
+    <Property Name="facing" Type="float" Nullable="false" />
+    <Property Name="closedBy" Type="bigint" Nullable="false" />
+    <Property Name="assignedTo" Type="ubigint" Nullable="false" />
+    <Property Name="comment" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="group_instance">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="instance" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="instance" Type="uint" Nullable="false" />
+    <Property Name="permanent" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="group_member">
+    <Key>
+      <PropertyRef Name="memberGuid" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="memberGuid" Type="ubigint" Nullable="false" />
+    <Property Name="memberFlags" Type="utinyint" Nullable="false" />
+    <Property Name="subgroup" Type="utinyint" Nullable="false" />
+    <Property Name="roles" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="groups">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="leaderGuid" Type="ubigint" Nullable="false" />
+    <Property Name="lootMethod" Type="utinyint" Nullable="false" />
+    <Property Name="looterGuid" Type="ubigint" Nullable="false" />
+    <Property Name="lootThreshold" Type="utinyint" Nullable="false" />
+    <Property Name="icon1" Type="guid" Nullable="false" />
+    <Property Name="icon2" Type="guid" Nullable="false" />
+    <Property Name="icon3" Type="guid" Nullable="false" />
+    <Property Name="icon4" Type="guid" Nullable="false" />
+    <Property Name="icon5" Type="guid" Nullable="false" />
+    <Property Name="icon6" Type="guid" Nullable="false" />
+    <Property Name="icon7" Type="guid" Nullable="false" />
+    <Property Name="icon8" Type="guid" Nullable="false" />
+    <Property Name="groupType" Type="utinyint" Nullable="false" />
+    <Property Name="difficulty" Type="utinyint" Nullable="false" />
+    <Property Name="raidDifficulty" Type="utinyint" Nullable="false" />
+    <Property Name="legacyRaidDifficulty" Type="utinyint" Nullable="false" />
+    <Property Name="masterLooterGuid" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild">
+    <Key>
+      <PropertyRef Name="guildid" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="24" Nullable="false" />
+    <Property Name="leaderguid" Type="ubigint" Nullable="false" />
+    <Property Name="EmblemStyle" Type="utinyint" Nullable="false" />
+    <Property Name="EmblemColor" Type="utinyint" Nullable="false" />
+    <Property Name="BorderStyle" Type="utinyint" Nullable="false" />
+    <Property Name="BorderColor" Type="utinyint" Nullable="false" />
+    <Property Name="BackgroundColor" Type="utinyint" Nullable="false" />
+    <Property Name="info" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="motd" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="createdate" Type="uint" Nullable="false" />
+    <Property Name="BankMoney" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_achievement">
+    <Key>
+      <PropertyRef Name="guildId" />
+      <PropertyRef Name="achievement" />
+    </Key>
+    <Property Name="guildId" Type="ubigint" Nullable="false" />
+    <Property Name="achievement" Type="uint" Nullable="false" />
+    <Property Name="date" Type="uint" Nullable="false" />
+    <Property Name="guids" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_achievement_progress">
+    <Key>
+      <PropertyRef Name="guildId" />
+      <PropertyRef Name="criteria" />
+    </Key>
+    <Property Name="guildId" Type="ubigint" Nullable="false" />
+    <Property Name="criteria" Type="uint" Nullable="false" />
+    <Property Name="counter" Type="ubigint" Nullable="false" />
+    <Property Name="date" Type="uint" Nullable="false" />
+    <Property Name="completedGuid" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_bank_eventlog">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="LogGuid" />
+      <PropertyRef Name="TabId" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="LogGuid" Type="uint" Nullable="false" />
+    <Property Name="TabId" Type="utinyint" Nullable="false" />
+    <Property Name="EventType" Type="utinyint" Nullable="false" />
+    <Property Name="PlayerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="ItemOrMoney" Type="ubigint" Nullable="false" />
+    <Property Name="ItemStackCount" Type="usmallint" Nullable="false" />
+    <Property Name="DestTabId" Type="utinyint" Nullable="false" />
+    <Property Name="TimeStamp" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_bank_item">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="TabId" />
+      <PropertyRef Name="SlotId" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="TabId" Type="utinyint" Nullable="false" />
+    <Property Name="SlotId" Type="utinyint" Nullable="false" />
+    <Property Name="item_guid" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_bank_right">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="TabId" />
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="TabId" Type="utinyint" Nullable="false" />
+    <Property Name="rid" Type="utinyint" Nullable="false" />
+    <Property Name="gbright" Type="tinyint" Nullable="false" />
+    <Property Name="SlotPerDay" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_bank_tab">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="TabId" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="TabId" Type="utinyint" Nullable="false" />
+    <Property Name="TabName" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="TabIcon" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="TabText" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="guild_eventlog">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="LogGuid" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="LogGuid" Type="uint" Nullable="false" />
+    <Property Name="EventType" Type="utinyint" Nullable="false" />
+    <Property Name="PlayerGuid1" Type="ubigint" Nullable="false" />
+    <Property Name="PlayerGuid2" Type="ubigint" Nullable="false" />
+    <Property Name="NewRank" Type="utinyint" Nullable="false" />
+    <Property Name="TimeStamp" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_finder_applicant">
+    <Key>
+      <PropertyRef Name="guildId" />
+      <PropertyRef Name="playerGuid" />
+    </Key>
+    <Property Name="guildId" Type="ubigint" Nullable="false" />
+    <Property Name="playerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="availability" Type="utinyint" />
+    <Property Name="classRole" Type="utinyint" />
+    <Property Name="interests" Type="utinyint" />
+    <Property Name="comment" Type="varchar" MaxLength="255" />
+    <Property Name="submitTime" Type="uint" />
+  </EntityType>
+  <EntityType Name="guild_finder_guild_settings">
+    <Key>
+      <PropertyRef Name="guildId" />
+    </Key>
+    <Property Name="guildId" Type="ubigint" Nullable="false" />
+    <Property Name="availability" Type="utinyint" Nullable="false" />
+    <Property Name="classRoles" Type="utinyint" Nullable="false" />
+    <Property Name="interests" Type="utinyint" Nullable="false" />
+    <Property Name="level" Type="utinyint" Nullable="false" />
+    <Property Name="listed" Type="utinyint" Nullable="false" />
+    <Property Name="comment" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.archive.guild_member' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="guild_member">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="rank" />
+      <PropertyRef Name="pnote" />
+      <PropertyRef Name="offnote" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="rank" Type="utinyint" Nullable="false" />
+    <Property Name="pnote" Type="varchar" MaxLength="31" Nullable="false" />
+    <Property Name="offnote" Type="varchar" MaxLength="31" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_member_withdraw">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="tab0" Type="uint" Nullable="false" />
+    <Property Name="tab1" Type="uint" Nullable="false" />
+    <Property Name="tab2" Type="uint" Nullable="false" />
+    <Property Name="tab3" Type="uint" Nullable="false" />
+    <Property Name="tab4" Type="uint" Nullable="false" />
+    <Property Name="tab5" Type="uint" Nullable="false" />
+    <Property Name="tab6" Type="uint" Nullable="false" />
+    <Property Name="tab7" Type="uint" Nullable="false" />
+    <Property Name="money" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_newslog">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="LogGuid" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="LogGuid" Type="uint" Nullable="false" />
+    <Property Name="EventType" Type="utinyint" Nullable="false" />
+    <Property Name="PlayerGuid" Type="ubigint" Nullable="false" />
+    <Property Name="Flags" Type="uint" Nullable="false" />
+    <Property Name="Value" Type="uint" Nullable="false" />
+    <Property Name="TimeStamp" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="guild_rank">
+    <Key>
+      <PropertyRef Name="guildid" />
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="guildid" Type="ubigint" Nullable="false" />
+    <Property Name="rid" Type="utinyint" Nullable="false" />
+    <Property Name="rname" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="rights" Type="umediumint" Nullable="false" />
+    <Property Name="BankMoneyPerDay" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instance">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="map" Type="usmallint" Nullable="false" />
+    <Property Name="resettime" Type="uint" Nullable="false" />
+    <Property Name="difficulty" Type="utinyint" Nullable="false" />
+    <Property Name="completedEncounters" Type="uint" Nullable="false" />
+    <Property Name="data" Type="tinytext" Nullable="false" />
+    <Property Name="entranceId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instance_reset">
+    <Key>
+      <PropertyRef Name="mapid" />
+      <PropertyRef Name="difficulty" />
+    </Key>
+    <Property Name="mapid" Type="usmallint" Nullable="false" />
+    <Property Name="difficulty" Type="utinyint" Nullable="false" />
+    <Property Name="resettime" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="instance_scenario_progress">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="criteria" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="criteria" Type="uint" Nullable="false" />
+    <Property Name="counter" Type="ubigint" Nullable="false" />
+    <Property Name="date" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="item_instance">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="ubigint" Nullable="false" />
+    <Property Name="itemEntry" Type="umediumint" Nullable="false" />
+    <Property Name="owner_guid" Type="ubigint" Nullable="false" />
+    <Property Name="creatorGuid" Type="ubigint" Nullable="false" />
+    <Property Name="giftCreatorGuid" Type="ubigint" Nullable="false" />
+    <Property Name="count" Type="uint" Nullable="false" />
+    <Property Name="duration" Type="int" Nullable="false" />
+    <Property Name="charges" Type="tinytext" />
+    <Property Name="flags" Type="umediumint" Nullable="false" />
+    <Property Name="enchantments" Type="text" Nullable="false" />
+    <Property Name="randomPropertyType" Type="utinyint" Nullable="false" />
+    <Property Name="randomPropertyId" Type="uint" Nullable="false" />
+    <Property Name="durability" Type="usmallint" Nullable="false" />
+    <Property Name="playedTime" Type="uint" Nullable="false" />
+    <Property Name="text" Type="text" />
+    <Property Name="transmogrification" Type="uint" Nullable="false" />
+    <Property Name="upgradeId" Type="uint" Nullable="false" />
+    <Property Name="enchantIllusion" Type="uint" Nullable="false" />
+    <Property Name="battlePetSpeciesId" Type="uint" Nullable="false" />
+    <Property Name="battlePetBreedData" Type="uint" Nullable="false" />
+    <Property Name="battlePetLevel" Type="usmallint" Nullable="false" />
+    <Property Name="battlePetDisplayId" Type="uint" Nullable="false" />
+    <Property Name="context" Type="utinyint" Nullable="false" />
+    <Property Name="bonusListIDs" Type="text" />
+  </EntityType>
+  <EntityType Name="item_instance_artifact">
+    <Key>
+      <PropertyRef Name="itemGuid" />
+    </Key>
+    <Property Name="itemGuid" Type="ubigint" Nullable="false" />
+    <Property Name="xp" Type="ubigint" Nullable="false" />
+    <Property Name="artifactAppearanceId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="item_instance_artifact_powers">
+    <Key>
+      <PropertyRef Name="itemGuid" />
+      <PropertyRef Name="artifactPowerId" />
+    </Key>
+    <Property Name="itemGuid" Type="ubigint" Nullable="false" />
+    <Property Name="artifactPowerId" Type="uint" Nullable="false" />
+    <Property Name="purchasedRank" Type="utinyint" />
+  </EntityType>
+  <EntityType Name="item_instance_gems">
+    <Key>
+      <PropertyRef Name="itemGuid" />
+    </Key>
+    <Property Name="itemGuid" Type="ubigint" Nullable="false" />
+    <Property Name="gemItemId1" Type="uint" Nullable="false" />
+    <Property Name="gemBonuses1" Type="text" />
+    <Property Name="gemContext1" Type="utinyint" Nullable="false" />
+    <Property Name="gemScalingLevel1" Type="uint" Nullable="false" />
+    <Property Name="gemItemId2" Type="uint" Nullable="false" />
+    <Property Name="gemBonuses2" Type="text" />
+    <Property Name="gemContext2" Type="utinyint" Nullable="false" />
+    <Property Name="gemScalingLevel2" Type="uint" Nullable="false" />
+    <Property Name="gemItemId3" Type="uint" Nullable="false" />
+    <Property Name="gemBonuses3" Type="text" />
+    <Property Name="gemContext3" Type="utinyint" Nullable="false" />
+    <Property Name="gemScalingLevel3" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="item_instance_modifiers">
+    <Key>
+      <PropertyRef Name="itemGuid" />
+    </Key>
+    <Property Name="itemGuid" Type="ubigint" Nullable="false" />
+    <Property Name="fixedScalingLevel" Type="uint" />
+    <Property Name="artifactKnowledgeLevel" Type="uint" />
+  </EntityType>
+  <EntityType Name="item_instance_transmog">
+    <Key>
+      <PropertyRef Name="itemGuid" />
+    </Key>
+    <Property Name="itemGuid" Type="ubigint" Nullable="false" />
+    <Property Name="itemModifiedAppearanceAllSpecs" Type="int" Nullable="false" />
+    <Property Name="itemModifiedAppearanceSpec1" Type="int" Nullable="false" />
+    <Property Name="itemModifiedAppearanceSpec2" Type="int" Nullable="false" />
+    <Property Name="itemModifiedAppearanceSpec3" Type="int" Nullable="false" />
+    <Property Name="itemModifiedAppearanceSpec4" Type="int" Nullable="false" />
+    <Property Name="spellItemEnchantmentAllSpecs" Type="int" Nullable="false" />
+    <Property Name="spellItemEnchantmentSpec1" Type="int" Nullable="false" />
+    <Property Name="spellItemEnchantmentSpec2" Type="int" Nullable="false" />
+    <Property Name="spellItemEnchantmentSpec3" Type="int" Nullable="false" />
+    <Property Name="spellItemEnchantmentSpec4" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="item_loot_items">
+    <Key>
+      <PropertyRef Name="container_id" />
+      <PropertyRef Name="item_id" />
+    </Key>
+    <Property Name="container_id" Type="ubigint" Nullable="false" />
+    <Property Name="item_id" Type="uint" Nullable="false" />
+    <Property Name="item_count" Type="int" Nullable="false" />
+    <Property Name="follow_rules" Type="bool" Nullable="false" />
+    <Property Name="ffa" Type="bool" Nullable="false" />
+    <Property Name="blocked" Type="bool" Nullable="false" />
+    <Property Name="counted" Type="bool" Nullable="false" />
+    <Property Name="under_threshold" Type="bool" Nullable="false" />
+    <Property Name="needs_quest" Type="bool" Nullable="false" />
+    <Property Name="rnd_type" Type="utinyint" Nullable="false" />
+    <Property Name="rnd_prop" Type="uint" Nullable="false" />
+    <Property Name="rnd_suffix" Type="int" Nullable="false" />
+    <Property Name="context" Type="utinyint" Nullable="false" />
+    <Property Name="bonus_list_ids" Type="text" />
+  </EntityType>
+  <EntityType Name="item_loot_money">
+    <Key>
+      <PropertyRef Name="container_id" />
+    </Key>
+    <Property Name="container_id" Type="bigint" Nullable="false" />
+    <Property Name="money" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="item_refund_instance">
+    <Key>
+      <PropertyRef Name="item_guid" />
+      <PropertyRef Name="player_guid" />
+    </Key>
+    <Property Name="item_guid" Type="ubigint" Nullable="false" />
+    <Property Name="player_guid" Type="ubigint" Nullable="false" />
+    <Property Name="paidMoney" Type="ubigint" Nullable="false" />
+    <Property Name="paidExtendedCost" Type="usmallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="item_soulbound_trade_data">
+    <Key>
+      <PropertyRef Name="itemGuid" />
+    </Key>
+    <Property Name="itemGuid" Type="ubigint" Nullable="false" />
+    <Property Name="allowedPlayers" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lfg_data">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="dungeon" Type="uint" Nullable="false" />
+    <Property Name="state" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="messageType" Type="utinyint" Nullable="false" />
+    <Property Name="stationery" Type="tinyint" Nullable="false" />
+    <Property Name="mailTemplateId" Type="usmallint" Nullable="false" />
+    <Property Name="sender" Type="ubigint" Nullable="false" />
+    <Property Name="receiver" Type="ubigint" Nullable="false" />
+    <Property Name="subject" Type="longtext" />
+    <Property Name="body" Type="longtext" />
+    <Property Name="has_items" Type="utinyint" Nullable="false" />
+    <Property Name="expire_time" Type="uint" Nullable="false" />
+    <Property Name="deliver_time" Type="uint" Nullable="false" />
+    <Property Name="money" Type="ubigint" Nullable="false" />
+    <Property Name="cod" Type="ubigint" Nullable="false" />
+    <Property Name="checked" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mail_items">
+    <Key>
+      <PropertyRef Name="item_guid" />
+    </Key>
+    <Property Name="mail_id" Type="uint" Nullable="false" />
+    <Property Name="item_guid" Type="ubigint" Nullable="false" />
+    <Property Name="receiver" Type="ubigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pet_aura">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="spell" />
+      <PropertyRef Name="effectMask" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="casterGuid" Type="guid" Nullable="false" />
+    <Property Name="spell" Type="uint" Nullable="false" />
+    <Property Name="effectMask" Type="uint" Nullable="false" />
+    <Property Name="recalculateMask" Type="uint" Nullable="false" />
+    <Property Name="stackCount" Type="utinyint" Nullable="false" />
+    <Property Name="maxDuration" Type="int" Nullable="false" />
+    <Property Name="remainTime" Type="int" Nullable="false" />
+    <Property Name="remainCharges" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pet_aura_effect">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="casterGuid" />
+      <PropertyRef Name="spell" />
+      <PropertyRef Name="effectMask" />
+      <PropertyRef Name="effectIndex" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="casterGuid" Type="guid" Nullable="false" />
+    <Property Name="spell" Type="uint" Nullable="false" />
+    <Property Name="effectMask" Type="uint" Nullable="false" />
+    <Property Name="effectIndex" Type="utinyint" Nullable="false" />
+    <Property Name="amount" Type="int" Nullable="false" />
+    <Property Name="baseAmount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pet_spell">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="spell" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="spell" Type="umediumint" Nullable="false" />
+    <Property Name="active" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.archive.pet_spell_charges' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="pet_spell_charges">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="categoryId" />
+      <PropertyRef Name="rechargeStart" />
+      <PropertyRef Name="rechargeEnd" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="categoryId" Type="uint" Nullable="false" />
+    <Property Name="rechargeStart" Type="uint" Nullable="false" />
+    <Property Name="rechargeEnd" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pet_spell_cooldown">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="spell" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="spell" Type="uint" Nullable="false" />
+    <Property Name="time" Type="uint" Nullable="false" />
+    <Property Name="categoryId" Type="uint" Nullable="false" />
+    <Property Name="categoryEnd" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="petition">
+    <Key>
+      <PropertyRef Name="ownerguid" />
+    </Key>
+    <Property Name="ownerguid" Type="ubigint" Nullable="false" />
+    <Property Name="petitionguid" Type="ubigint" />
+    <Property Name="name" Type="varchar" MaxLength="24" Nullable="false" />
+  </EntityType>
+  <EntityType Name="petition_sign">
+    <Key>
+      <PropertyRef Name="petitionguid" />
+      <PropertyRef Name="playerguid" />
+    </Key>
+    <Property Name="ownerguid" Type="ubigint" Nullable="false" />
+    <Property Name="petitionguid" Type="ubigint" Nullable="false" />
+    <Property Name="playerguid" Type="ubigint" Nullable="false" />
+    <Property Name="player_account" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pool_quest_save">
+    <Key>
+      <PropertyRef Name="pool_id" />
+      <PropertyRef Name="quest_id" />
+    </Key>
+    <Property Name="pool_id" Type="uint" Nullable="false" />
+    <Property Name="quest_id" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pvpstats_battlegrounds">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="winner_faction" Type="tinyint" Nullable="false" />
+    <Property Name="bracket_id" Type="utinyint" Nullable="false" />
+    <Property Name="type" Type="utinyint" Nullable="false" />
+    <Property Name="date" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pvpstats_players">
+    <Key>
+      <PropertyRef Name="battleground_id" />
+      <PropertyRef Name="character_guid" />
+    </Key>
+    <Property Name="battleground_id" Type="ubigint" Nullable="false" />
+    <Property Name="character_guid" Type="ubigint" Nullable="false" />
+    <Property Name="winner" Type="bit" Nullable="false" />
+    <Property Name="score_killing_blows" Type="umediumint" Nullable="false" />
+    <Property Name="score_deaths" Type="umediumint" Nullable="false" />
+    <Property Name="score_honorable_kills" Type="umediumint" Nullable="false" />
+    <Property Name="score_bonus_honor" Type="umediumint" Nullable="false" />
+    <Property Name="score_damage_done" Type="umediumint" Nullable="false" />
+    <Property Name="score_healing_done" Type="umediumint" Nullable="false" />
+    <Property Name="attr_1" Type="umediumint" Nullable="false" />
+    <Property Name="attr_2" Type="umediumint" Nullable="false" />
+    <Property Name="attr_3" Type="umediumint" Nullable="false" />
+    <Property Name="attr_4" Type="umediumint" Nullable="false" />
+    <Property Name="attr_5" Type="umediumint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="quest_tracker">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="character_guid" />
+    </Key>
+    <Property Name="id" Type="umediumint" Nullable="false" />
+    <Property Name="character_guid" Type="ubigint" Nullable="false" />
+    <Property Name="quest_accept_time" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="quest_complete_time" Type="datetime" Precision="0" />
+    <Property Name="quest_abandon_time" Type="datetime" Precision="0" />
+    <Property Name="completed_by_gm" Type="bool" Nullable="false" />
+    <Property Name="core_hash" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="core_revision" Type="varchar" MaxLength="120" Nullable="false" />
+  </EntityType>
+  <EntityType Name="reserved_name">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="updates">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="hash" Type="char" MaxLength="40" />
+    <Property Name="state" Type="enum" Nullable="false" />
+    <Property Name="timestamp" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="speed" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="updates_include">
+    <Key>
+      <PropertyRef Name="path" />
+    </Key>
+    <Property Name="path" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="state" Type="enum" Nullable="false" />
+  </EntityType>
+  <EntityType Name="warden_action">
+    <Key>
+      <PropertyRef Name="wardenId" />
+    </Key>
+    <Property Name="wardenId" Type="usmallint" Nullable="false" />
+    <Property Name="action" Type="utinyint" />
+  </EntityType>
+  <EntityType Name="worldstates">
+    <Key>
+      <PropertyRef Name="entry" />
+    </Key>
+    <Property Name="entry" Type="uint" Nullable="false" />
+    <Property Name="value" Type="uint" Nullable="false" />
+    <Property Name="comment" Type="tinytext" />
+  </EntityType>
+  <Association Name="fk_foll_dbid">
+    <End Role="character_garrison_followers" Type="Self.character_garrison_followers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="character_garrison_follower_abilities" Type="Self.character_garrison_follower_abilities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="character_garrison_followers">
+        <PropertyRef Name="dbId" />
+      </Principal>
+      <Dependent Role="character_garrison_follower_abilities">
+        <PropertyRef Name="dbId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_foll_owner">
+    <End Role="characters" Type="Self.characters" Multiplicity="1" />
+    <End Role="character_garrison_followers" Type="Self.character_garrison_followers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="characters">
+        <PropertyRef Name="guid" />
+      </Principal>
+      <Dependent Role="character_garrison_followers">
+        <PropertyRef Name="guid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="archiveModelStoreContainer">
+    <EntitySet Name="account_data" EntityType="Self.account_data" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="account_instance_times" EntityType="Self.account_instance_times" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="account_tutorial" EntityType="Self.account_tutorial" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="arena_team" EntityType="Self.arena_team" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="arena_team_member" EntityType="Self.arena_team_member" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="auctionhouse" EntityType="Self.auctionhouse" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="blackmarket_auctions" EntityType="Self.blackmarket_auctions" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="bugreport" EntityType="Self.bugreport" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="calendar_events" EntityType="Self.calendar_events" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="calendar_invites" EntityType="Self.calendar_invites" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="channels" EntityType="Self.channels" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_account_data" EntityType="Self.character_account_data" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_achievement" EntityType="Self.character_achievement" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_achievement_progress" EntityType="Self.character_achievement_progress" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_action" EntityType="Self.character_action" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_arena_stats" EntityType="Self.character_arena_stats" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_aura" EntityType="Self.character_aura" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_aura_effect" EntityType="Self.character_aura_effect" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_banned" EntityType="Self.character_banned" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_battleground_data" EntityType="Self.character_battleground_data" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_battleground_random" EntityType="Self.character_battleground_random" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_cuf_profiles" EntityType="Self.character_cuf_profiles" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_currency" EntityType="Self.character_currency" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_declinedname" EntityType="Self.character_declinedname" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_equipmentsets" EntityType="Self.character_equipmentsets" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_fishingsteps" EntityType="Self.character_fishingsteps" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_garrison" EntityType="Self.character_garrison" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_garrison_blueprints" EntityType="Self.character_garrison_blueprints" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_garrison_buildings" EntityType="Self.character_garrison_buildings" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_garrison_follower_abilities" EntityType="Self.character_garrison_follower_abilities" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_garrison_followers" EntityType="Self.character_garrison_followers" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_gifts" EntityType="Self.character_gifts" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_glyphs" EntityType="Self.character_glyphs" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_homebind" EntityType="Self.character_homebind" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_instance" EntityType="Self.character_instance" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_inventory" EntityType="Self.character_inventory" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_pet" EntityType="Self.character_pet" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_pet_declinedname" EntityType="Self.character_pet_declinedname" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus" EntityType="Self.character_queststatus" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_daily" EntityType="Self.character_queststatus_daily" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_monthly" EntityType="Self.character_queststatus_monthly" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_objectives" EntityType="Self.character_queststatus_objectives" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_objectives_criteria" EntityType="Self.character_queststatus_objectives_criteria" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_objectives_criteria_progress" EntityType="Self.character_queststatus_objectives_criteria_progress" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_rewarded" EntityType="Self.character_queststatus_rewarded" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_seasonal" EntityType="Self.character_queststatus_seasonal" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_queststatus_weekly" EntityType="Self.character_queststatus_weekly" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_reputation" EntityType="Self.character_reputation" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_skills" EntityType="Self.character_skills" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_social" EntityType="Self.character_social" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_spell" EntityType="Self.character_spell" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_spell_cooldown" EntityType="Self.character_spell_cooldown" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_stats" EntityType="Self.character_stats" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_talent" EntityType="Self.character_talent" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_transmog_outfits" EntityType="Self.character_transmog_outfits" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_void_storage" EntityType="Self.character_void_storage" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="characters" EntityType="Self.characters" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="corpse" EntityType="Self.corpse" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="corpse_phases" EntityType="Self.corpse_phases" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="creature_respawn" EntityType="Self.creature_respawn" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="game_event_condition_save" EntityType="Self.game_event_condition_save" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="game_event_save" EntityType="Self.game_event_save" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="gameobject_respawn" EntityType="Self.gameobject_respawn" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="gm_bug" EntityType="Self.gm_bug" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="gm_complaint" EntityType="Self.gm_complaint" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="gm_complaint_chatlog" EntityType="Self.gm_complaint_chatlog" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="gm_suggestion" EntityType="Self.gm_suggestion" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="group_instance" EntityType="Self.group_instance" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="group_member" EntityType="Self.group_member" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="groups" EntityType="Self.groups" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild" EntityType="Self.guild" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_achievement" EntityType="Self.guild_achievement" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_achievement_progress" EntityType="Self.guild_achievement_progress" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_bank_eventlog" EntityType="Self.guild_bank_eventlog" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_bank_item" EntityType="Self.guild_bank_item" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_bank_right" EntityType="Self.guild_bank_right" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_bank_tab" EntityType="Self.guild_bank_tab" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_eventlog" EntityType="Self.guild_eventlog" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_finder_applicant" EntityType="Self.guild_finder_applicant" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_finder_guild_settings" EntityType="Self.guild_finder_guild_settings" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_member_withdraw" EntityType="Self.guild_member_withdraw" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_newslog" EntityType="Self.guild_newslog" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="guild_rank" EntityType="Self.guild_rank" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="instance" EntityType="Self.instance" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="instance_reset" EntityType="Self.instance_reset" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="instance_scenario_progress" EntityType="Self.instance_scenario_progress" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_instance" EntityType="Self.item_instance" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_instance_artifact" EntityType="Self.item_instance_artifact" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_instance_artifact_powers" EntityType="Self.item_instance_artifact_powers" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_instance_gems" EntityType="Self.item_instance_gems" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_instance_modifiers" EntityType="Self.item_instance_modifiers" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_instance_transmog" EntityType="Self.item_instance_transmog" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_loot_items" EntityType="Self.item_loot_items" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_loot_money" EntityType="Self.item_loot_money" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_refund_instance" EntityType="Self.item_refund_instance" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="item_soulbound_trade_data" EntityType="Self.item_soulbound_trade_data" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="lfg_data" EntityType="Self.lfg_data" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="mail" EntityType="Self.mail" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="mail_items" EntityType="Self.mail_items" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="pet_aura" EntityType="Self.pet_aura" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="pet_aura_effect" EntityType="Self.pet_aura_effect" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="pet_spell" EntityType="Self.pet_spell" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="pet_spell_cooldown" EntityType="Self.pet_spell_cooldown" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="petition" EntityType="Self.petition" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="petition_sign" EntityType="Self.petition_sign" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="pool_quest_save" EntityType="Self.pool_quest_save" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="pvpstats_battlegrounds" EntityType="Self.pvpstats_battlegrounds" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="pvpstats_players" EntityType="Self.pvpstats_players" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="quest_tracker" EntityType="Self.quest_tracker" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="reserved_name" EntityType="Self.reserved_name" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="updates" EntityType="Self.updates" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="updates_include" EntityType="Self.updates_include" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="warden_action" EntityType="Self.warden_action" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="worldstates" EntityType="Self.worldstates" Schema="archive" store:Type="Tables" />
+    <EntitySet Name="character_spell_charges" EntityType="Self.character_spell_charges" store:Type="Tables" store:Schema="archive">
+      <DefiningQuery>SELECT
+`character_spell_charges`.`guid`, 
+`character_spell_charges`.`categoryId`, 
+`character_spell_charges`.`rechargeStart`, 
+`character_spell_charges`.`rechargeEnd`
+FROM `character_spell_charges` AS `character_spell_charges`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="guild_member" EntityType="Self.guild_member" store:Type="Tables" store:Schema="archive">
+      <DefiningQuery>SELECT
+`guild_member`.`guildid`, 
+`guild_member`.`guid`, 
+`guild_member`.`rank`, 
+`guild_member`.`pnote`, 
+`guild_member`.`offnote`
+FROM `guild_member` AS `guild_member`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="pet_spell_charges" EntityType="Self.pet_spell_charges" store:Type="Tables" store:Schema="archive">
+      <DefiningQuery>SELECT
+`pet_spell_charges`.`guid`, 
+`pet_spell_charges`.`categoryId`, 
+`pet_spell_charges`.`rechargeStart`, 
+`pet_spell_charges`.`rechargeEnd`
+FROM `pet_spell_charges` AS `pet_spell_charges`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="fk_foll_dbid" Association="Self.fk_foll_dbid">
+      <End Role="character_garrison_followers" EntitySet="character_garrison_followers" />
+      <End Role="character_garrison_follower_abilities" EntitySet="character_garrison_follower_abilities" />
+    </AssociationSet>
+    <AssociationSet Name="fk_foll_owner" Association="Self.fk_foll_owner">
+      <End Role="characters" EntitySet="characters" />
+      <End Role="character_garrison_followers" EntitySet="character_garrison_followers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

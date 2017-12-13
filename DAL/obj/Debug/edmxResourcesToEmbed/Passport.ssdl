@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="passportModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sha_pass_hash" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="sessionkey" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="v" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="s" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="token_key" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="reg_mail" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="joindate" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="last_ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="last_attempt_ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="failed_logins" Type="uint" Nullable="false" />
+    <Property Name="locked" Type="utinyint" Nullable="false" />
+    <Property Name="lock_country" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="last_login" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="online" Type="utinyint" Nullable="false" />
+    <Property Name="expansion" Type="utinyint" Nullable="false" />
+    <Property Name="mutetime" Type="bigint" Nullable="false" />
+    <Property Name="mutereason" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="muteby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="locale" Type="utinyint" Nullable="false" />
+    <Property Name="os" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="recruiter" Type="uint" Nullable="false" />
+    <Property Name="battlenet_account" Type="uint" />
+    <Property Name="battlenet_index" Type="utinyint" />
+  </EntityType>
+  <EntityType Name="account_access">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="RealmID" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="gmlevel" Type="utinyint" Nullable="false" />
+    <Property Name="RealmID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_banned">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="bandate" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="bandate" Type="uint" Nullable="false" />
+    <Property Name="unbandate" Type="uint" Nullable="false" />
+    <Property Name="bannedby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="banreason" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="active" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="account_last_played_character">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="region" />
+      <PropertyRef Name="battlegroup" />
+    </Key>
+    <Property Name="accountId" Type="uint" Nullable="false" />
+    <Property Name="region" Type="utinyint" Nullable="false" />
+    <Property Name="battlegroup" Type="utinyint" Nullable="false" />
+    <Property Name="realmId" Type="uint" />
+    <Property Name="characterName" Type="varchar" MaxLength="12" />
+    <Property Name="characterGUID" Type="ubigint" />
+    <Property Name="lastPlayedTime" Type="uint" />
+  </EntityType>
+  <EntityType Name="account_muted">
+    <Key>
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="mutedate" />
+    </Key>
+    <Property Name="guid" Type="uint" Nullable="false" />
+    <Property Name="mutedate" Type="uint" Nullable="false" />
+    <Property Name="mutetime" Type="uint" Nullable="false" />
+    <Property Name="mutedby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mutereason" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="autobroadcast">
+    <Key>
+      <PropertyRef Name="realmid" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="realmid" Type="int" Nullable="false" />
+    <Property Name="id" Type="utinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="weight" Type="utinyint" />
+    <Property Name="text" Type="longtext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battle_pet_slots">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="battlenetAccountId" />
+    </Key>
+    <Property Name="id" Type="tinyint" Nullable="false" />
+    <Property Name="battlenetAccountId" Type="int" Nullable="false" />
+    <Property Name="battlePetGuid" Type="bigint" Nullable="false" />
+    <Property Name="locked" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battle_pets">
+    <Key>
+      <PropertyRef Name="guid" />
+    </Key>
+    <Property Name="guid" Type="bigint" Nullable="false" />
+    <Property Name="battlenetAccountId" Type="int" Nullable="false" />
+    <Property Name="species" Type="int" Nullable="false" />
+    <Property Name="breed" Type="smallint" Nullable="false" />
+    <Property Name="level" Type="smallint" Nullable="false" />
+    <Property Name="exp" Type="smallint" Nullable="false" />
+    <Property Name="health" Type="int" Nullable="false" />
+    <Property Name="quality" Type="tinyint" Nullable="false" />
+    <Property Name="flags" Type="smallint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_bans">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="bandate" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="bandate" Type="uint" Nullable="false" />
+    <Property Name="unbandate" Type="uint" Nullable="false" />
+    <Property Name="bannedby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="banreason" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_heirlooms">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="itemId" />
+    </Key>
+    <Property Name="accountId" Type="uint" Nullable="false" />
+    <Property Name="itemId" Type="uint" Nullable="false" />
+    <Property Name="flags" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_mounts">
+    <Key>
+      <PropertyRef Name="battlenetAccountId" />
+      <PropertyRef Name="mountSpellId" />
+    </Key>
+    <Property Name="battlenetAccountId" Type="uint" Nullable="false" />
+    <Property Name="mountSpellId" Type="uint" Nullable="false" />
+    <Property Name="flags" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_account_toys">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="itemId" />
+    </Key>
+    <Property Name="accountId" Type="uint" Nullable="false" />
+    <Property Name="itemId" Type="int" Nullable="false" />
+    <Property Name="isFavourite" Type="bool" />
+  </EntityType>
+  <EntityType Name="battlenet_accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="320" Nullable="false" />
+    <Property Name="sha_pass_hash" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="joindate" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="last_ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="failed_logins" Type="uint" Nullable="false" />
+    <Property Name="locked" Type="utinyint" Nullable="false" />
+    <Property Name="lock_country" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="last_login" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="online" Type="utinyint" Nullable="false" />
+    <Property Name="locale" Type="utinyint" Nullable="false" />
+    <Property Name="os" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="LastCharacterUndelete" Type="uint" Nullable="false" />
+    <Property Name="LoginTicket" Type="varchar" MaxLength="64" />
+    <Property Name="LoginTicketExpiry" Type="uint" />
+  </EntityType>
+  <EntityType Name="battlenet_item_appearances">
+    <Key>
+      <PropertyRef Name="battlenetAccountId" />
+      <PropertyRef Name="blobIndex" />
+    </Key>
+    <Property Name="battlenetAccountId" Type="uint" Nullable="false" />
+    <Property Name="blobIndex" Type="usmallint" Nullable="false" />
+    <Property Name="appearanceMask" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="battlenet_item_favorite_appearances">
+    <Key>
+      <PropertyRef Name="battlenetAccountId" />
+      <PropertyRef Name="itemModifiedAppearanceId" />
+    </Key>
+    <Property Name="battlenetAccountId" Type="uint" Nullable="false" />
+    <Property Name="itemModifiedAppearanceId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ip_banned">
+    <Key>
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="bandate" />
+    </Key>
+    <Property Name="ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="bandate" Type="uint" Nullable="false" />
+    <Property Name="unbandate" Type="uint" Nullable="false" />
+    <Property Name="bannedby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="banreason" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.passport.ip2nation' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ip2nation">
+    <Key>
+      <PropertyRef Name="ip" />
+      <PropertyRef Name="country" />
+    </Key>
+    <Property Name="ip" Type="uint" Nullable="false" />
+    <Property Name="country" Type="char" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ip2nationcountries">
+    <Key>
+      <PropertyRef Name="code" />
+    </Key>
+    <Property Name="code" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="iso_code_2" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="iso_code_3" Type="varchar" MaxLength="3" />
+    <Property Name="iso_country" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="country" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="lat" Type="float" Nullable="false" />
+    <Property Name="lon" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.passport.logs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="logs">
+    <Key>
+      <PropertyRef Name="time" />
+      <PropertyRef Name="realm" />
+      <PropertyRef Name="type" />
+      <PropertyRef Name="level" />
+    </Key>
+    <Property Name="time" Type="uint" Nullable="false" />
+    <Property Name="realm" Type="uint" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="level" Type="utinyint" Nullable="false" />
+    <Property Name="string" Type="text" />
+  </EntityType>
+  <EntityType Name="logs_ip_actions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="account_id" Type="uint" Nullable="false" />
+    <Property Name="character_guid" Type="ubigint" Nullable="false" />
+    <Property Name="type" Type="utinyint" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="systemnote" Type="text" />
+    <Property Name="unixtime" Type="uint" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="comment" Type="text" />
+  </EntityType>
+  <EntityType Name="rbac_account_permissions">
+    <Key>
+      <PropertyRef Name="accountId" />
+      <PropertyRef Name="permissionId" />
+      <PropertyRef Name="realmId" />
+    </Key>
+    <Property Name="accountId" Type="uint" Nullable="false" />
+    <Property Name="permissionId" Type="uint" Nullable="false" />
+    <Property Name="granted" Type="bool" Nullable="false" />
+    <Property Name="realmId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rbac_default_permissions">
+    <Key>
+      <PropertyRef Name="secId" />
+      <PropertyRef Name="permissionId" />
+      <PropertyRef Name="realmId" />
+    </Key>
+    <Property Name="secId" Type="uint" Nullable="false" />
+    <Property Name="permissionId" Type="uint" Nullable="false" />
+    <Property Name="realmId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rbac_linked_permissions">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="linkedId" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="linkedId" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rbac_permissions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="realmcharacters">
+    <Key>
+      <PropertyRef Name="realmid" />
+      <PropertyRef Name="acctid" />
+    </Key>
+    <Property Name="realmid" Type="uint" Nullable="false" />
+    <Property Name="acctid" Type="uint" Nullable="false" />
+    <Property Name="numchars" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6005: The data type 'ufloat' is currently not supported for the target Entity Framework version; the column 'population' in the table 'def.passport.realmlist' was excluded.-->
+  <EntityType Name="realmlist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="localAddress" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="localSubnetMask" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="port" Type="usmallint" Nullable="false" />
+    <Property Name="icon" Type="utinyint" Nullable="false" />
+    <Property Name="flag" Type="utinyint" Nullable="false" />
+    <Property Name="timezone" Type="utinyint" Nullable="false" />
+    <Property Name="allowedSecurityLevel" Type="utinyint" Nullable="false" />
+    <Property Name="gamebuild" Type="uint" Nullable="false" />
+    <Property Name="Region" Type="utinyint" Nullable="false" />
+    <Property Name="Battlegroup" Type="utinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="updates">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="hash" Type="char" MaxLength="40" />
+    <Property Name="state" Type="enum" Nullable="false" />
+    <Property Name="timestamp" Type="timestamp" Precision="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="speed" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="updates_include">
+    <Key>
+      <PropertyRef Name="path" />
+    </Key>
+    <Property Name="path" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="state" Type="enum" Nullable="false" />
+  </EntityType>
+  <EntityType Name="uptime">
+    <Key>
+      <PropertyRef Name="realmid" />
+      <PropertyRef Name="starttime" />
+    </Key>
+    <Property Name="realmid" Type="uint" Nullable="false" />
+    <Property Name="starttime" Type="uint" Nullable="false" />
+    <Property Name="uptime" Type="uint" Nullable="false" />
+    <Property Name="maxplayers" Type="usmallint" Nullable="false" />
+    <Property Name="revision" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <Association Name="fk__rbac_account_permissions__account">
+    <End Role="account" Type="Self.account" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rbac_account_permissions" Type="Self.rbac_account_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="account">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_account_permissions">
+        <PropertyRef Name="accountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk__rbac_account_roles__rbac_permissions">
+    <End Role="rbac_permissions" Type="Self.rbac_permissions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rbac_account_permissions" Type="Self.rbac_account_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rbac_permissions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_account_permissions">
+        <PropertyRef Name="permissionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk__rbac_default_permissions__rbac_permissions">
+    <End Role="rbac_permissions" Type="Self.rbac_permissions" Multiplicity="1" />
+    <End Role="rbac_default_permissions" Type="Self.rbac_default_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rbac_permissions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_default_permissions">
+        <PropertyRef Name="permissionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk__rbac_linked_permissions__rbac_permissions1">
+    <End Role="rbac_permissions" Type="Self.rbac_permissions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rbac_linked_permissions" Type="Self.rbac_linked_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rbac_permissions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_linked_permissions">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk__rbac_linked_permissions__rbac_permissions2">
+    <End Role="rbac_permissions" Type="Self.rbac_permissions" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="rbac_linked_permissions" Type="Self.rbac_linked_permissions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rbac_permissions">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="rbac_linked_permissions">
+        <PropertyRef Name="linkedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_battlenet_item_appearances">
+    <End Role="battlenet_accounts" Type="Self.battlenet_accounts" Multiplicity="1" />
+    <End Role="battlenet_item_appearances" Type="Self.battlenet_item_appearances" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="battlenet_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="battlenet_item_appearances">
+        <PropertyRef Name="battlenetAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_battlenet_item_favorite_appearances">
+    <End Role="battlenet_accounts" Type="Self.battlenet_accounts" Multiplicity="1" />
+    <End Role="battlenet_item_favorite_appearances" Type="Self.battlenet_item_favorite_appearances" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="battlenet_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="battlenet_item_favorite_appearances">
+        <PropertyRef Name="battlenetAccountId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_bnet_acc">
+    <End Role="battlenet_accounts" Type="Self.battlenet_accounts" Multiplicity="0..1" />
+    <End Role="account" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="battlenet_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="account">
+        <PropertyRef Name="battlenet_account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="passportModelStoreContainer">
+    <EntitySet Name="account" EntityType="Self.account" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="account_access" EntityType="Self.account_access" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="account_banned" EntityType="Self.account_banned" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="account_last_played_character" EntityType="Self.account_last_played_character" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="account_muted" EntityType="Self.account_muted" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="autobroadcast" EntityType="Self.autobroadcast" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battle_pet_slots" EntityType="Self.battle_pet_slots" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battle_pets" EntityType="Self.battle_pets" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battlenet_account_bans" EntityType="Self.battlenet_account_bans" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battlenet_account_heirlooms" EntityType="Self.battlenet_account_heirlooms" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battlenet_account_mounts" EntityType="Self.battlenet_account_mounts" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battlenet_account_toys" EntityType="Self.battlenet_account_toys" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battlenet_accounts" EntityType="Self.battlenet_accounts" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battlenet_item_appearances" EntityType="Self.battlenet_item_appearances" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="battlenet_item_favorite_appearances" EntityType="Self.battlenet_item_favorite_appearances" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="ip_banned" EntityType="Self.ip_banned" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="ip2nationcountries" EntityType="Self.ip2nationcountries" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="logs_ip_actions" EntityType="Self.logs_ip_actions" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="rbac_account_permissions" EntityType="Self.rbac_account_permissions" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="rbac_default_permissions" EntityType="Self.rbac_default_permissions" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="rbac_linked_permissions" EntityType="Self.rbac_linked_permissions" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="rbac_permissions" EntityType="Self.rbac_permissions" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="realmcharacters" EntityType="Self.realmcharacters" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="realmlist" EntityType="Self.realmlist" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="updates" EntityType="Self.updates" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="updates_include" EntityType="Self.updates_include" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="uptime" EntityType="Self.uptime" Schema="passport" store:Type="Tables" />
+    <EntitySet Name="ip2nation" EntityType="Self.ip2nation" store:Type="Tables" store:Schema="passport">
+      <DefiningQuery>SELECT
+`ip2nation`.`ip`, 
+`ip2nation`.`country`
+FROM `ip2nation` AS `ip2nation`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="logs" EntityType="Self.logs" store:Type="Tables" store:Schema="passport">
+      <DefiningQuery>SELECT
+`logs`.`time`, 
+`logs`.`realm`, 
+`logs`.`type`, 
+`logs`.`level`, 
+`logs`.`string`
+FROM `logs` AS `logs`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="fk__rbac_account_permissions__account" Association="Self.fk__rbac_account_permissions__account">
+      <End Role="account" EntitySet="account" />
+      <End Role="rbac_account_permissions" EntitySet="rbac_account_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="fk__rbac_account_roles__rbac_permissions" Association="Self.fk__rbac_account_roles__rbac_permissions">
+      <End Role="rbac_permissions" EntitySet="rbac_permissions" />
+      <End Role="rbac_account_permissions" EntitySet="rbac_account_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="fk__rbac_default_permissions__rbac_permissions" Association="Self.fk__rbac_default_permissions__rbac_permissions">
+      <End Role="rbac_permissions" EntitySet="rbac_permissions" />
+      <End Role="rbac_default_permissions" EntitySet="rbac_default_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="fk__rbac_linked_permissions__rbac_permissions1" Association="Self.fk__rbac_linked_permissions__rbac_permissions1">
+      <End Role="rbac_permissions" EntitySet="rbac_permissions" />
+      <End Role="rbac_linked_permissions" EntitySet="rbac_linked_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="fk__rbac_linked_permissions__rbac_permissions2" Association="Self.fk__rbac_linked_permissions__rbac_permissions2">
+      <End Role="rbac_permissions" EntitySet="rbac_permissions" />
+      <End Role="rbac_linked_permissions" EntitySet="rbac_linked_permissions" />
+    </AssociationSet>
+    <AssociationSet Name="fk_battlenet_item_appearances" Association="Self.fk_battlenet_item_appearances">
+      <End Role="battlenet_accounts" EntitySet="battlenet_accounts" />
+      <End Role="battlenet_item_appearances" EntitySet="battlenet_item_appearances" />
+    </AssociationSet>
+    <AssociationSet Name="fk_battlenet_item_favorite_appearances" Association="Self.fk_battlenet_item_favorite_appearances">
+      <End Role="battlenet_accounts" EntitySet="battlenet_accounts" />
+      <End Role="battlenet_item_favorite_appearances" EntitySet="battlenet_item_favorite_appearances" />
+    </AssociationSet>
+    <AssociationSet Name="fk_bnet_acc" Association="Self.fk_bnet_acc">
+      <End Role="battlenet_accounts" EntitySet="battlenet_accounts" />
+      <End Role="account" EntitySet="account" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

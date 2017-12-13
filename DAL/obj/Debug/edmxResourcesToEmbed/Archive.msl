@@ -1,0 +1,1549 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="archiveModelStoreContainer" CdmEntityContainer="archiveEntities">
+    <EntitySetMapping Name="account_data">
+      <EntityTypeMapping TypeName="archiveModel.account_data">
+        <MappingFragment StoreEntitySet="account_data">
+          <ScalarProperty Name="accountId" ColumnName="accountId" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_instance_times">
+      <EntityTypeMapping TypeName="archiveModel.account_instance_times">
+        <MappingFragment StoreEntitySet="account_instance_times">
+          <ScalarProperty Name="accountId" ColumnName="accountId" />
+          <ScalarProperty Name="instanceId" ColumnName="instanceId" />
+          <ScalarProperty Name="releaseTime" ColumnName="releaseTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="account_tutorial">
+      <EntityTypeMapping TypeName="archiveModel.account_tutorial">
+        <MappingFragment StoreEntitySet="account_tutorial">
+          <ScalarProperty Name="accountId" ColumnName="accountId" />
+          <ScalarProperty Name="tut0" ColumnName="tut0" />
+          <ScalarProperty Name="tut1" ColumnName="tut1" />
+          <ScalarProperty Name="tut2" ColumnName="tut2" />
+          <ScalarProperty Name="tut3" ColumnName="tut3" />
+          <ScalarProperty Name="tut4" ColumnName="tut4" />
+          <ScalarProperty Name="tut5" ColumnName="tut5" />
+          <ScalarProperty Name="tut6" ColumnName="tut6" />
+          <ScalarProperty Name="tut7" ColumnName="tut7" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arena_team">
+      <EntityTypeMapping TypeName="archiveModel.arena_team">
+        <MappingFragment StoreEntitySet="arena_team">
+          <ScalarProperty Name="arenaTeamId" ColumnName="arenaTeamId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="captainGuid" ColumnName="captainGuid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="seasonGames" ColumnName="seasonGames" />
+          <ScalarProperty Name="seasonWins" ColumnName="seasonWins" />
+          <ScalarProperty Name="weekGames" ColumnName="weekGames" />
+          <ScalarProperty Name="weekWins" ColumnName="weekWins" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="backgroundColor" ColumnName="backgroundColor" />
+          <ScalarProperty Name="emblemStyle" ColumnName="emblemStyle" />
+          <ScalarProperty Name="emblemColor" ColumnName="emblemColor" />
+          <ScalarProperty Name="borderStyle" ColumnName="borderStyle" />
+          <ScalarProperty Name="borderColor" ColumnName="borderColor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arena_team_member">
+      <EntityTypeMapping TypeName="archiveModel.arena_team_member">
+        <MappingFragment StoreEntitySet="arena_team_member">
+          <ScalarProperty Name="arenaTeamId" ColumnName="arenaTeamId" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="weekGames" ColumnName="weekGames" />
+          <ScalarProperty Name="weekWins" ColumnName="weekWins" />
+          <ScalarProperty Name="seasonGames" ColumnName="seasonGames" />
+          <ScalarProperty Name="seasonWins" ColumnName="seasonWins" />
+          <ScalarProperty Name="personalRating" ColumnName="personalRating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="auctionhouses">
+      <EntityTypeMapping TypeName="archiveModel.auctionhouse">
+        <MappingFragment StoreEntitySet="auctionhouse">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="auctioneerguid" ColumnName="auctioneerguid" />
+          <ScalarProperty Name="itemguid" ColumnName="itemguid" />
+          <ScalarProperty Name="itemowner" ColumnName="itemowner" />
+          <ScalarProperty Name="buyoutprice" ColumnName="buyoutprice" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="buyguid" ColumnName="buyguid" />
+          <ScalarProperty Name="lastbid" ColumnName="lastbid" />
+          <ScalarProperty Name="startbid" ColumnName="startbid" />
+          <ScalarProperty Name="deposit" ColumnName="deposit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blackmarket_auctions">
+      <EntityTypeMapping TypeName="archiveModel.blackmarket_auctions">
+        <MappingFragment StoreEntitySet="blackmarket_auctions">
+          <ScalarProperty Name="marketId" ColumnName="marketId" />
+          <ScalarProperty Name="currentBid" ColumnName="currentBid" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="numBids" ColumnName="numBids" />
+          <ScalarProperty Name="bidder" ColumnName="bidder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bugreports">
+      <EntityTypeMapping TypeName="archiveModel.bugreport">
+        <MappingFragment StoreEntitySet="bugreport">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="content" ColumnName="content" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calendar_events">
+      <EntityTypeMapping TypeName="archiveModel.calendar_events">
+        <MappingFragment StoreEntitySet="calendar_events">
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="TextureID" ColumnName="TextureID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="LockDate" ColumnName="LockDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="calendar_invites">
+      <EntityTypeMapping TypeName="archiveModel.calendar_invites">
+        <MappingFragment StoreEntitySet="calendar_invites">
+          <ScalarProperty Name="InviteID" ColumnName="InviteID" />
+          <ScalarProperty Name="EventID" ColumnName="EventID" />
+          <ScalarProperty Name="Invitee" ColumnName="Invitee" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+          <ScalarProperty Name="ModerationRank" ColumnName="ModerationRank" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="channels">
+      <EntityTypeMapping TypeName="archiveModel.channel">
+        <MappingFragment StoreEntitySet="channels">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="announce" ColumnName="announce" />
+          <ScalarProperty Name="ownership" ColumnName="ownership" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="bannedList" ColumnName="bannedList" />
+          <ScalarProperty Name="lastUsed" ColumnName="lastUsed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_account_data">
+      <EntityTypeMapping TypeName="archiveModel.character_account_data">
+        <MappingFragment StoreEntitySet="character_account_data">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_achievement">
+      <EntityTypeMapping TypeName="archiveModel.character_achievement">
+        <MappingFragment StoreEntitySet="character_achievement">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="achievement" ColumnName="achievement" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_achievement_progress">
+      <EntityTypeMapping TypeName="archiveModel.character_achievement_progress">
+        <MappingFragment StoreEntitySet="character_achievement_progress">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="criteria" ColumnName="criteria" />
+          <ScalarProperty Name="counter" ColumnName="counter" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_action">
+      <EntityTypeMapping TypeName="archiveModel.character_action">
+        <MappingFragment StoreEntitySet="character_action">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="spec" ColumnName="spec" />
+          <ScalarProperty Name="button" ColumnName="button" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_arena_stats">
+      <EntityTypeMapping TypeName="archiveModel.character_arena_stats">
+        <MappingFragment StoreEntitySet="character_arena_stats">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="matchMakerRating" ColumnName="matchMakerRating" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_aura">
+      <EntityTypeMapping TypeName="archiveModel.character_aura">
+        <MappingFragment StoreEntitySet="character_aura">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="casterGuid" ColumnName="casterGuid" />
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="effectMask" ColumnName="effectMask" />
+          <ScalarProperty Name="recalculateMask" ColumnName="recalculateMask" />
+          <ScalarProperty Name="stackCount" ColumnName="stackCount" />
+          <ScalarProperty Name="maxDuration" ColumnName="maxDuration" />
+          <ScalarProperty Name="remainTime" ColumnName="remainTime" />
+          <ScalarProperty Name="remainCharges" ColumnName="remainCharges" />
+          <ScalarProperty Name="castItemLevel" ColumnName="castItemLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_aura_effect">
+      <EntityTypeMapping TypeName="archiveModel.character_aura_effect">
+        <MappingFragment StoreEntitySet="character_aura_effect">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="casterGuid" ColumnName="casterGuid" />
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="effectMask" ColumnName="effectMask" />
+          <ScalarProperty Name="effectIndex" ColumnName="effectIndex" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="baseAmount" ColumnName="baseAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_banned">
+      <EntityTypeMapping TypeName="archiveModel.character_banned">
+        <MappingFragment StoreEntitySet="character_banned">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="bandate" ColumnName="bandate" />
+          <ScalarProperty Name="unbandate" ColumnName="unbandate" />
+          <ScalarProperty Name="bannedby" ColumnName="bannedby" />
+          <ScalarProperty Name="banreason" ColumnName="banreason" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_battleground_data">
+      <EntityTypeMapping TypeName="archiveModel.character_battleground_data">
+        <MappingFragment StoreEntitySet="character_battleground_data">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="instanceId" ColumnName="instanceId" />
+          <ScalarProperty Name="team" ColumnName="team" />
+          <ScalarProperty Name="joinX" ColumnName="joinX" />
+          <ScalarProperty Name="joinY" ColumnName="joinY" />
+          <ScalarProperty Name="joinZ" ColumnName="joinZ" />
+          <ScalarProperty Name="joinO" ColumnName="joinO" />
+          <ScalarProperty Name="joinMapId" ColumnName="joinMapId" />
+          <ScalarProperty Name="taxiStart" ColumnName="taxiStart" />
+          <ScalarProperty Name="taxiEnd" ColumnName="taxiEnd" />
+          <ScalarProperty Name="mountSpell" ColumnName="mountSpell" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_battleground_random">
+      <EntityTypeMapping TypeName="archiveModel.character_battleground_random">
+        <MappingFragment StoreEntitySet="character_battleground_random">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_cuf_profiles">
+      <EntityTypeMapping TypeName="archiveModel.character_cuf_profiles">
+        <MappingFragment StoreEntitySet="character_cuf_profiles">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="frameHeight" ColumnName="frameHeight" />
+          <ScalarProperty Name="frameWidth" ColumnName="frameWidth" />
+          <ScalarProperty Name="sortBy" ColumnName="sortBy" />
+          <ScalarProperty Name="healthText" ColumnName="healthText" />
+          <ScalarProperty Name="boolOptions" ColumnName="boolOptions" />
+          <ScalarProperty Name="topPoint" ColumnName="topPoint" />
+          <ScalarProperty Name="bottomPoint" ColumnName="bottomPoint" />
+          <ScalarProperty Name="leftPoint" ColumnName="leftPoint" />
+          <ScalarProperty Name="topOffset" ColumnName="topOffset" />
+          <ScalarProperty Name="bottomOffset" ColumnName="bottomOffset" />
+          <ScalarProperty Name="leftOffset" ColumnName="leftOffset" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_currency">
+      <EntityTypeMapping TypeName="archiveModel.character_currency">
+        <MappingFragment StoreEntitySet="character_currency">
+          <ScalarProperty Name="CharacterGuid" ColumnName="CharacterGuid" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="WeeklyQuantity" ColumnName="WeeklyQuantity" />
+          <ScalarProperty Name="TrackedQuantity" ColumnName="TrackedQuantity" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_declinedname">
+      <EntityTypeMapping TypeName="archiveModel.character_declinedname">
+        <MappingFragment StoreEntitySet="character_declinedname">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="genitive" ColumnName="genitive" />
+          <ScalarProperty Name="dative" ColumnName="dative" />
+          <ScalarProperty Name="accusative" ColumnName="accusative" />
+          <ScalarProperty Name="instrumental" ColumnName="instrumental" />
+          <ScalarProperty Name="prepositional" ColumnName="prepositional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_equipmentsets">
+      <EntityTypeMapping TypeName="archiveModel.character_equipmentsets">
+        <MappingFragment StoreEntitySet="character_equipmentsets">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="setguid" ColumnName="setguid" />
+          <ScalarProperty Name="setindex" ColumnName="setindex" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="iconname" ColumnName="iconname" />
+          <ScalarProperty Name="ignore_mask" ColumnName="ignore_mask" />
+          <ScalarProperty Name="AssignedSpecIndex" ColumnName="AssignedSpecIndex" />
+          <ScalarProperty Name="item0" ColumnName="item0" />
+          <ScalarProperty Name="item1" ColumnName="item1" />
+          <ScalarProperty Name="item2" ColumnName="item2" />
+          <ScalarProperty Name="item3" ColumnName="item3" />
+          <ScalarProperty Name="item4" ColumnName="item4" />
+          <ScalarProperty Name="item5" ColumnName="item5" />
+          <ScalarProperty Name="item6" ColumnName="item6" />
+          <ScalarProperty Name="item7" ColumnName="item7" />
+          <ScalarProperty Name="item8" ColumnName="item8" />
+          <ScalarProperty Name="item9" ColumnName="item9" />
+          <ScalarProperty Name="item10" ColumnName="item10" />
+          <ScalarProperty Name="item11" ColumnName="item11" />
+          <ScalarProperty Name="item12" ColumnName="item12" />
+          <ScalarProperty Name="item13" ColumnName="item13" />
+          <ScalarProperty Name="item14" ColumnName="item14" />
+          <ScalarProperty Name="item15" ColumnName="item15" />
+          <ScalarProperty Name="item16" ColumnName="item16" />
+          <ScalarProperty Name="item17" ColumnName="item17" />
+          <ScalarProperty Name="item18" ColumnName="item18" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_fishingsteps">
+      <EntityTypeMapping TypeName="archiveModel.character_fishingsteps">
+        <MappingFragment StoreEntitySet="character_fishingsteps">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="fishingSteps" ColumnName="fishingSteps" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_garrison">
+      <EntityTypeMapping TypeName="archiveModel.character_garrison">
+        <MappingFragment StoreEntitySet="character_garrison">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="siteLevelId" ColumnName="siteLevelId" />
+          <ScalarProperty Name="followerActivationsRemainingToday" ColumnName="followerActivationsRemainingToday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_garrison_blueprints">
+      <EntityTypeMapping TypeName="archiveModel.character_garrison_blueprints">
+        <MappingFragment StoreEntitySet="character_garrison_blueprints">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="buildingId" ColumnName="buildingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_garrison_buildings">
+      <EntityTypeMapping TypeName="archiveModel.character_garrison_buildings">
+        <MappingFragment StoreEntitySet="character_garrison_buildings">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="plotInstanceId" ColumnName="plotInstanceId" />
+          <ScalarProperty Name="buildingId" ColumnName="buildingId" />
+          <ScalarProperty Name="timeBuilt" ColumnName="timeBuilt" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_garrison_follower_abilities">
+      <EntityTypeMapping TypeName="archiveModel.character_garrison_follower_abilities">
+        <MappingFragment StoreEntitySet="character_garrison_follower_abilities">
+          <ScalarProperty Name="dbId" ColumnName="dbId" />
+          <ScalarProperty Name="abilityId" ColumnName="abilityId" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_garrison_followers">
+      <EntityTypeMapping TypeName="archiveModel.character_garrison_followers">
+        <MappingFragment StoreEntitySet="character_garrison_followers">
+          <ScalarProperty Name="dbId" ColumnName="dbId" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="followerId" ColumnName="followerId" />
+          <ScalarProperty Name="quality" ColumnName="quality" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="itemLevelWeapon" ColumnName="itemLevelWeapon" />
+          <ScalarProperty Name="itemLevelArmor" ColumnName="itemLevelArmor" />
+          <ScalarProperty Name="xp" ColumnName="xp" />
+          <ScalarProperty Name="currentBuilding" ColumnName="currentBuilding" />
+          <ScalarProperty Name="currentMission" ColumnName="currentMission" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_gifts">
+      <EntityTypeMapping TypeName="archiveModel.character_gifts">
+        <MappingFragment StoreEntitySet="character_gifts">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_guid" ColumnName="item_guid" />
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_glyphs">
+      <EntityTypeMapping TypeName="archiveModel.character_glyphs">
+        <MappingFragment StoreEntitySet="character_glyphs">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="talentGroup" ColumnName="talentGroup" />
+          <ScalarProperty Name="glyphId" ColumnName="glyphId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_homebind">
+      <EntityTypeMapping TypeName="archiveModel.character_homebind">
+        <MappingFragment StoreEntitySet="character_homebind">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="zoneId" ColumnName="zoneId" />
+          <ScalarProperty Name="posX" ColumnName="posX" />
+          <ScalarProperty Name="posY" ColumnName="posY" />
+          <ScalarProperty Name="posZ" ColumnName="posZ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_instance">
+      <EntityTypeMapping TypeName="archiveModel.character_instance">
+        <MappingFragment StoreEntitySet="character_instance">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="instance" ColumnName="instance" />
+          <ScalarProperty Name="permanent" ColumnName="permanent" />
+          <ScalarProperty Name="extendState" ColumnName="extendState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_inventory">
+      <EntityTypeMapping TypeName="archiveModel.character_inventory">
+        <MappingFragment StoreEntitySet="character_inventory">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="bag" ColumnName="bag" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="item" ColumnName="item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_pet">
+      <EntityTypeMapping TypeName="archiveModel.character_pet">
+        <MappingFragment StoreEntitySet="character_pet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="modelid" ColumnName="modelid" />
+          <ScalarProperty Name="CreatedBySpell" ColumnName="CreatedBySpell" />
+          <ScalarProperty Name="PetType" ColumnName="PetType" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="exp" ColumnName="exp" />
+          <ScalarProperty Name="Reactstate" ColumnName="Reactstate" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="renamed" ColumnName="renamed" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="curhealth" ColumnName="curhealth" />
+          <ScalarProperty Name="curmana" ColumnName="curmana" />
+          <ScalarProperty Name="savetime" ColumnName="savetime" />
+          <ScalarProperty Name="abdata" ColumnName="abdata" />
+          <ScalarProperty Name="specialization" ColumnName="specialization" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_pet_declinedname">
+      <EntityTypeMapping TypeName="archiveModel.character_pet_declinedname">
+        <MappingFragment StoreEntitySet="character_pet_declinedname">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="genitive" ColumnName="genitive" />
+          <ScalarProperty Name="dative" ColumnName="dative" />
+          <ScalarProperty Name="accusative" ColumnName="accusative" />
+          <ScalarProperty Name="instrumental" ColumnName="instrumental" />
+          <ScalarProperty Name="prepositional" ColumnName="prepositional" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus">
+        <MappingFragment StoreEntitySet="character_queststatus">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="timer" ColumnName="timer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_daily">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_daily">
+        <MappingFragment StoreEntitySet="character_queststatus_daily">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_monthly">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_monthly">
+        <MappingFragment StoreEntitySet="character_queststatus_monthly">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_objectives">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_objectives">
+        <MappingFragment StoreEntitySet="character_queststatus_objectives">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+          <ScalarProperty Name="objective" ColumnName="objective" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_objectives_criteria">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_objectives_criteria">
+        <MappingFragment StoreEntitySet="character_queststatus_objectives_criteria">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="questObjectiveId" ColumnName="questObjectiveId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_objectives_criteria_progress">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_objectives_criteria_progress">
+        <MappingFragment StoreEntitySet="character_queststatus_objectives_criteria_progress">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="criteriaId" ColumnName="criteriaId" />
+          <ScalarProperty Name="counter" ColumnName="counter" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_rewarded">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_rewarded">
+        <MappingFragment StoreEntitySet="character_queststatus_rewarded">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_seasonal">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_seasonal">
+        <MappingFragment StoreEntitySet="character_queststatus_seasonal">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+          <ScalarProperty Name="event" ColumnName="event" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_queststatus_weekly">
+      <EntityTypeMapping TypeName="archiveModel.character_queststatus_weekly">
+        <MappingFragment StoreEntitySet="character_queststatus_weekly">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_reputation">
+      <EntityTypeMapping TypeName="archiveModel.character_reputation">
+        <MappingFragment StoreEntitySet="character_reputation">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="faction" ColumnName="faction" />
+          <ScalarProperty Name="standing" ColumnName="standing" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_skills">
+      <EntityTypeMapping TypeName="archiveModel.character_skills">
+        <MappingFragment StoreEntitySet="character_skills">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="skill" ColumnName="skill" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="max" ColumnName="max" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_social">
+      <EntityTypeMapping TypeName="archiveModel.character_social">
+        <MappingFragment StoreEntitySet="character_social">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="friend" ColumnName="friend" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_spell">
+      <EntityTypeMapping TypeName="archiveModel.character_spell">
+        <MappingFragment StoreEntitySet="character_spell">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="disabled" ColumnName="disabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_spell_cooldown">
+      <EntityTypeMapping TypeName="archiveModel.character_spell_cooldown">
+        <MappingFragment StoreEntitySet="character_spell_cooldown">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="categoryEnd" ColumnName="categoryEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_stats">
+      <EntityTypeMapping TypeName="archiveModel.character_stats">
+        <MappingFragment StoreEntitySet="character_stats">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="maxhealth" ColumnName="maxhealth" />
+          <ScalarProperty Name="maxpower1" ColumnName="maxpower1" />
+          <ScalarProperty Name="maxpower2" ColumnName="maxpower2" />
+          <ScalarProperty Name="maxpower3" ColumnName="maxpower3" />
+          <ScalarProperty Name="maxpower4" ColumnName="maxpower4" />
+          <ScalarProperty Name="maxpower5" ColumnName="maxpower5" />
+          <ScalarProperty Name="maxpower6" ColumnName="maxpower6" />
+          <ScalarProperty Name="strength" ColumnName="strength" />
+          <ScalarProperty Name="agility" ColumnName="agility" />
+          <ScalarProperty Name="stamina" ColumnName="stamina" />
+          <ScalarProperty Name="intellect" ColumnName="intellect" />
+          <ScalarProperty Name="armor" ColumnName="armor" />
+          <ScalarProperty Name="resHoly" ColumnName="resHoly" />
+          <ScalarProperty Name="resFire" ColumnName="resFire" />
+          <ScalarProperty Name="resNature" ColumnName="resNature" />
+          <ScalarProperty Name="resFrost" ColumnName="resFrost" />
+          <ScalarProperty Name="resShadow" ColumnName="resShadow" />
+          <ScalarProperty Name="resArcane" ColumnName="resArcane" />
+          <ScalarProperty Name="attackPower" ColumnName="attackPower" />
+          <ScalarProperty Name="rangedAttackPower" ColumnName="rangedAttackPower" />
+          <ScalarProperty Name="spellPower" ColumnName="spellPower" />
+          <ScalarProperty Name="resilience" ColumnName="resilience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_talent">
+      <EntityTypeMapping TypeName="archiveModel.character_talent">
+        <MappingFragment StoreEntitySet="character_talent">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="talentId" ColumnName="talentId" />
+          <ScalarProperty Name="talentGroup" ColumnName="talentGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_transmog_outfits">
+      <EntityTypeMapping TypeName="archiveModel.character_transmog_outfits">
+        <MappingFragment StoreEntitySet="character_transmog_outfits">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="setguid" ColumnName="setguid" />
+          <ScalarProperty Name="setindex" ColumnName="setindex" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="iconname" ColumnName="iconname" />
+          <ScalarProperty Name="ignore_mask" ColumnName="ignore_mask" />
+          <ScalarProperty Name="appearance0" ColumnName="appearance0" />
+          <ScalarProperty Name="appearance1" ColumnName="appearance1" />
+          <ScalarProperty Name="appearance2" ColumnName="appearance2" />
+          <ScalarProperty Name="appearance3" ColumnName="appearance3" />
+          <ScalarProperty Name="appearance4" ColumnName="appearance4" />
+          <ScalarProperty Name="appearance5" ColumnName="appearance5" />
+          <ScalarProperty Name="appearance6" ColumnName="appearance6" />
+          <ScalarProperty Name="appearance7" ColumnName="appearance7" />
+          <ScalarProperty Name="appearance8" ColumnName="appearance8" />
+          <ScalarProperty Name="appearance9" ColumnName="appearance9" />
+          <ScalarProperty Name="appearance10" ColumnName="appearance10" />
+          <ScalarProperty Name="appearance11" ColumnName="appearance11" />
+          <ScalarProperty Name="appearance12" ColumnName="appearance12" />
+          <ScalarProperty Name="appearance13" ColumnName="appearance13" />
+          <ScalarProperty Name="appearance14" ColumnName="appearance14" />
+          <ScalarProperty Name="appearance15" ColumnName="appearance15" />
+          <ScalarProperty Name="appearance16" ColumnName="appearance16" />
+          <ScalarProperty Name="appearance17" ColumnName="appearance17" />
+          <ScalarProperty Name="appearance18" ColumnName="appearance18" />
+          <ScalarProperty Name="mainHandEnchant" ColumnName="mainHandEnchant" />
+          <ScalarProperty Name="offHandEnchant" ColumnName="offHandEnchant" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_void_storage">
+      <EntityTypeMapping TypeName="archiveModel.character_void_storage">
+        <MappingFragment StoreEntitySet="character_void_storage">
+          <ScalarProperty Name="itemId" ColumnName="itemId" />
+          <ScalarProperty Name="playerGuid" ColumnName="playerGuid" />
+          <ScalarProperty Name="itemEntry" ColumnName="itemEntry" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="creatorGuid" ColumnName="creatorGuid" />
+          <ScalarProperty Name="randomPropertyType" ColumnName="randomPropertyType" />
+          <ScalarProperty Name="randomProperty" ColumnName="randomProperty" />
+          <ScalarProperty Name="suffixFactor" ColumnName="suffixFactor" />
+          <ScalarProperty Name="upgradeId" ColumnName="upgradeId" />
+          <ScalarProperty Name="fixedScalingLevel" ColumnName="fixedScalingLevel" />
+          <ScalarProperty Name="artifactKnowledgeLevel" ColumnName="artifactKnowledgeLevel" />
+          <ScalarProperty Name="context" ColumnName="context" />
+          <ScalarProperty Name="bonusListIDs" ColumnName="bonusListIDs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="characters">
+      <EntityTypeMapping TypeName="archiveModel.character">
+        <MappingFragment StoreEntitySet="characters">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="race" ColumnName="race" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="xp" ColumnName="xp" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="skin" ColumnName="skin" />
+          <ScalarProperty Name="face" ColumnName="face" />
+          <ScalarProperty Name="hairStyle" ColumnName="hairStyle" />
+          <ScalarProperty Name="hairColor" ColumnName="hairColor" />
+          <ScalarProperty Name="facialStyle" ColumnName="facialStyle" />
+          <ScalarProperty Name="customDisplay1" ColumnName="customDisplay1" />
+          <ScalarProperty Name="customDisplay2" ColumnName="customDisplay2" />
+          <ScalarProperty Name="customDisplay3" ColumnName="customDisplay3" />
+          <ScalarProperty Name="bankSlots" ColumnName="bankSlots" />
+          <ScalarProperty Name="restState" ColumnName="restState" />
+          <ScalarProperty Name="playerFlags" ColumnName="playerFlags" />
+          <ScalarProperty Name="playerFlagsEx" ColumnName="playerFlagsEx" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="instance_id" ColumnName="instance_id" />
+          <ScalarProperty Name="dungeonDifficulty" ColumnName="dungeonDifficulty" />
+          <ScalarProperty Name="raidDifficulty" ColumnName="raidDifficulty" />
+          <ScalarProperty Name="legacyRaidDifficulty" ColumnName="legacyRaidDifficulty" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="taximask" ColumnName="taximask" />
+          <ScalarProperty Name="online" ColumnName="online" />
+          <ScalarProperty Name="cinematic" ColumnName="cinematic" />
+          <ScalarProperty Name="totaltime" ColumnName="totaltime" />
+          <ScalarProperty Name="leveltime" ColumnName="leveltime" />
+          <ScalarProperty Name="logout_time" ColumnName="logout_time" />
+          <ScalarProperty Name="is_logout_resting" ColumnName="is_logout_resting" />
+          <ScalarProperty Name="rest_bonus" ColumnName="rest_bonus" />
+          <ScalarProperty Name="resettalents_cost" ColumnName="resettalents_cost" />
+          <ScalarProperty Name="resettalents_time" ColumnName="resettalents_time" />
+          <ScalarProperty Name="primarySpecialization" ColumnName="primarySpecialization" />
+          <ScalarProperty Name="trans_x" ColumnName="trans_x" />
+          <ScalarProperty Name="trans_y" ColumnName="trans_y" />
+          <ScalarProperty Name="trans_z" ColumnName="trans_z" />
+          <ScalarProperty Name="trans_o" ColumnName="trans_o" />
+          <ScalarProperty Name="transguid" ColumnName="transguid" />
+          <ScalarProperty Name="extra_flags" ColumnName="extra_flags" />
+          <ScalarProperty Name="stable_slots" ColumnName="stable_slots" />
+          <ScalarProperty Name="at_login" ColumnName="at_login" />
+          <ScalarProperty Name="zone" ColumnName="zone" />
+          <ScalarProperty Name="death_expire_time" ColumnName="death_expire_time" />
+          <ScalarProperty Name="taxi_path" ColumnName="taxi_path" />
+          <ScalarProperty Name="totalKills" ColumnName="totalKills" />
+          <ScalarProperty Name="todayKills" ColumnName="todayKills" />
+          <ScalarProperty Name="yesterdayKills" ColumnName="yesterdayKills" />
+          <ScalarProperty Name="chosenTitle" ColumnName="chosenTitle" />
+          <ScalarProperty Name="watchedFaction" ColumnName="watchedFaction" />
+          <ScalarProperty Name="drunk" ColumnName="drunk" />
+          <ScalarProperty Name="health" ColumnName="health" />
+          <ScalarProperty Name="power1" ColumnName="power1" />
+          <ScalarProperty Name="power2" ColumnName="power2" />
+          <ScalarProperty Name="power3" ColumnName="power3" />
+          <ScalarProperty Name="power4" ColumnName="power4" />
+          <ScalarProperty Name="power5" ColumnName="power5" />
+          <ScalarProperty Name="power6" ColumnName="power6" />
+          <ScalarProperty Name="latency" ColumnName="latency" />
+          <ScalarProperty Name="activeTalentGroup" ColumnName="activeTalentGroup" />
+          <ScalarProperty Name="lootSpecId" ColumnName="lootSpecId" />
+          <ScalarProperty Name="exploredZones" ColumnName="exploredZones" />
+          <ScalarProperty Name="equipmentCache" ColumnName="equipmentCache" />
+          <ScalarProperty Name="knownTitles" ColumnName="knownTitles" />
+          <ScalarProperty Name="actionBars" ColumnName="actionBars" />
+          <ScalarProperty Name="grantableLevels" ColumnName="grantableLevels" />
+          <ScalarProperty Name="deleteInfos_Account" ColumnName="deleteInfos_Account" />
+          <ScalarProperty Name="deleteInfos_Name" ColumnName="deleteInfos_Name" />
+          <ScalarProperty Name="deleteDate" ColumnName="deleteDate" />
+          <ScalarProperty Name="honor" ColumnName="honor" />
+          <ScalarProperty Name="honorLevel" ColumnName="honorLevel" />
+          <ScalarProperty Name="prestigeLevel" ColumnName="prestigeLevel" />
+          <ScalarProperty Name="honorRestState" ColumnName="honorRestState" />
+          <ScalarProperty Name="honorRestBonus" ColumnName="honorRestBonus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corpses">
+      <EntityTypeMapping TypeName="archiveModel.corpse">
+        <MappingFragment StoreEntitySet="corpse">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="posX" ColumnName="posX" />
+          <ScalarProperty Name="posY" ColumnName="posY" />
+          <ScalarProperty Name="posZ" ColumnName="posZ" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="displayId" ColumnName="displayId" />
+          <ScalarProperty Name="itemCache" ColumnName="itemCache" />
+          <ScalarProperty Name="bytes1" ColumnName="bytes1" />
+          <ScalarProperty Name="bytes2" ColumnName="bytes2" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="dynFlags" ColumnName="dynFlags" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="corpseType" ColumnName="corpseType" />
+          <ScalarProperty Name="instanceId" ColumnName="instanceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="corpse_phases">
+      <EntityTypeMapping TypeName="archiveModel.corpse_phases">
+        <MappingFragment StoreEntitySet="corpse_phases">
+          <ScalarProperty Name="OwnerGuid" ColumnName="OwnerGuid" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_respawn">
+      <EntityTypeMapping TypeName="archiveModel.creature_respawn">
+        <MappingFragment StoreEntitySet="creature_respawn">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="respawnTime" ColumnName="respawnTime" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="instanceId" ColumnName="instanceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_condition_save">
+      <EntityTypeMapping TypeName="archiveModel.game_event_condition_save">
+        <MappingFragment StoreEntitySet="game_event_condition_save">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="condition_id" ColumnName="condition_id" />
+          <ScalarProperty Name="done" ColumnName="done" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_save">
+      <EntityTypeMapping TypeName="archiveModel.game_event_save">
+        <MappingFragment StoreEntitySet="game_event_save">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="next_start" ColumnName="next_start" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_respawn">
+      <EntityTypeMapping TypeName="archiveModel.gameobject_respawn">
+        <MappingFragment StoreEntitySet="gameobject_respawn">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="respawnTime" ColumnName="respawnTime" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="instanceId" ColumnName="instanceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gm_bug">
+      <EntityTypeMapping TypeName="archiveModel.gm_bug">
+        <MappingFragment StoreEntitySet="gm_bug">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="playerGuid" ColumnName="playerGuid" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="posX" ColumnName="posX" />
+          <ScalarProperty Name="posY" ColumnName="posY" />
+          <ScalarProperty Name="posZ" ColumnName="posZ" />
+          <ScalarProperty Name="facing" ColumnName="facing" />
+          <ScalarProperty Name="closedBy" ColumnName="closedBy" />
+          <ScalarProperty Name="assignedTo" ColumnName="assignedTo" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gm_complaint">
+      <EntityTypeMapping TypeName="archiveModel.gm_complaint">
+        <MappingFragment StoreEntitySet="gm_complaint">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="playerGuid" ColumnName="playerGuid" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="posX" ColumnName="posX" />
+          <ScalarProperty Name="posY" ColumnName="posY" />
+          <ScalarProperty Name="posZ" ColumnName="posZ" />
+          <ScalarProperty Name="facing" ColumnName="facing" />
+          <ScalarProperty Name="targetCharacterGuid" ColumnName="targetCharacterGuid" />
+          <ScalarProperty Name="complaintType" ColumnName="complaintType" />
+          <ScalarProperty Name="reportLineIndex" ColumnName="reportLineIndex" />
+          <ScalarProperty Name="closedBy" ColumnName="closedBy" />
+          <ScalarProperty Name="assignedTo" ColumnName="assignedTo" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gm_complaint_chatlog">
+      <EntityTypeMapping TypeName="archiveModel.gm_complaint_chatlog">
+        <MappingFragment StoreEntitySet="gm_complaint_chatlog">
+          <ScalarProperty Name="complaintId" ColumnName="complaintId" />
+          <ScalarProperty Name="lineId" ColumnName="lineId" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gm_suggestion">
+      <EntityTypeMapping TypeName="archiveModel.gm_suggestion">
+        <MappingFragment StoreEntitySet="gm_suggestion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="playerGuid" ColumnName="playerGuid" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="createTime" ColumnName="createTime" />
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="posX" ColumnName="posX" />
+          <ScalarProperty Name="posY" ColumnName="posY" />
+          <ScalarProperty Name="posZ" ColumnName="posZ" />
+          <ScalarProperty Name="facing" ColumnName="facing" />
+          <ScalarProperty Name="closedBy" ColumnName="closedBy" />
+          <ScalarProperty Name="assignedTo" ColumnName="assignedTo" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_instance">
+      <EntityTypeMapping TypeName="archiveModel.group_instance">
+        <MappingFragment StoreEntitySet="group_instance">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="instance" ColumnName="instance" />
+          <ScalarProperty Name="permanent" ColumnName="permanent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="group_member">
+      <EntityTypeMapping TypeName="archiveModel.group_member">
+        <MappingFragment StoreEntitySet="group_member">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="memberGuid" ColumnName="memberGuid" />
+          <ScalarProperty Name="memberFlags" ColumnName="memberFlags" />
+          <ScalarProperty Name="subgroup" ColumnName="subgroup" />
+          <ScalarProperty Name="roles" ColumnName="roles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groups">
+      <EntityTypeMapping TypeName="archiveModel.group">
+        <MappingFragment StoreEntitySet="groups">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="leaderGuid" ColumnName="leaderGuid" />
+          <ScalarProperty Name="lootMethod" ColumnName="lootMethod" />
+          <ScalarProperty Name="looterGuid" ColumnName="looterGuid" />
+          <ScalarProperty Name="lootThreshold" ColumnName="lootThreshold" />
+          <ScalarProperty Name="icon1" ColumnName="icon1" />
+          <ScalarProperty Name="icon2" ColumnName="icon2" />
+          <ScalarProperty Name="icon3" ColumnName="icon3" />
+          <ScalarProperty Name="icon4" ColumnName="icon4" />
+          <ScalarProperty Name="icon5" ColumnName="icon5" />
+          <ScalarProperty Name="icon6" ColumnName="icon6" />
+          <ScalarProperty Name="icon7" ColumnName="icon7" />
+          <ScalarProperty Name="icon8" ColumnName="icon8" />
+          <ScalarProperty Name="groupType" ColumnName="groupType" />
+          <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+          <ScalarProperty Name="raidDifficulty" ColumnName="raidDifficulty" />
+          <ScalarProperty Name="legacyRaidDifficulty" ColumnName="legacyRaidDifficulty" />
+          <ScalarProperty Name="masterLooterGuid" ColumnName="masterLooterGuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guilds">
+      <EntityTypeMapping TypeName="archiveModel.guild">
+        <MappingFragment StoreEntitySet="guild">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="leaderguid" ColumnName="leaderguid" />
+          <ScalarProperty Name="EmblemStyle" ColumnName="EmblemStyle" />
+          <ScalarProperty Name="EmblemColor" ColumnName="EmblemColor" />
+          <ScalarProperty Name="BorderStyle" ColumnName="BorderStyle" />
+          <ScalarProperty Name="BorderColor" ColumnName="BorderColor" />
+          <ScalarProperty Name="BackgroundColor" ColumnName="BackgroundColor" />
+          <ScalarProperty Name="info" ColumnName="info" />
+          <ScalarProperty Name="motd" ColumnName="motd" />
+          <ScalarProperty Name="createdate" ColumnName="createdate" />
+          <ScalarProperty Name="BankMoney" ColumnName="BankMoney" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_achievement">
+      <EntityTypeMapping TypeName="archiveModel.guild_achievement">
+        <MappingFragment StoreEntitySet="guild_achievement">
+          <ScalarProperty Name="guildId" ColumnName="guildId" />
+          <ScalarProperty Name="achievement" ColumnName="achievement" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="guids" ColumnName="guids" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_achievement_progress">
+      <EntityTypeMapping TypeName="archiveModel.guild_achievement_progress">
+        <MappingFragment StoreEntitySet="guild_achievement_progress">
+          <ScalarProperty Name="guildId" ColumnName="guildId" />
+          <ScalarProperty Name="criteria" ColumnName="criteria" />
+          <ScalarProperty Name="counter" ColumnName="counter" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="completedGuid" ColumnName="completedGuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_bank_eventlog">
+      <EntityTypeMapping TypeName="archiveModel.guild_bank_eventlog">
+        <MappingFragment StoreEntitySet="guild_bank_eventlog">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="LogGuid" ColumnName="LogGuid" />
+          <ScalarProperty Name="TabId" ColumnName="TabId" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="PlayerGuid" ColumnName="PlayerGuid" />
+          <ScalarProperty Name="ItemOrMoney" ColumnName="ItemOrMoney" />
+          <ScalarProperty Name="ItemStackCount" ColumnName="ItemStackCount" />
+          <ScalarProperty Name="DestTabId" ColumnName="DestTabId" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_bank_item">
+      <EntityTypeMapping TypeName="archiveModel.guild_bank_item">
+        <MappingFragment StoreEntitySet="guild_bank_item">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="TabId" ColumnName="TabId" />
+          <ScalarProperty Name="SlotId" ColumnName="SlotId" />
+          <ScalarProperty Name="item_guid" ColumnName="item_guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_bank_right">
+      <EntityTypeMapping TypeName="archiveModel.guild_bank_right">
+        <MappingFragment StoreEntitySet="guild_bank_right">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="TabId" ColumnName="TabId" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+          <ScalarProperty Name="gbright" ColumnName="gbright" />
+          <ScalarProperty Name="SlotPerDay" ColumnName="SlotPerDay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_bank_tab">
+      <EntityTypeMapping TypeName="archiveModel.guild_bank_tab">
+        <MappingFragment StoreEntitySet="guild_bank_tab">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="TabId" ColumnName="TabId" />
+          <ScalarProperty Name="TabName" ColumnName="TabName" />
+          <ScalarProperty Name="TabIcon" ColumnName="TabIcon" />
+          <ScalarProperty Name="TabText" ColumnName="TabText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_eventlog">
+      <EntityTypeMapping TypeName="archiveModel.guild_eventlog">
+        <MappingFragment StoreEntitySet="guild_eventlog">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="LogGuid" ColumnName="LogGuid" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="PlayerGuid1" ColumnName="PlayerGuid1" />
+          <ScalarProperty Name="PlayerGuid2" ColumnName="PlayerGuid2" />
+          <ScalarProperty Name="NewRank" ColumnName="NewRank" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_finder_applicant">
+      <EntityTypeMapping TypeName="archiveModel.guild_finder_applicant">
+        <MappingFragment StoreEntitySet="guild_finder_applicant">
+          <ScalarProperty Name="guildId" ColumnName="guildId" />
+          <ScalarProperty Name="playerGuid" ColumnName="playerGuid" />
+          <ScalarProperty Name="availability" ColumnName="availability" />
+          <ScalarProperty Name="classRole" ColumnName="classRole" />
+          <ScalarProperty Name="interests" ColumnName="interests" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="submitTime" ColumnName="submitTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_finder_guild_settings">
+      <EntityTypeMapping TypeName="archiveModel.guild_finder_guild_settings">
+        <MappingFragment StoreEntitySet="guild_finder_guild_settings">
+          <ScalarProperty Name="guildId" ColumnName="guildId" />
+          <ScalarProperty Name="availability" ColumnName="availability" />
+          <ScalarProperty Name="classRoles" ColumnName="classRoles" />
+          <ScalarProperty Name="interests" ColumnName="interests" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="listed" ColumnName="listed" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_member_withdraw">
+      <EntityTypeMapping TypeName="archiveModel.guild_member_withdraw">
+        <MappingFragment StoreEntitySet="guild_member_withdraw">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="tab0" ColumnName="tab0" />
+          <ScalarProperty Name="tab1" ColumnName="tab1" />
+          <ScalarProperty Name="tab2" ColumnName="tab2" />
+          <ScalarProperty Name="tab3" ColumnName="tab3" />
+          <ScalarProperty Name="tab4" ColumnName="tab4" />
+          <ScalarProperty Name="tab5" ColumnName="tab5" />
+          <ScalarProperty Name="tab6" ColumnName="tab6" />
+          <ScalarProperty Name="tab7" ColumnName="tab7" />
+          <ScalarProperty Name="money" ColumnName="money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_newslog">
+      <EntityTypeMapping TypeName="archiveModel.guild_newslog">
+        <MappingFragment StoreEntitySet="guild_newslog">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="LogGuid" ColumnName="LogGuid" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="PlayerGuid" ColumnName="PlayerGuid" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_rank">
+      <EntityTypeMapping TypeName="archiveModel.guild_rank">
+        <MappingFragment StoreEntitySet="guild_rank">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="rid" ColumnName="rid" />
+          <ScalarProperty Name="rname" ColumnName="rname" />
+          <ScalarProperty Name="rights" ColumnName="rights" />
+          <ScalarProperty Name="BankMoneyPerDay" ColumnName="BankMoneyPerDay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instances">
+      <EntityTypeMapping TypeName="archiveModel.instance">
+        <MappingFragment StoreEntitySet="instance">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="resettime" ColumnName="resettime" />
+          <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+          <ScalarProperty Name="completedEncounters" ColumnName="completedEncounters" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="entranceId" ColumnName="entranceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instance_reset">
+      <EntityTypeMapping TypeName="archiveModel.instance_reset">
+        <MappingFragment StoreEntitySet="instance_reset">
+          <ScalarProperty Name="mapid" ColumnName="mapid" />
+          <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+          <ScalarProperty Name="resettime" ColumnName="resettime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instance_scenario_progress">
+      <EntityTypeMapping TypeName="archiveModel.instance_scenario_progress">
+        <MappingFragment StoreEntitySet="instance_scenario_progress">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="criteria" ColumnName="criteria" />
+          <ScalarProperty Name="counter" ColumnName="counter" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_instance">
+      <EntityTypeMapping TypeName="archiveModel.item_instance">
+        <MappingFragment StoreEntitySet="item_instance">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="itemEntry" ColumnName="itemEntry" />
+          <ScalarProperty Name="owner_guid" ColumnName="owner_guid" />
+          <ScalarProperty Name="creatorGuid" ColumnName="creatorGuid" />
+          <ScalarProperty Name="giftCreatorGuid" ColumnName="giftCreatorGuid" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="charges" ColumnName="charges" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="enchantments" ColumnName="enchantments" />
+          <ScalarProperty Name="randomPropertyType" ColumnName="randomPropertyType" />
+          <ScalarProperty Name="randomPropertyId" ColumnName="randomPropertyId" />
+          <ScalarProperty Name="durability" ColumnName="durability" />
+          <ScalarProperty Name="playedTime" ColumnName="playedTime" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="transmogrification" ColumnName="transmogrification" />
+          <ScalarProperty Name="upgradeId" ColumnName="upgradeId" />
+          <ScalarProperty Name="enchantIllusion" ColumnName="enchantIllusion" />
+          <ScalarProperty Name="battlePetSpeciesId" ColumnName="battlePetSpeciesId" />
+          <ScalarProperty Name="battlePetBreedData" ColumnName="battlePetBreedData" />
+          <ScalarProperty Name="battlePetLevel" ColumnName="battlePetLevel" />
+          <ScalarProperty Name="battlePetDisplayId" ColumnName="battlePetDisplayId" />
+          <ScalarProperty Name="context" ColumnName="context" />
+          <ScalarProperty Name="bonusListIDs" ColumnName="bonusListIDs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_instance_artifact">
+      <EntityTypeMapping TypeName="archiveModel.item_instance_artifact">
+        <MappingFragment StoreEntitySet="item_instance_artifact">
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="xp" ColumnName="xp" />
+          <ScalarProperty Name="artifactAppearanceId" ColumnName="artifactAppearanceId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_instance_artifact_powers">
+      <EntityTypeMapping TypeName="archiveModel.item_instance_artifact_powers">
+        <MappingFragment StoreEntitySet="item_instance_artifact_powers">
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="artifactPowerId" ColumnName="artifactPowerId" />
+          <ScalarProperty Name="purchasedRank" ColumnName="purchasedRank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_instance_gems">
+      <EntityTypeMapping TypeName="archiveModel.item_instance_gems">
+        <MappingFragment StoreEntitySet="item_instance_gems">
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="gemItemId1" ColumnName="gemItemId1" />
+          <ScalarProperty Name="gemBonuses1" ColumnName="gemBonuses1" />
+          <ScalarProperty Name="gemContext1" ColumnName="gemContext1" />
+          <ScalarProperty Name="gemScalingLevel1" ColumnName="gemScalingLevel1" />
+          <ScalarProperty Name="gemItemId2" ColumnName="gemItemId2" />
+          <ScalarProperty Name="gemBonuses2" ColumnName="gemBonuses2" />
+          <ScalarProperty Name="gemContext2" ColumnName="gemContext2" />
+          <ScalarProperty Name="gemScalingLevel2" ColumnName="gemScalingLevel2" />
+          <ScalarProperty Name="gemItemId3" ColumnName="gemItemId3" />
+          <ScalarProperty Name="gemBonuses3" ColumnName="gemBonuses3" />
+          <ScalarProperty Name="gemContext3" ColumnName="gemContext3" />
+          <ScalarProperty Name="gemScalingLevel3" ColumnName="gemScalingLevel3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_instance_modifiers">
+      <EntityTypeMapping TypeName="archiveModel.item_instance_modifiers">
+        <MappingFragment StoreEntitySet="item_instance_modifiers">
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="fixedScalingLevel" ColumnName="fixedScalingLevel" />
+          <ScalarProperty Name="artifactKnowledgeLevel" ColumnName="artifactKnowledgeLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_instance_transmog">
+      <EntityTypeMapping TypeName="archiveModel.item_instance_transmog">
+        <MappingFragment StoreEntitySet="item_instance_transmog">
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="itemModifiedAppearanceAllSpecs" ColumnName="itemModifiedAppearanceAllSpecs" />
+          <ScalarProperty Name="itemModifiedAppearanceSpec1" ColumnName="itemModifiedAppearanceSpec1" />
+          <ScalarProperty Name="itemModifiedAppearanceSpec2" ColumnName="itemModifiedAppearanceSpec2" />
+          <ScalarProperty Name="itemModifiedAppearanceSpec3" ColumnName="itemModifiedAppearanceSpec3" />
+          <ScalarProperty Name="itemModifiedAppearanceSpec4" ColumnName="itemModifiedAppearanceSpec4" />
+          <ScalarProperty Name="spellItemEnchantmentAllSpecs" ColumnName="spellItemEnchantmentAllSpecs" />
+          <ScalarProperty Name="spellItemEnchantmentSpec1" ColumnName="spellItemEnchantmentSpec1" />
+          <ScalarProperty Name="spellItemEnchantmentSpec2" ColumnName="spellItemEnchantmentSpec2" />
+          <ScalarProperty Name="spellItemEnchantmentSpec3" ColumnName="spellItemEnchantmentSpec3" />
+          <ScalarProperty Name="spellItemEnchantmentSpec4" ColumnName="spellItemEnchantmentSpec4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_loot_items">
+      <EntityTypeMapping TypeName="archiveModel.item_loot_items">
+        <MappingFragment StoreEntitySet="item_loot_items">
+          <ScalarProperty Name="container_id" ColumnName="container_id" />
+          <ScalarProperty Name="item_id" ColumnName="item_id" />
+          <ScalarProperty Name="item_count" ColumnName="item_count" />
+          <ScalarProperty Name="follow_rules" ColumnName="follow_rules" />
+          <ScalarProperty Name="ffa" ColumnName="ffa" />
+          <ScalarProperty Name="blocked" ColumnName="blocked" />
+          <ScalarProperty Name="counted" ColumnName="counted" />
+          <ScalarProperty Name="under_threshold" ColumnName="under_threshold" />
+          <ScalarProperty Name="needs_quest" ColumnName="needs_quest" />
+          <ScalarProperty Name="rnd_type" ColumnName="rnd_type" />
+          <ScalarProperty Name="rnd_prop" ColumnName="rnd_prop" />
+          <ScalarProperty Name="rnd_suffix" ColumnName="rnd_suffix" />
+          <ScalarProperty Name="context" ColumnName="context" />
+          <ScalarProperty Name="bonus_list_ids" ColumnName="bonus_list_ids" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_loot_money">
+      <EntityTypeMapping TypeName="archiveModel.item_loot_money">
+        <MappingFragment StoreEntitySet="item_loot_money">
+          <ScalarProperty Name="container_id" ColumnName="container_id" />
+          <ScalarProperty Name="money" ColumnName="money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_refund_instance">
+      <EntityTypeMapping TypeName="archiveModel.item_refund_instance">
+        <MappingFragment StoreEntitySet="item_refund_instance">
+          <ScalarProperty Name="item_guid" ColumnName="item_guid" />
+          <ScalarProperty Name="player_guid" ColumnName="player_guid" />
+          <ScalarProperty Name="paidMoney" ColumnName="paidMoney" />
+          <ScalarProperty Name="paidExtendedCost" ColumnName="paidExtendedCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_soulbound_trade_data">
+      <EntityTypeMapping TypeName="archiveModel.item_soulbound_trade_data">
+        <MappingFragment StoreEntitySet="item_soulbound_trade_data">
+          <ScalarProperty Name="itemGuid" ColumnName="itemGuid" />
+          <ScalarProperty Name="allowedPlayers" ColumnName="allowedPlayers" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lfg_data">
+      <EntityTypeMapping TypeName="archiveModel.lfg_data">
+        <MappingFragment StoreEntitySet="lfg_data">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="dungeon" ColumnName="dungeon" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mails">
+      <EntityTypeMapping TypeName="archiveModel.mail">
+        <MappingFragment StoreEntitySet="mail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="messageType" ColumnName="messageType" />
+          <ScalarProperty Name="stationery" ColumnName="stationery" />
+          <ScalarProperty Name="mailTemplateId" ColumnName="mailTemplateId" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="receiver" ColumnName="receiver" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="body" ColumnName="body" />
+          <ScalarProperty Name="has_items" ColumnName="has_items" />
+          <ScalarProperty Name="expire_time" ColumnName="expire_time" />
+          <ScalarProperty Name="deliver_time" ColumnName="deliver_time" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="cod" ColumnName="cod" />
+          <ScalarProperty Name="checked" ColumnName="checked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mail_items">
+      <EntityTypeMapping TypeName="archiveModel.mail_items">
+        <MappingFragment StoreEntitySet="mail_items">
+          <ScalarProperty Name="mail_id" ColumnName="mail_id" />
+          <ScalarProperty Name="item_guid" ColumnName="item_guid" />
+          <ScalarProperty Name="receiver" ColumnName="receiver" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pet_aura">
+      <EntityTypeMapping TypeName="archiveModel.pet_aura">
+        <MappingFragment StoreEntitySet="pet_aura">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="casterGuid" ColumnName="casterGuid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="effectMask" ColumnName="effectMask" />
+          <ScalarProperty Name="recalculateMask" ColumnName="recalculateMask" />
+          <ScalarProperty Name="stackCount" ColumnName="stackCount" />
+          <ScalarProperty Name="maxDuration" ColumnName="maxDuration" />
+          <ScalarProperty Name="remainTime" ColumnName="remainTime" />
+          <ScalarProperty Name="remainCharges" ColumnName="remainCharges" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pet_aura_effect">
+      <EntityTypeMapping TypeName="archiveModel.pet_aura_effect">
+        <MappingFragment StoreEntitySet="pet_aura_effect">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="casterGuid" ColumnName="casterGuid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="effectMask" ColumnName="effectMask" />
+          <ScalarProperty Name="effectIndex" ColumnName="effectIndex" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="baseAmount" ColumnName="baseAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pet_spell">
+      <EntityTypeMapping TypeName="archiveModel.pet_spell">
+        <MappingFragment StoreEntitySet="pet_spell">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="active" ColumnName="active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pet_spell_cooldown">
+      <EntityTypeMapping TypeName="archiveModel.pet_spell_cooldown">
+        <MappingFragment StoreEntitySet="pet_spell_cooldown">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="categoryEnd" ColumnName="categoryEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="petitions">
+      <EntityTypeMapping TypeName="archiveModel.petition">
+        <MappingFragment StoreEntitySet="petition">
+          <ScalarProperty Name="ownerguid" ColumnName="ownerguid" />
+          <ScalarProperty Name="petitionguid" ColumnName="petitionguid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="petition_sign">
+      <EntityTypeMapping TypeName="archiveModel.petition_sign">
+        <MappingFragment StoreEntitySet="petition_sign">
+          <ScalarProperty Name="ownerguid" ColumnName="ownerguid" />
+          <ScalarProperty Name="petitionguid" ColumnName="petitionguid" />
+          <ScalarProperty Name="playerguid" ColumnName="playerguid" />
+          <ScalarProperty Name="player_account" ColumnName="player_account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pool_quest_save">
+      <EntityTypeMapping TypeName="archiveModel.pool_quest_save">
+        <MappingFragment StoreEntitySet="pool_quest_save">
+          <ScalarProperty Name="pool_id" ColumnName="pool_id" />
+          <ScalarProperty Name="quest_id" ColumnName="quest_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pvpstats_battlegrounds">
+      <EntityTypeMapping TypeName="archiveModel.pvpstats_battlegrounds">
+        <MappingFragment StoreEntitySet="pvpstats_battlegrounds">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="winner_faction" ColumnName="winner_faction" />
+          <ScalarProperty Name="bracket_id" ColumnName="bracket_id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pvpstats_players">
+      <EntityTypeMapping TypeName="archiveModel.pvpstats_players">
+        <MappingFragment StoreEntitySet="pvpstats_players">
+          <ScalarProperty Name="battleground_id" ColumnName="battleground_id" />
+          <ScalarProperty Name="character_guid" ColumnName="character_guid" />
+          <ScalarProperty Name="winner" ColumnName="winner" />
+          <ScalarProperty Name="score_killing_blows" ColumnName="score_killing_blows" />
+          <ScalarProperty Name="score_deaths" ColumnName="score_deaths" />
+          <ScalarProperty Name="score_honorable_kills" ColumnName="score_honorable_kills" />
+          <ScalarProperty Name="score_bonus_honor" ColumnName="score_bonus_honor" />
+          <ScalarProperty Name="score_damage_done" ColumnName="score_damage_done" />
+          <ScalarProperty Name="score_healing_done" ColumnName="score_healing_done" />
+          <ScalarProperty Name="attr_1" ColumnName="attr_1" />
+          <ScalarProperty Name="attr_2" ColumnName="attr_2" />
+          <ScalarProperty Name="attr_3" ColumnName="attr_3" />
+          <ScalarProperty Name="attr_4" ColumnName="attr_4" />
+          <ScalarProperty Name="attr_5" ColumnName="attr_5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_tracker">
+      <EntityTypeMapping TypeName="archiveModel.quest_tracker">
+        <MappingFragment StoreEntitySet="quest_tracker">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="character_guid" ColumnName="character_guid" />
+          <ScalarProperty Name="quest_accept_time" ColumnName="quest_accept_time" />
+          <ScalarProperty Name="quest_complete_time" ColumnName="quest_complete_time" />
+          <ScalarProperty Name="quest_abandon_time" ColumnName="quest_abandon_time" />
+          <ScalarProperty Name="completed_by_gm" ColumnName="completed_by_gm" />
+          <ScalarProperty Name="core_hash" ColumnName="core_hash" />
+          <ScalarProperty Name="core_revision" ColumnName="core_revision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reserved_name">
+      <EntityTypeMapping TypeName="archiveModel.reserved_name">
+        <MappingFragment StoreEntitySet="reserved_name">
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="updates">
+      <EntityTypeMapping TypeName="archiveModel.update">
+        <MappingFragment StoreEntitySet="updates">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="hash" ColumnName="hash" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="speed" ColumnName="speed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="updates_include">
+      <EntityTypeMapping TypeName="archiveModel.updates_include">
+        <MappingFragment StoreEntitySet="updates_include">
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="warden_action">
+      <EntityTypeMapping TypeName="archiveModel.warden_action">
+        <MappingFragment StoreEntitySet="warden_action">
+          <ScalarProperty Name="wardenId" ColumnName="wardenId" />
+          <ScalarProperty Name="action" ColumnName="action" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="worldstates">
+      <EntityTypeMapping TypeName="archiveModel.worldstate">
+        <MappingFragment StoreEntitySet="worldstates">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_spell_charges">
+      <EntityTypeMapping TypeName="archiveModel.character_spell_charges">
+        <MappingFragment StoreEntitySet="character_spell_charges">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="rechargeStart" ColumnName="rechargeStart" />
+          <ScalarProperty Name="rechargeEnd" ColumnName="rechargeEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_member">
+      <EntityTypeMapping TypeName="archiveModel.guild_member">
+        <MappingFragment StoreEntitySet="guild_member">
+          <ScalarProperty Name="guildid" ColumnName="guildid" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="pnote" ColumnName="pnote" />
+          <ScalarProperty Name="offnote" ColumnName="offnote" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pet_spell_charges">
+      <EntityTypeMapping TypeName="archiveModel.pet_spell_charges">
+        <MappingFragment StoreEntitySet="pet_spell_charges">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+          <ScalarProperty Name="rechargeStart" ColumnName="rechargeStart" />
+          <ScalarProperty Name="rechargeEnd" ColumnName="rechargeEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

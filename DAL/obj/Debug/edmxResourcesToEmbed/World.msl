@@ -1,0 +1,2723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="worldModelStoreContainer" CdmEntityContainer="worldEntities">
+    <EntitySetMapping Name="access_requirement">
+      <EntityTypeMapping TypeName="worldModel.access_requirement">
+        <MappingFragment StoreEntitySet="access_requirement">
+          <ScalarProperty Name="mapId" ColumnName="mapId" />
+          <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+          <ScalarProperty Name="level_min" ColumnName="level_min" />
+          <ScalarProperty Name="level_max" ColumnName="level_max" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="item2" ColumnName="item2" />
+          <ScalarProperty Name="quest_done_A" ColumnName="quest_done_A" />
+          <ScalarProperty Name="quest_done_H" ColumnName="quest_done_H" />
+          <ScalarProperty Name="completed_achievement" ColumnName="completed_achievement" />
+          <ScalarProperty Name="quest_failed_text" ColumnName="quest_failed_text" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="achievement_dbc">
+      <EntityTypeMapping TypeName="worldModel.achievement_dbc">
+        <MappingFragment StoreEntitySet="achievement_dbc">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="requiredFaction" ColumnName="requiredFaction" />
+          <ScalarProperty Name="mapID" ColumnName="mapID" />
+          <ScalarProperty Name="points" ColumnName="points" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="refAchievement" ColumnName="refAchievement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="achievement_reward">
+      <EntityTypeMapping TypeName="worldModel.achievement_reward">
+        <MappingFragment StoreEntitySet="achievement_reward">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="title_A" ColumnName="title_A" />
+          <ScalarProperty Name="title_H" ColumnName="title_H" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="mailTemplate" ColumnName="mailTemplate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areatrigger_involvedrelation">
+      <EntityTypeMapping TypeName="worldModel.areatrigger_involvedrelation">
+        <MappingFragment StoreEntitySet="areatrigger_involvedrelation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areatrigger_scripts">
+      <EntityTypeMapping TypeName="worldModel.areatrigger_scripts">
+        <MappingFragment StoreEntitySet="areatrigger_scripts">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areatrigger_tavern">
+      <EntityTypeMapping TypeName="worldModel.areatrigger_tavern">
+        <MappingFragment StoreEntitySet="areatrigger_tavern">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areatrigger_teleport">
+      <EntityTypeMapping TypeName="worldModel.areatrigger_teleport">
+        <MappingFragment StoreEntitySet="areatrigger_teleport">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PortLocID" ColumnName="PortLocID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areatrigger_template">
+      <EntityTypeMapping TypeName="worldModel.areatrigger_template">
+        <MappingFragment StoreEntitySet="areatrigger_template">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="Data0" ColumnName="Data0" />
+          <ScalarProperty Name="Data1" ColumnName="Data1" />
+          <ScalarProperty Name="Data2" ColumnName="Data2" />
+          <ScalarProperty Name="Data3" ColumnName="Data3" />
+          <ScalarProperty Name="Data4" ColumnName="Data4" />
+          <ScalarProperty Name="Data5" ColumnName="Data5" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areatrigger_template_actions">
+      <EntityTypeMapping TypeName="worldModel.areatrigger_template_actions">
+        <MappingFragment StoreEntitySet="areatrigger_template_actions">
+          <ScalarProperty Name="AreaTriggerId" ColumnName="AreaTriggerId" />
+          <ScalarProperty Name="ActionType" ColumnName="ActionType" />
+          <ScalarProperty Name="ActionParam" ColumnName="ActionParam" />
+          <ScalarProperty Name="TargetType" ColumnName="TargetType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areatrigger_template_polygon_vertices">
+      <EntityTypeMapping TypeName="worldModel.areatrigger_template_polygon_vertices">
+        <MappingFragment StoreEntitySet="areatrigger_template_polygon_vertices">
+          <ScalarProperty Name="AreaTriggerId" ColumnName="AreaTriggerId" />
+          <ScalarProperty Name="Idx" ColumnName="Idx" />
+          <ScalarProperty Name="VerticeX" ColumnName="VerticeX" />
+          <ScalarProperty Name="VerticeY" ColumnName="VerticeY" />
+          <ScalarProperty Name="VerticeTargetX" ColumnName="VerticeTargetX" />
+          <ScalarProperty Name="VerticeTargetY" ColumnName="VerticeTargetY" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="battle_pet_breeds">
+      <EntityTypeMapping TypeName="worldModel.battle_pet_breeds">
+        <MappingFragment StoreEntitySet="battle_pet_breeds">
+          <ScalarProperty Name="speciesId" ColumnName="speciesId" />
+          <ScalarProperty Name="breedId" ColumnName="breedId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="battle_pet_quality">
+      <EntityTypeMapping TypeName="worldModel.battle_pet_quality">
+        <MappingFragment StoreEntitySet="battle_pet_quality">
+          <ScalarProperty Name="speciesId" ColumnName="speciesId" />
+          <ScalarProperty Name="quality" ColumnName="quality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="battleground_template">
+      <EntityTypeMapping TypeName="worldModel.battleground_template">
+        <MappingFragment StoreEntitySet="battleground_template">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MinPlayersPerTeam" ColumnName="MinPlayersPerTeam" />
+          <ScalarProperty Name="MaxPlayersPerTeam" ColumnName="MaxPlayersPerTeam" />
+          <ScalarProperty Name="MinLvl" ColumnName="MinLvl" />
+          <ScalarProperty Name="MaxLvl" ColumnName="MaxLvl" />
+          <ScalarProperty Name="AllianceStartLoc" ColumnName="AllianceStartLoc" />
+          <ScalarProperty Name="HordeStartLoc" ColumnName="HordeStartLoc" />
+          <ScalarProperty Name="StartMaxDist" ColumnName="StartMaxDist" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="battlemaster_entry">
+      <EntityTypeMapping TypeName="worldModel.battlemaster_entry">
+        <MappingFragment StoreEntitySet="battlemaster_entry">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="bg_template" ColumnName="bg_template" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blackmarket_template">
+      <EntityTypeMapping TypeName="worldModel.blackmarket_template">
+        <MappingFragment StoreEntitySet="blackmarket_template">
+          <ScalarProperty Name="marketId" ColumnName="marketId" />
+          <ScalarProperty Name="sellerNpc" ColumnName="sellerNpc" />
+          <ScalarProperty Name="itemEntry" ColumnName="itemEntry" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="minBid" ColumnName="minBid" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="chance" ColumnName="chance" />
+          <ScalarProperty Name="bonusListIDs" ColumnName="bonusListIDs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_template">
+      <EntityTypeMapping TypeName="worldModel.character_template">
+        <MappingFragment StoreEntitySet="character_template">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_template_class">
+      <EntityTypeMapping TypeName="worldModel.character_template_class">
+        <MappingFragment StoreEntitySet="character_template_class">
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="FactionGroup" ColumnName="FactionGroup" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="class_expansion_requirement">
+      <EntityTypeMapping TypeName="worldModel.class_expansion_requirement">
+        <MappingFragment StoreEntitySet="class_expansion_requirement">
+          <ScalarProperty Name="classID" ColumnName="classID" />
+          <ScalarProperty Name="expansion" ColumnName="expansion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="commands">
+      <EntityTypeMapping TypeName="worldModel.command">
+        <MappingFragment StoreEntitySet="command">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="permission" ColumnName="permission" />
+          <ScalarProperty Name="help" ColumnName="help" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conditions">
+      <EntityTypeMapping TypeName="worldModel.condition">
+        <MappingFragment StoreEntitySet="conditions">
+          <ScalarProperty Name="SourceTypeOrReferenceId" ColumnName="SourceTypeOrReferenceId" />
+          <ScalarProperty Name="SourceGroup" ColumnName="SourceGroup" />
+          <ScalarProperty Name="SourceEntry" ColumnName="SourceEntry" />
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="ElseGroup" ColumnName="ElseGroup" />
+          <ScalarProperty Name="ConditionTypeOrReference" ColumnName="ConditionTypeOrReference" />
+          <ScalarProperty Name="ConditionTarget" ColumnName="ConditionTarget" />
+          <ScalarProperty Name="ConditionValue1" ColumnName="ConditionValue1" />
+          <ScalarProperty Name="ConditionValue2" ColumnName="ConditionValue2" />
+          <ScalarProperty Name="ConditionValue3" ColumnName="ConditionValue3" />
+          <ScalarProperty Name="NegativeCondition" ColumnName="NegativeCondition" />
+          <ScalarProperty Name="ErrorType" ColumnName="ErrorType" />
+          <ScalarProperty Name="ErrorTextId" ColumnName="ErrorTextId" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conversation_actor_template">
+      <EntityTypeMapping TypeName="worldModel.conversation_actor_template">
+        <MappingFragment StoreEntitySet="conversation_actor_template">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CreatureId" ColumnName="CreatureId" />
+          <ScalarProperty Name="CreatureModelId" ColumnName="CreatureModelId" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conversation_actors">
+      <EntityTypeMapping TypeName="worldModel.conversation_actors">
+        <MappingFragment StoreEntitySet="conversation_actors">
+          <ScalarProperty Name="ConversationId" ColumnName="ConversationId" />
+          <ScalarProperty Name="ConversationActorId" ColumnName="ConversationActorId" />
+          <ScalarProperty Name="ConversationActorGuid" ColumnName="ConversationActorGuid" />
+          <ScalarProperty Name="Idx" ColumnName="Idx" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conversation_line_template">
+      <EntityTypeMapping TypeName="worldModel.conversation_line_template">
+        <MappingFragment StoreEntitySet="conversation_line_template">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="UiCameraID" ColumnName="UiCameraID" />
+          <ScalarProperty Name="ActorIdx" ColumnName="ActorIdx" />
+          <ScalarProperty Name="Unk" ColumnName="Unk" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conversation_template">
+      <EntityTypeMapping TypeName="worldModel.conversation_template">
+        <MappingFragment StoreEntitySet="conversation_template">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstLineId" ColumnName="FirstLineId" />
+          <ScalarProperty Name="LastLineEndTime" ColumnName="LastLineEndTime" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creatures">
+      <EntityTypeMapping TypeName="worldModel.creature">
+        <MappingFragment StoreEntitySet="creature">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="zoneId" ColumnName="zoneId" />
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="spawnMask" ColumnName="spawnMask" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="PhaseGroup" ColumnName="PhaseGroup" />
+          <ScalarProperty Name="modelid" ColumnName="modelid" />
+          <ScalarProperty Name="equipment_id" ColumnName="equipment_id" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="spawntimesecs" ColumnName="spawntimesecs" />
+          <ScalarProperty Name="spawndist" ColumnName="spawndist" />
+          <ScalarProperty Name="currentwaypoint" ColumnName="currentwaypoint" />
+          <ScalarProperty Name="curhealth" ColumnName="curhealth" />
+          <ScalarProperty Name="curmana" ColumnName="curmana" />
+          <ScalarProperty Name="MovementType" ColumnName="MovementType" />
+          <ScalarProperty Name="npcflag" ColumnName="npcflag" />
+          <ScalarProperty Name="unit_flags" ColumnName="unit_flags" />
+          <ScalarProperty Name="unit_flags2" ColumnName="unit_flags2" />
+          <ScalarProperty Name="unit_flags3" ColumnName="unit_flags3" />
+          <ScalarProperty Name="dynamicflags" ColumnName="dynamicflags" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_addon">
+      <EntityTypeMapping TypeName="worldModel.creature_addon">
+        <MappingFragment StoreEntitySet="creature_addon">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="path_id" ColumnName="path_id" />
+          <ScalarProperty Name="mount" ColumnName="mount" />
+          <ScalarProperty Name="bytes1" ColumnName="bytes1" />
+          <ScalarProperty Name="bytes2" ColumnName="bytes2" />
+          <ScalarProperty Name="emote" ColumnName="emote" />
+          <ScalarProperty Name="aiAnimKit" ColumnName="aiAnimKit" />
+          <ScalarProperty Name="movementAnimKit" ColumnName="movementAnimKit" />
+          <ScalarProperty Name="meleeAnimKit" ColumnName="meleeAnimKit" />
+          <ScalarProperty Name="auras" ColumnName="auras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_classlevelstats">
+      <EntityTypeMapping TypeName="worldModel.creature_classlevelstats">
+        <MappingFragment StoreEntitySet="creature_classlevelstats">
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="basemana" ColumnName="basemana" />
+          <ScalarProperty Name="basearmor" ColumnName="basearmor" />
+          <ScalarProperty Name="attackpower" ColumnName="attackpower" />
+          <ScalarProperty Name="rangedattackpower" ColumnName="rangedattackpower" />
+          <ScalarProperty Name="damage_base" ColumnName="damage_base" />
+          <ScalarProperty Name="damage_exp1" ColumnName="damage_exp1" />
+          <ScalarProperty Name="damage_exp2" ColumnName="damage_exp2" />
+          <ScalarProperty Name="damage_exp3" ColumnName="damage_exp3" />
+          <ScalarProperty Name="damage_exp4" ColumnName="damage_exp4" />
+          <ScalarProperty Name="damage_exp5" ColumnName="damage_exp5" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_default_trainer">
+      <EntityTypeMapping TypeName="worldModel.creature_default_trainer">
+        <MappingFragment StoreEntitySet="creature_default_trainer">
+          <ScalarProperty Name="CreatureId" ColumnName="CreatureId" />
+          <ScalarProperty Name="TrainerId" ColumnName="TrainerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_equip_template">
+      <EntityTypeMapping TypeName="worldModel.creature_equip_template">
+        <MappingFragment StoreEntitySet="creature_equip_template">
+          <ScalarProperty Name="CreatureID" ColumnName="CreatureID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ItemID1" ColumnName="ItemID1" />
+          <ScalarProperty Name="AppearanceModID1" ColumnName="AppearanceModID1" />
+          <ScalarProperty Name="ItemVisual1" ColumnName="ItemVisual1" />
+          <ScalarProperty Name="ItemID2" ColumnName="ItemID2" />
+          <ScalarProperty Name="AppearanceModID2" ColumnName="AppearanceModID2" />
+          <ScalarProperty Name="ItemVisual2" ColumnName="ItemVisual2" />
+          <ScalarProperty Name="ItemID3" ColumnName="ItemID3" />
+          <ScalarProperty Name="AppearanceModID3" ColumnName="AppearanceModID3" />
+          <ScalarProperty Name="ItemVisual3" ColumnName="ItemVisual3" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_formations">
+      <EntityTypeMapping TypeName="worldModel.creature_formations">
+        <MappingFragment StoreEntitySet="creature_formations">
+          <ScalarProperty Name="leaderGUID" ColumnName="leaderGUID" />
+          <ScalarProperty Name="memberGUID" ColumnName="memberGUID" />
+          <ScalarProperty Name="groupAI" ColumnName="groupAI" />
+          <ScalarProperty Name="point_1" ColumnName="point_1" />
+          <ScalarProperty Name="point_2" ColumnName="point_2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_loot_template">
+      <EntityTypeMapping TypeName="worldModel.creature_loot_template">
+        <MappingFragment StoreEntitySet="creature_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_model_info">
+      <EntityTypeMapping TypeName="worldModel.creature_model_info">
+        <MappingFragment StoreEntitySet="creature_model_info">
+          <ScalarProperty Name="DisplayID" ColumnName="DisplayID" />
+          <ScalarProperty Name="BoundingRadius" ColumnName="BoundingRadius" />
+          <ScalarProperty Name="CombatReach" ColumnName="CombatReach" />
+          <ScalarProperty Name="DisplayID_Other_Gender" ColumnName="DisplayID_Other_Gender" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_onkill_reputation">
+      <EntityTypeMapping TypeName="worldModel.creature_onkill_reputation">
+        <MappingFragment StoreEntitySet="creature_onkill_reputation">
+          <ScalarProperty Name="creature_id" ColumnName="creature_id" />
+          <ScalarProperty Name="RewOnKillRepFaction1" ColumnName="RewOnKillRepFaction1" />
+          <ScalarProperty Name="RewOnKillRepFaction2" ColumnName="RewOnKillRepFaction2" />
+          <ScalarProperty Name="MaxStanding1" ColumnName="MaxStanding1" />
+          <ScalarProperty Name="IsTeamAward1" ColumnName="IsTeamAward1" />
+          <ScalarProperty Name="RewOnKillRepValue1" ColumnName="RewOnKillRepValue1" />
+          <ScalarProperty Name="MaxStanding2" ColumnName="MaxStanding2" />
+          <ScalarProperty Name="IsTeamAward2" ColumnName="IsTeamAward2" />
+          <ScalarProperty Name="RewOnKillRepValue2" ColumnName="RewOnKillRepValue2" />
+          <ScalarProperty Name="TeamDependent" ColumnName="TeamDependent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_questender">
+      <EntityTypeMapping TypeName="worldModel.creature_questender">
+        <MappingFragment StoreEntitySet="creature_questender">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_questitem">
+      <EntityTypeMapping TypeName="worldModel.creature_questitem">
+        <MappingFragment StoreEntitySet="creature_questitem">
+          <ScalarProperty Name="CreatureEntry" ColumnName="CreatureEntry" />
+          <ScalarProperty Name="Idx" ColumnName="Idx" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_queststarter">
+      <EntityTypeMapping TypeName="worldModel.creature_queststarter">
+        <MappingFragment StoreEntitySet="creature_queststarter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_template">
+      <EntityTypeMapping TypeName="worldModel.creature_template">
+        <MappingFragment StoreEntitySet="creature_template">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="difficulty_entry_1" ColumnName="difficulty_entry_1" />
+          <ScalarProperty Name="difficulty_entry_2" ColumnName="difficulty_entry_2" />
+          <ScalarProperty Name="difficulty_entry_3" ColumnName="difficulty_entry_3" />
+          <ScalarProperty Name="KillCredit1" ColumnName="KillCredit1" />
+          <ScalarProperty Name="KillCredit2" ColumnName="KillCredit2" />
+          <ScalarProperty Name="modelid1" ColumnName="modelid1" />
+          <ScalarProperty Name="modelid2" ColumnName="modelid2" />
+          <ScalarProperty Name="modelid3" ColumnName="modelid3" />
+          <ScalarProperty Name="modelid4" ColumnName="modelid4" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="femaleName" ColumnName="femaleName" />
+          <ScalarProperty Name="subname" ColumnName="subname" />
+          <ScalarProperty Name="IconName" ColumnName="IconName" />
+          <ScalarProperty Name="gossip_menu_id" ColumnName="gossip_menu_id" />
+          <ScalarProperty Name="minlevel" ColumnName="minlevel" />
+          <ScalarProperty Name="maxlevel" ColumnName="maxlevel" />
+          <ScalarProperty Name="HealthScalingExpansion" ColumnName="HealthScalingExpansion" />
+          <ScalarProperty Name="RequiredExpansion" ColumnName="RequiredExpansion" />
+          <ScalarProperty Name="VignetteID" ColumnName="VignetteID" />
+          <ScalarProperty Name="faction" ColumnName="faction" />
+          <ScalarProperty Name="npcflag" ColumnName="npcflag" />
+          <ScalarProperty Name="speed_walk" ColumnName="speed_walk" />
+          <ScalarProperty Name="speed_run" ColumnName="speed_run" />
+          <ScalarProperty Name="scale" ColumnName="scale" />
+          <ScalarProperty Name="rank" ColumnName="rank" />
+          <ScalarProperty Name="dmgschool" ColumnName="dmgschool" />
+          <ScalarProperty Name="BaseAttackTime" ColumnName="BaseAttackTime" />
+          <ScalarProperty Name="RangeAttackTime" ColumnName="RangeAttackTime" />
+          <ScalarProperty Name="BaseVariance" ColumnName="BaseVariance" />
+          <ScalarProperty Name="RangeVariance" ColumnName="RangeVariance" />
+          <ScalarProperty Name="unit_class" ColumnName="unit_class" />
+          <ScalarProperty Name="unit_flags" ColumnName="unit_flags" />
+          <ScalarProperty Name="unit_flags2" ColumnName="unit_flags2" />
+          <ScalarProperty Name="unit_flags3" ColumnName="unit_flags3" />
+          <ScalarProperty Name="dynamicflags" ColumnName="dynamicflags" />
+          <ScalarProperty Name="family" ColumnName="family" />
+          <ScalarProperty Name="trainer_class" ColumnName="trainer_class" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="type_flags" ColumnName="type_flags" />
+          <ScalarProperty Name="type_flags2" ColumnName="type_flags2" />
+          <ScalarProperty Name="lootid" ColumnName="lootid" />
+          <ScalarProperty Name="pickpocketloot" ColumnName="pickpocketloot" />
+          <ScalarProperty Name="skinloot" ColumnName="skinloot" />
+          <ScalarProperty Name="resistance1" ColumnName="resistance1" />
+          <ScalarProperty Name="resistance2" ColumnName="resistance2" />
+          <ScalarProperty Name="resistance3" ColumnName="resistance3" />
+          <ScalarProperty Name="resistance4" ColumnName="resistance4" />
+          <ScalarProperty Name="resistance5" ColumnName="resistance5" />
+          <ScalarProperty Name="resistance6" ColumnName="resistance6" />
+          <ScalarProperty Name="spell1" ColumnName="spell1" />
+          <ScalarProperty Name="spell2" ColumnName="spell2" />
+          <ScalarProperty Name="spell3" ColumnName="spell3" />
+          <ScalarProperty Name="spell4" ColumnName="spell4" />
+          <ScalarProperty Name="spell5" ColumnName="spell5" />
+          <ScalarProperty Name="spell6" ColumnName="spell6" />
+          <ScalarProperty Name="spell7" ColumnName="spell7" />
+          <ScalarProperty Name="spell8" ColumnName="spell8" />
+          <ScalarProperty Name="VehicleId" ColumnName="VehicleId" />
+          <ScalarProperty Name="mingold" ColumnName="mingold" />
+          <ScalarProperty Name="maxgold" ColumnName="maxgold" />
+          <ScalarProperty Name="AIName" ColumnName="AIName" />
+          <ScalarProperty Name="MovementType" ColumnName="MovementType" />
+          <ScalarProperty Name="InhabitType" ColumnName="InhabitType" />
+          <ScalarProperty Name="HoverHeight" ColumnName="HoverHeight" />
+          <ScalarProperty Name="HealthModifier" ColumnName="HealthModifier" />
+          <ScalarProperty Name="HealthModifierExtra" ColumnName="HealthModifierExtra" />
+          <ScalarProperty Name="ManaModifier" ColumnName="ManaModifier" />
+          <ScalarProperty Name="ManaModifierExtra" ColumnName="ManaModifierExtra" />
+          <ScalarProperty Name="ArmorModifier" ColumnName="ArmorModifier" />
+          <ScalarProperty Name="DamageModifier" ColumnName="DamageModifier" />
+          <ScalarProperty Name="ExperienceModifier" ColumnName="ExperienceModifier" />
+          <ScalarProperty Name="RacialLeader" ColumnName="RacialLeader" />
+          <ScalarProperty Name="movementId" ColumnName="movementId" />
+          <ScalarProperty Name="RegenHealth" ColumnName="RegenHealth" />
+          <ScalarProperty Name="mechanic_immune_mask" ColumnName="mechanic_immune_mask" />
+          <ScalarProperty Name="flags_extra" ColumnName="flags_extra" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_template_addon">
+      <EntityTypeMapping TypeName="worldModel.creature_template_addon">
+        <MappingFragment StoreEntitySet="creature_template_addon">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="path_id" ColumnName="path_id" />
+          <ScalarProperty Name="mount" ColumnName="mount" />
+          <ScalarProperty Name="bytes1" ColumnName="bytes1" />
+          <ScalarProperty Name="bytes2" ColumnName="bytes2" />
+          <ScalarProperty Name="emote" ColumnName="emote" />
+          <ScalarProperty Name="aiAnimKit" ColumnName="aiAnimKit" />
+          <ScalarProperty Name="movementAnimKit" ColumnName="movementAnimKit" />
+          <ScalarProperty Name="meleeAnimKit" ColumnName="meleeAnimKit" />
+          <ScalarProperty Name="auras" ColumnName="auras" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_template_locale">
+      <EntityTypeMapping TypeName="worldModel.creature_template_locale">
+        <MappingFragment StoreEntitySet="creature_template_locale">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="NameAlt" ColumnName="NameAlt" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="TitleAlt" ColumnName="TitleAlt" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_template_scaling">
+      <EntityTypeMapping TypeName="worldModel.creature_template_scaling">
+        <MappingFragment StoreEntitySet="creature_template_scaling">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="LevelScalingMin" ColumnName="LevelScalingMin" />
+          <ScalarProperty Name="LevelScalingMax" ColumnName="LevelScalingMax" />
+          <ScalarProperty Name="LevelScalingDelta" ColumnName="LevelScalingDelta" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_text">
+      <EntityTypeMapping TypeName="worldModel.creature_text">
+        <MappingFragment StoreEntitySet="creature_text">
+          <ScalarProperty Name="CreatureID" ColumnName="CreatureID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Language" ColumnName="Language" />
+          <ScalarProperty Name="Emote" ColumnName="Emote" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Sound" ColumnName="Sound" />
+          <ScalarProperty Name="BroadcastTextId" ColumnName="BroadcastTextId" />
+          <ScalarProperty Name="TextRange" ColumnName="TextRange" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_text_locale">
+      <EntityTypeMapping TypeName="worldModel.creature_text_locale">
+        <MappingFragment StoreEntitySet="creature_text_locale">
+          <ScalarProperty Name="CreatureID" ColumnName="CreatureID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Locale" ColumnName="Locale" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="criteria_data">
+      <EntityTypeMapping TypeName="worldModel.criteria_data">
+        <MappingFragment StoreEntitySet="criteria_data">
+          <ScalarProperty Name="criteria_id" ColumnName="criteria_id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="value1" ColumnName="value1" />
+          <ScalarProperty Name="value2" ColumnName="value2" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disables">
+      <EntityTypeMapping TypeName="worldModel.disable">
+        <MappingFragment StoreEntitySet="disables">
+          <ScalarProperty Name="sourceType" ColumnName="sourceType" />
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="params_0" ColumnName="params_0" />
+          <ScalarProperty Name="params_1" ColumnName="params_1" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disenchant_loot_template">
+      <EntityTypeMapping TypeName="worldModel.disenchant_loot_template">
+        <MappingFragment StoreEntitySet="disenchant_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exploration_basexp">
+      <EntityTypeMapping TypeName="worldModel.exploration_basexp">
+        <MappingFragment StoreEntitySet="exploration_basexp">
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="basexp" ColumnName="basexp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fishing_loot_template">
+      <EntityTypeMapping TypeName="worldModel.fishing_loot_template">
+        <MappingFragment StoreEntitySet="fishing_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event">
+      <EntityTypeMapping TypeName="worldModel.game_event">
+        <MappingFragment StoreEntitySet="game_event">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+          <ScalarProperty Name="occurence" ColumnName="occurence" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="holiday" ColumnName="holiday" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="world_event" ColumnName="world_event" />
+          <ScalarProperty Name="announce" ColumnName="announce" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_battleground_holiday">
+      <EntityTypeMapping TypeName="worldModel.game_event_battleground_holiday">
+        <MappingFragment StoreEntitySet="game_event_battleground_holiday">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="bgflag" ColumnName="bgflag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_condition">
+      <EntityTypeMapping TypeName="worldModel.game_event_condition">
+        <MappingFragment StoreEntitySet="game_event_condition">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="condition_id" ColumnName="condition_id" />
+          <ScalarProperty Name="req_num" ColumnName="req_num" />
+          <ScalarProperty Name="max_world_state_field" ColumnName="max_world_state_field" />
+          <ScalarProperty Name="done_world_state_field" ColumnName="done_world_state_field" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_creature">
+      <EntityTypeMapping TypeName="worldModel.game_event_creature">
+        <MappingFragment StoreEntitySet="game_event_creature">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_creature_quest">
+      <EntityTypeMapping TypeName="worldModel.game_event_creature_quest">
+        <MappingFragment StoreEntitySet="game_event_creature_quest">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_gameobject">
+      <EntityTypeMapping TypeName="worldModel.game_event_gameobject">
+        <MappingFragment StoreEntitySet="game_event_gameobject">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_gameobject_quest">
+      <EntityTypeMapping TypeName="worldModel.game_event_gameobject_quest">
+        <MappingFragment StoreEntitySet="game_event_gameobject_quest">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_model_equip">
+      <EntityTypeMapping TypeName="worldModel.game_event_model_equip">
+        <MappingFragment StoreEntitySet="game_event_model_equip">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="modelid" ColumnName="modelid" />
+          <ScalarProperty Name="equipment_id" ColumnName="equipment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_npc_vendor">
+      <EntityTypeMapping TypeName="worldModel.game_event_npc_vendor">
+        <MappingFragment StoreEntitySet="game_event_npc_vendor">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="maxcount" ColumnName="maxcount" />
+          <ScalarProperty Name="incrtime" ColumnName="incrtime" />
+          <ScalarProperty Name="ExtendedCost" ColumnName="ExtendedCost" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="BonusListIDs" ColumnName="BonusListIDs" />
+          <ScalarProperty Name="PlayerConditionID" ColumnName="PlayerConditionID" />
+          <ScalarProperty Name="IgnoreFiltering" ColumnName="IgnoreFiltering" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_npcflag">
+      <EntityTypeMapping TypeName="worldModel.game_event_npcflag">
+        <MappingFragment StoreEntitySet="game_event_npcflag">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="npcflag" ColumnName="npcflag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_pool">
+      <EntityTypeMapping TypeName="worldModel.game_event_pool">
+        <MappingFragment StoreEntitySet="game_event_pool">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="pool_entry" ColumnName="pool_entry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_prerequisite">
+      <EntityTypeMapping TypeName="worldModel.game_event_prerequisite">
+        <MappingFragment StoreEntitySet="game_event_prerequisite">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="prerequisite_event" ColumnName="prerequisite_event" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_quest_condition">
+      <EntityTypeMapping TypeName="worldModel.game_event_quest_condition">
+        <MappingFragment StoreEntitySet="game_event_quest_condition">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+          <ScalarProperty Name="condition_id" ColumnName="condition_id" />
+          <ScalarProperty Name="num" ColumnName="num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_seasonal_questrelation">
+      <EntityTypeMapping TypeName="worldModel.game_event_seasonal_questrelation">
+        <MappingFragment StoreEntitySet="game_event_seasonal_questrelation">
+          <ScalarProperty Name="questId" ColumnName="questId" />
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_tele">
+      <EntityTypeMapping TypeName="worldModel.game_tele">
+        <MappingFragment StoreEntitySet="game_tele">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_weather">
+      <EntityTypeMapping TypeName="worldModel.game_weather">
+        <MappingFragment StoreEntitySet="game_weather">
+          <ScalarProperty Name="zone" ColumnName="zone" />
+          <ScalarProperty Name="spring_rain_chance" ColumnName="spring_rain_chance" />
+          <ScalarProperty Name="spring_snow_chance" ColumnName="spring_snow_chance" />
+          <ScalarProperty Name="spring_storm_chance" ColumnName="spring_storm_chance" />
+          <ScalarProperty Name="summer_rain_chance" ColumnName="summer_rain_chance" />
+          <ScalarProperty Name="summer_snow_chance" ColumnName="summer_snow_chance" />
+          <ScalarProperty Name="summer_storm_chance" ColumnName="summer_storm_chance" />
+          <ScalarProperty Name="fall_rain_chance" ColumnName="fall_rain_chance" />
+          <ScalarProperty Name="fall_snow_chance" ColumnName="fall_snow_chance" />
+          <ScalarProperty Name="fall_storm_chance" ColumnName="fall_storm_chance" />
+          <ScalarProperty Name="winter_rain_chance" ColumnName="winter_rain_chance" />
+          <ScalarProperty Name="winter_snow_chance" ColumnName="winter_snow_chance" />
+          <ScalarProperty Name="winter_storm_chance" ColumnName="winter_storm_chance" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobjects">
+      <EntityTypeMapping TypeName="worldModel.gameobject">
+        <MappingFragment StoreEntitySet="gameobject">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="zoneId" ColumnName="zoneId" />
+          <ScalarProperty Name="areaId" ColumnName="areaId" />
+          <ScalarProperty Name="spawnMask" ColumnName="spawnMask" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="PhaseGroup" ColumnName="PhaseGroup" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="rotation0" ColumnName="rotation0" />
+          <ScalarProperty Name="rotation1" ColumnName="rotation1" />
+          <ScalarProperty Name="rotation2" ColumnName="rotation2" />
+          <ScalarProperty Name="rotation3" ColumnName="rotation3" />
+          <ScalarProperty Name="spawntimesecs" ColumnName="spawntimesecs" />
+          <ScalarProperty Name="animprogress" ColumnName="animprogress" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_addon">
+      <EntityTypeMapping TypeName="worldModel.gameobject_addon">
+        <MappingFragment StoreEntitySet="gameobject_addon">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="parent_rotation0" ColumnName="parent_rotation0" />
+          <ScalarProperty Name="parent_rotation1" ColumnName="parent_rotation1" />
+          <ScalarProperty Name="parent_rotation2" ColumnName="parent_rotation2" />
+          <ScalarProperty Name="parent_rotation3" ColumnName="parent_rotation3" />
+          <ScalarProperty Name="invisibilityType" ColumnName="invisibilityType" />
+          <ScalarProperty Name="invisibilityValue" ColumnName="invisibilityValue" />
+          <ScalarProperty Name="WorldEffectID" ColumnName="WorldEffectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_loot_template">
+      <EntityTypeMapping TypeName="worldModel.gameobject_loot_template">
+        <MappingFragment StoreEntitySet="gameobject_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_questender">
+      <EntityTypeMapping TypeName="worldModel.gameobject_questender">
+        <MappingFragment StoreEntitySet="gameobject_questender">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_questitem">
+      <EntityTypeMapping TypeName="worldModel.gameobject_questitem">
+        <MappingFragment StoreEntitySet="gameobject_questitem">
+          <ScalarProperty Name="GameObjectEntry" ColumnName="GameObjectEntry" />
+          <ScalarProperty Name="Idx" ColumnName="Idx" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_queststarter">
+      <EntityTypeMapping TypeName="worldModel.gameobject_queststarter">
+        <MappingFragment StoreEntitySet="gameobject_queststarter">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="quest" ColumnName="quest" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_template">
+      <EntityTypeMapping TypeName="worldModel.gameobject_template">
+        <MappingFragment StoreEntitySet="gameobject_template">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="displayId" ColumnName="displayId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="IconName" ColumnName="IconName" />
+          <ScalarProperty Name="castBarCaption" ColumnName="castBarCaption" />
+          <ScalarProperty Name="unk1" ColumnName="unk1" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="Data0" ColumnName="Data0" />
+          <ScalarProperty Name="Data1" ColumnName="Data1" />
+          <ScalarProperty Name="Data2" ColumnName="Data2" />
+          <ScalarProperty Name="Data3" ColumnName="Data3" />
+          <ScalarProperty Name="Data4" ColumnName="Data4" />
+          <ScalarProperty Name="Data5" ColumnName="Data5" />
+          <ScalarProperty Name="Data6" ColumnName="Data6" />
+          <ScalarProperty Name="Data7" ColumnName="Data7" />
+          <ScalarProperty Name="Data8" ColumnName="Data8" />
+          <ScalarProperty Name="Data9" ColumnName="Data9" />
+          <ScalarProperty Name="Data10" ColumnName="Data10" />
+          <ScalarProperty Name="Data11" ColumnName="Data11" />
+          <ScalarProperty Name="Data12" ColumnName="Data12" />
+          <ScalarProperty Name="Data13" ColumnName="Data13" />
+          <ScalarProperty Name="Data14" ColumnName="Data14" />
+          <ScalarProperty Name="Data15" ColumnName="Data15" />
+          <ScalarProperty Name="Data16" ColumnName="Data16" />
+          <ScalarProperty Name="Data17" ColumnName="Data17" />
+          <ScalarProperty Name="Data18" ColumnName="Data18" />
+          <ScalarProperty Name="Data19" ColumnName="Data19" />
+          <ScalarProperty Name="Data20" ColumnName="Data20" />
+          <ScalarProperty Name="Data21" ColumnName="Data21" />
+          <ScalarProperty Name="Data22" ColumnName="Data22" />
+          <ScalarProperty Name="Data23" ColumnName="Data23" />
+          <ScalarProperty Name="Data24" ColumnName="Data24" />
+          <ScalarProperty Name="Data25" ColumnName="Data25" />
+          <ScalarProperty Name="Data26" ColumnName="Data26" />
+          <ScalarProperty Name="Data27" ColumnName="Data27" />
+          <ScalarProperty Name="Data28" ColumnName="Data28" />
+          <ScalarProperty Name="Data29" ColumnName="Data29" />
+          <ScalarProperty Name="Data30" ColumnName="Data30" />
+          <ScalarProperty Name="Data31" ColumnName="Data31" />
+          <ScalarProperty Name="Data32" ColumnName="Data32" />
+          <ScalarProperty Name="RequiredLevel" ColumnName="RequiredLevel" />
+          <ScalarProperty Name="AIName" ColumnName="AIName" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_template_addon">
+      <EntityTypeMapping TypeName="worldModel.gameobject_template_addon">
+        <MappingFragment StoreEntitySet="gameobject_template_addon">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="faction" ColumnName="faction" />
+          <ScalarProperty Name="flags" ColumnName="flags" />
+          <ScalarProperty Name="mingold" ColumnName="mingold" />
+          <ScalarProperty Name="maxgold" ColumnName="maxgold" />
+          <ScalarProperty Name="WorldEffectID" ColumnName="WorldEffectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gameobject_template_locale">
+      <EntityTypeMapping TypeName="worldModel.gameobject_template_locale">
+        <MappingFragment StoreEntitySet="gameobject_template_locale">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="castBarCaption" ColumnName="castBarCaption" />
+          <ScalarProperty Name="unk1" ColumnName="unk1" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="garrison_follower_class_spec_abilities">
+      <EntityTypeMapping TypeName="worldModel.garrison_follower_class_spec_abilities">
+        <MappingFragment StoreEntitySet="garrison_follower_class_spec_abilities">
+          <ScalarProperty Name="classSpecId" ColumnName="classSpecId" />
+          <ScalarProperty Name="abilityId" ColumnName="abilityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="garrison_plot_finalize_info">
+      <EntityTypeMapping TypeName="worldModel.garrison_plot_finalize_info">
+        <MappingFragment StoreEntitySet="garrison_plot_finalize_info">
+          <ScalarProperty Name="garrPlotInstanceId" ColumnName="garrPlotInstanceId" />
+          <ScalarProperty Name="hordeGameObjectId" ColumnName="hordeGameObjectId" />
+          <ScalarProperty Name="hordeX" ColumnName="hordeX" />
+          <ScalarProperty Name="hordeY" ColumnName="hordeY" />
+          <ScalarProperty Name="hordeZ" ColumnName="hordeZ" />
+          <ScalarProperty Name="hordeO" ColumnName="hordeO" />
+          <ScalarProperty Name="hordeAnimKitId" ColumnName="hordeAnimKitId" />
+          <ScalarProperty Name="allianceGameObjectId" ColumnName="allianceGameObjectId" />
+          <ScalarProperty Name="allianceX" ColumnName="allianceX" />
+          <ScalarProperty Name="allianceY" ColumnName="allianceY" />
+          <ScalarProperty Name="allianceZ" ColumnName="allianceZ" />
+          <ScalarProperty Name="allianceO" ColumnName="allianceO" />
+          <ScalarProperty Name="allianceAnimKitId" ColumnName="allianceAnimKitId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gossip_menu">
+      <EntityTypeMapping TypeName="worldModel.gossip_menu">
+        <MappingFragment StoreEntitySet="gossip_menu">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="TextID" ColumnName="TextID" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gossip_menu_option">
+      <EntityTypeMapping TypeName="worldModel.gossip_menu_option">
+        <MappingFragment StoreEntitySet="gossip_menu_option">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="OptionIcon" ColumnName="OptionIcon" />
+          <ScalarProperty Name="OptionText" ColumnName="OptionText" />
+          <ScalarProperty Name="OptionBroadcastTextId" ColumnName="OptionBroadcastTextId" />
+          <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+          <ScalarProperty Name="OptionNpcflag" ColumnName="OptionNpcflag" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gossip_menu_option_action">
+      <EntityTypeMapping TypeName="worldModel.gossip_menu_option_action">
+        <MappingFragment StoreEntitySet="gossip_menu_option_action">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="ActionMenuId" ColumnName="ActionMenuId" />
+          <ScalarProperty Name="ActionPoiId" ColumnName="ActionPoiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gossip_menu_option_box">
+      <EntityTypeMapping TypeName="worldModel.gossip_menu_option_box">
+        <MappingFragment StoreEntitySet="gossip_menu_option_box">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="BoxCoded" ColumnName="BoxCoded" />
+          <ScalarProperty Name="BoxMoney" ColumnName="BoxMoney" />
+          <ScalarProperty Name="BoxText" ColumnName="BoxText" />
+          <ScalarProperty Name="BoxBroadcastTextId" ColumnName="BoxBroadcastTextId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gossip_menu_option_locale">
+      <EntityTypeMapping TypeName="worldModel.gossip_menu_option_locale">
+        <MappingFragment StoreEntitySet="gossip_menu_option_locale">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="Locale" ColumnName="Locale" />
+          <ScalarProperty Name="OptionText" ColumnName="OptionText" />
+          <ScalarProperty Name="BoxText" ColumnName="BoxText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gossip_menu_option_trainer">
+      <EntityTypeMapping TypeName="worldModel.gossip_menu_option_trainer">
+        <MappingFragment StoreEntitySet="gossip_menu_option_trainer">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="OptionID" ColumnName="OptionID" />
+          <ScalarProperty Name="TrainerId" ColumnName="TrainerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="graveyard_zone">
+      <EntityTypeMapping TypeName="worldModel.graveyard_zone">
+        <MappingFragment StoreEntitySet="graveyard_zone">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GhostZone" ColumnName="GhostZone" />
+          <ScalarProperty Name="Faction" ColumnName="Faction" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_rewards">
+      <EntityTypeMapping TypeName="worldModel.guild_rewards">
+        <MappingFragment StoreEntitySet="guild_rewards">
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="MinGuildRep" ColumnName="MinGuildRep" />
+          <ScalarProperty Name="RaceMask" ColumnName="RaceMask" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guild_rewards_req_achievements">
+      <EntityTypeMapping TypeName="worldModel.guild_rewards_req_achievements">
+        <MappingFragment StoreEntitySet="guild_rewards_req_achievements">
+          <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+          <ScalarProperty Name="AchievementRequired" ColumnName="AchievementRequired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instance_encounters">
+      <EntityTypeMapping TypeName="worldModel.instance_encounters">
+        <MappingFragment StoreEntitySet="instance_encounters">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="creditType" ColumnName="creditType" />
+          <ScalarProperty Name="creditEntry" ColumnName="creditEntry" />
+          <ScalarProperty Name="lastEncounterDungeon" ColumnName="lastEncounterDungeon" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="instance_template">
+      <EntityTypeMapping TypeName="worldModel.instance_template">
+        <MappingFragment StoreEntitySet="instance_template">
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="script" ColumnName="script" />
+          <ScalarProperty Name="allowMount" ColumnName="allowMount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_enchantment_template">
+      <EntityTypeMapping TypeName="worldModel.item_enchantment_template">
+        <MappingFragment StoreEntitySet="item_enchantment_template">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="ench" ColumnName="ench" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_loot_template">
+      <EntityTypeMapping TypeName="worldModel.item_loot_template">
+        <MappingFragment StoreEntitySet="item_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_script_names">
+      <EntityTypeMapping TypeName="worldModel.item_script_names">
+        <MappingFragment StoreEntitySet="item_script_names">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="item_template_addon">
+      <EntityTypeMapping TypeName="worldModel.item_template_addon">
+        <MappingFragment StoreEntitySet="item_template_addon">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FlagsCu" ColumnName="FlagsCu" />
+          <ScalarProperty Name="FoodType" ColumnName="FoodType" />
+          <ScalarProperty Name="MinMoneyLoot" ColumnName="MinMoneyLoot" />
+          <ScalarProperty Name="MaxMoneyLoot" ColumnName="MaxMoneyLoot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lfg_dungeon_rewards">
+      <EntityTypeMapping TypeName="worldModel.lfg_dungeon_rewards">
+        <MappingFragment StoreEntitySet="lfg_dungeon_rewards">
+          <ScalarProperty Name="dungeonId" ColumnName="dungeonId" />
+          <ScalarProperty Name="maxLevel" ColumnName="maxLevel" />
+          <ScalarProperty Name="firstQuestId" ColumnName="firstQuestId" />
+          <ScalarProperty Name="otherQuestId" ColumnName="otherQuestId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lfg_dungeon_template">
+      <EntityTypeMapping TypeName="worldModel.lfg_dungeon_template">
+        <MappingFragment StoreEntitySet="lfg_dungeon_template">
+          <ScalarProperty Name="dungeonId" ColumnName="dungeonId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="requiredItemLevel" ColumnName="requiredItemLevel" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="linked_respawn">
+      <EntityTypeMapping TypeName="worldModel.linked_respawn">
+        <MappingFragment StoreEntitySet="linked_respawn">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="linkedGuid" ColumnName="linkedGuid" />
+          <ScalarProperty Name="linkType" ColumnName="linkType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="locales_achievement_reward">
+      <EntityTypeMapping TypeName="worldModel.locales_achievement_reward">
+        <MappingFragment StoreEntitySet="locales_achievement_reward">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="subject_loc1" ColumnName="subject_loc1" />
+          <ScalarProperty Name="subject_loc2" ColumnName="subject_loc2" />
+          <ScalarProperty Name="subject_loc3" ColumnName="subject_loc3" />
+          <ScalarProperty Name="subject_loc4" ColumnName="subject_loc4" />
+          <ScalarProperty Name="subject_loc5" ColumnName="subject_loc5" />
+          <ScalarProperty Name="subject_loc6" ColumnName="subject_loc6" />
+          <ScalarProperty Name="subject_loc7" ColumnName="subject_loc7" />
+          <ScalarProperty Name="subject_loc8" ColumnName="subject_loc8" />
+          <ScalarProperty Name="text_loc1" ColumnName="text_loc1" />
+          <ScalarProperty Name="text_loc2" ColumnName="text_loc2" />
+          <ScalarProperty Name="text_loc3" ColumnName="text_loc3" />
+          <ScalarProperty Name="text_loc4" ColumnName="text_loc4" />
+          <ScalarProperty Name="text_loc5" ColumnName="text_loc5" />
+          <ScalarProperty Name="text_loc6" ColumnName="text_loc6" />
+          <ScalarProperty Name="text_loc7" ColumnName="text_loc7" />
+          <ScalarProperty Name="text_loc8" ColumnName="text_loc8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mail_level_reward">
+      <EntityTypeMapping TypeName="worldModel.mail_level_reward">
+        <MappingFragment StoreEntitySet="mail_level_reward">
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="raceMask" ColumnName="raceMask" />
+          <ScalarProperty Name="mailTemplateId" ColumnName="mailTemplateId" />
+          <ScalarProperty Name="senderEntry" ColumnName="senderEntry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mail_loot_template">
+      <EntityTypeMapping TypeName="worldModel.mail_loot_template">
+        <MappingFragment StoreEntitySet="mail_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="milling_loot_template">
+      <EntityTypeMapping TypeName="worldModel.milling_loot_template">
+        <MappingFragment StoreEntitySet="milling_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mount_definitions">
+      <EntityTypeMapping TypeName="worldModel.mount_definitions">
+        <MappingFragment StoreEntitySet="mount_definitions">
+          <ScalarProperty Name="spellId" ColumnName="spellId" />
+          <ScalarProperty Name="otherFactionSpellId" ColumnName="otherFactionSpellId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="npc_spellclick_spells">
+      <EntityTypeMapping TypeName="worldModel.npc_spellclick_spells">
+        <MappingFragment StoreEntitySet="npc_spellclick_spells">
+          <ScalarProperty Name="npc_entry" ColumnName="npc_entry" />
+          <ScalarProperty Name="spell_id" ColumnName="spell_id" />
+          <ScalarProperty Name="cast_flags" ColumnName="cast_flags" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="npc_text">
+      <EntityTypeMapping TypeName="worldModel.npc_text">
+        <MappingFragment StoreEntitySet="npc_text">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Probability0" ColumnName="Probability0" />
+          <ScalarProperty Name="Probability1" ColumnName="Probability1" />
+          <ScalarProperty Name="Probability2" ColumnName="Probability2" />
+          <ScalarProperty Name="Probability3" ColumnName="Probability3" />
+          <ScalarProperty Name="Probability4" ColumnName="Probability4" />
+          <ScalarProperty Name="Probability5" ColumnName="Probability5" />
+          <ScalarProperty Name="Probability6" ColumnName="Probability6" />
+          <ScalarProperty Name="Probability7" ColumnName="Probability7" />
+          <ScalarProperty Name="BroadcastTextID0" ColumnName="BroadcastTextID0" />
+          <ScalarProperty Name="BroadcastTextID1" ColumnName="BroadcastTextID1" />
+          <ScalarProperty Name="BroadcastTextID2" ColumnName="BroadcastTextID2" />
+          <ScalarProperty Name="BroadcastTextID3" ColumnName="BroadcastTextID3" />
+          <ScalarProperty Name="BroadcastTextID4" ColumnName="BroadcastTextID4" />
+          <ScalarProperty Name="BroadcastTextID5" ColumnName="BroadcastTextID5" />
+          <ScalarProperty Name="BroadcastTextID6" ColumnName="BroadcastTextID6" />
+          <ScalarProperty Name="BroadcastTextID7" ColumnName="BroadcastTextID7" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="npc_vendor">
+      <EntityTypeMapping TypeName="worldModel.npc_vendor">
+        <MappingFragment StoreEntitySet="npc_vendor">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="slot" ColumnName="slot" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="maxcount" ColumnName="maxcount" />
+          <ScalarProperty Name="incrtime" ColumnName="incrtime" />
+          <ScalarProperty Name="ExtendedCost" ColumnName="ExtendedCost" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="BonusListIDs" ColumnName="BonusListIDs" />
+          <ScalarProperty Name="PlayerConditionID" ColumnName="PlayerConditionID" />
+          <ScalarProperty Name="IgnoreFiltering" ColumnName="IgnoreFiltering" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="outdoorpvp_template">
+      <EntityTypeMapping TypeName="worldModel.outdoorpvp_template">
+        <MappingFragment StoreEntitySet="outdoorpvp_template">
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="page_text">
+      <EntityTypeMapping TypeName="worldModel.page_text">
+        <MappingFragment StoreEntitySet="page_text">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="NextPageID" ColumnName="NextPageID" />
+          <ScalarProperty Name="PlayerConditionID" ColumnName="PlayerConditionID" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="page_text_locale">
+      <EntityTypeMapping TypeName="worldModel.page_text_locale">
+        <MappingFragment StoreEntitySet="page_text_locale">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pet_levelstats">
+      <EntityTypeMapping TypeName="worldModel.pet_levelstats">
+        <MappingFragment StoreEntitySet="pet_levelstats">
+          <ScalarProperty Name="creature_entry" ColumnName="creature_entry" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="hp" ColumnName="hp" />
+          <ScalarProperty Name="mana" ColumnName="mana" />
+          <ScalarProperty Name="armor" ColumnName="armor" />
+          <ScalarProperty Name="str" ColumnName="str" />
+          <ScalarProperty Name="agi" ColumnName="agi" />
+          <ScalarProperty Name="sta" ColumnName="sta" />
+          <ScalarProperty Name="inte" ColumnName="inte" />
+          <ScalarProperty Name="spi" ColumnName="spi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pet_name_generation">
+      <EntityTypeMapping TypeName="worldModel.pet_name_generation">
+        <MappingFragment StoreEntitySet="pet_name_generation">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="word" ColumnName="word" />
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="half" ColumnName="half" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phase_area">
+      <EntityTypeMapping TypeName="worldModel.phase_area">
+        <MappingFragment StoreEntitySet="phase_area">
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="PhaseId" ColumnName="PhaseId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pickpocketing_loot_template">
+      <EntityTypeMapping TypeName="worldModel.pickpocketing_loot_template">
+        <MappingFragment StoreEntitySet="pickpocketing_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_factionchange_achievement">
+      <EntityTypeMapping TypeName="worldModel.player_factionchange_achievement">
+        <MappingFragment StoreEntitySet="player_factionchange_achievement">
+          <ScalarProperty Name="alliance_id" ColumnName="alliance_id" />
+          <ScalarProperty Name="horde_id" ColumnName="horde_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_factionchange_items">
+      <EntityTypeMapping TypeName="worldModel.player_factionchange_items">
+        <MappingFragment StoreEntitySet="player_factionchange_items">
+          <ScalarProperty Name="race_A" ColumnName="race_A" />
+          <ScalarProperty Name="alliance_id" ColumnName="alliance_id" />
+          <ScalarProperty Name="commentA" ColumnName="commentA" />
+          <ScalarProperty Name="race_H" ColumnName="race_H" />
+          <ScalarProperty Name="horde_id" ColumnName="horde_id" />
+          <ScalarProperty Name="commentH" ColumnName="commentH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_factionchange_quests">
+      <EntityTypeMapping TypeName="worldModel.player_factionchange_quests">
+        <MappingFragment StoreEntitySet="player_factionchange_quests">
+          <ScalarProperty Name="alliance_id" ColumnName="alliance_id" />
+          <ScalarProperty Name="horde_id" ColumnName="horde_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_factionchange_reputations">
+      <EntityTypeMapping TypeName="worldModel.player_factionchange_reputations">
+        <MappingFragment StoreEntitySet="player_factionchange_reputations">
+          <ScalarProperty Name="alliance_id" ColumnName="alliance_id" />
+          <ScalarProperty Name="horde_id" ColumnName="horde_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_factionchange_spells">
+      <EntityTypeMapping TypeName="worldModel.player_factionchange_spells">
+        <MappingFragment StoreEntitySet="player_factionchange_spells">
+          <ScalarProperty Name="alliance_id" ColumnName="alliance_id" />
+          <ScalarProperty Name="horde_id" ColumnName="horde_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_factionchange_titles">
+      <EntityTypeMapping TypeName="worldModel.player_factionchange_titles">
+        <MappingFragment StoreEntitySet="player_factionchange_titles">
+          <ScalarProperty Name="alliance_id" ColumnName="alliance_id" />
+          <ScalarProperty Name="horde_id" ColumnName="horde_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_levelstats">
+      <EntityTypeMapping TypeName="worldModel.player_levelstats">
+        <MappingFragment StoreEntitySet="player_levelstats">
+          <ScalarProperty Name="race" ColumnName="race" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="str" ColumnName="str" />
+          <ScalarProperty Name="agi" ColumnName="agi" />
+          <ScalarProperty Name="sta" ColumnName="sta" />
+          <ScalarProperty Name="inte" ColumnName="inte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="player_xp_for_level">
+      <EntityTypeMapping TypeName="worldModel.player_xp_for_level">
+        <MappingFragment StoreEntitySet="player_xp_for_level">
+          <ScalarProperty Name="Level" ColumnName="Level" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="playercreateinfoes">
+      <EntityTypeMapping TypeName="worldModel.playercreateinfo">
+        <MappingFragment StoreEntitySet="playercreateinfo">
+          <ScalarProperty Name="race" ColumnName="race" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="zone" ColumnName="zone" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="playercreateinfo_action">
+      <EntityTypeMapping TypeName="worldModel.playercreateinfo_action">
+        <MappingFragment StoreEntitySet="playercreateinfo_action">
+          <ScalarProperty Name="race" ColumnName="race" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="button" ColumnName="button" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="playercreateinfo_cast_spell">
+      <EntityTypeMapping TypeName="worldModel.playercreateinfo_cast_spell">
+        <MappingFragment StoreEntitySet="playercreateinfo_cast_spell">
+          <ScalarProperty Name="raceMask" ColumnName="raceMask" />
+          <ScalarProperty Name="classMask" ColumnName="classMask" />
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="playercreateinfo_item">
+      <EntityTypeMapping TypeName="worldModel.playercreateinfo_item">
+        <MappingFragment StoreEntitySet="playercreateinfo_item">
+          <ScalarProperty Name="race" ColumnName="race" />
+          <ScalarProperty Name="class" ColumnName="class" />
+          <ScalarProperty Name="itemid" ColumnName="itemid" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="playercreateinfo_spell_custom">
+      <EntityTypeMapping TypeName="worldModel.playercreateinfo_spell_custom">
+        <MappingFragment StoreEntitySet="playercreateinfo_spell_custom">
+          <ScalarProperty Name="racemask" ColumnName="racemask" />
+          <ScalarProperty Name="classmask" ColumnName="classmask" />
+          <ScalarProperty Name="Spell" ColumnName="Spell" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="points_of_interest">
+      <EntityTypeMapping TypeName="worldModel.points_of_interest">
+        <MappingFragment StoreEntitySet="points_of_interest">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PositionX" ColumnName="PositionX" />
+          <ScalarProperty Name="PositionY" ColumnName="PositionY" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="Importance" ColumnName="Importance" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="points_of_interest_locale">
+      <EntityTypeMapping TypeName="worldModel.points_of_interest_locale">
+        <MappingFragment StoreEntitySet="points_of_interest_locale">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pool_creature">
+      <EntityTypeMapping TypeName="worldModel.pool_creature">
+        <MappingFragment StoreEntitySet="pool_creature">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="pool_entry" ColumnName="pool_entry" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pool_gameobject">
+      <EntityTypeMapping TypeName="worldModel.pool_gameobject">
+        <MappingFragment StoreEntitySet="pool_gameobject">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="pool_entry" ColumnName="pool_entry" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pool_pool">
+      <EntityTypeMapping TypeName="worldModel.pool_pool">
+        <MappingFragment StoreEntitySet="pool_pool">
+          <ScalarProperty Name="pool_id" ColumnName="pool_id" />
+          <ScalarProperty Name="mother_pool" ColumnName="mother_pool" />
+          <ScalarProperty Name="chance" ColumnName="chance" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pool_quest">
+      <EntityTypeMapping TypeName="worldModel.pool_quest">
+        <MappingFragment StoreEntitySet="pool_quest">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="pool_entry" ColumnName="pool_entry" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pool_template">
+      <EntityTypeMapping TypeName="worldModel.pool_template">
+        <MappingFragment StoreEntitySet="pool_template">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="max_limit" ColumnName="max_limit" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="prospecting_loot_template">
+      <EntityTypeMapping TypeName="worldModel.prospecting_loot_template">
+        <MappingFragment StoreEntitySet="prospecting_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_details">
+      <EntityTypeMapping TypeName="worldModel.quest_details">
+        <MappingFragment StoreEntitySet="quest_details">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emote1" ColumnName="Emote1" />
+          <ScalarProperty Name="Emote2" ColumnName="Emote2" />
+          <ScalarProperty Name="Emote3" ColumnName="Emote3" />
+          <ScalarProperty Name="Emote4" ColumnName="Emote4" />
+          <ScalarProperty Name="EmoteDelay1" ColumnName="EmoteDelay1" />
+          <ScalarProperty Name="EmoteDelay2" ColumnName="EmoteDelay2" />
+          <ScalarProperty Name="EmoteDelay3" ColumnName="EmoteDelay3" />
+          <ScalarProperty Name="EmoteDelay4" ColumnName="EmoteDelay4" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_greeting">
+      <EntityTypeMapping TypeName="worldModel.quest_greeting">
+        <MappingFragment StoreEntitySet="quest_greeting">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="GreetEmoteType" ColumnName="GreetEmoteType" />
+          <ScalarProperty Name="GreetEmoteDelay" ColumnName="GreetEmoteDelay" />
+          <ScalarProperty Name="Greeting" ColumnName="Greeting" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_mail_sender">
+      <EntityTypeMapping TypeName="worldModel.quest_mail_sender">
+        <MappingFragment StoreEntitySet="quest_mail_sender">
+          <ScalarProperty Name="QuestId" ColumnName="QuestId" />
+          <ScalarProperty Name="RewardMailSenderEntry" ColumnName="RewardMailSenderEntry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_objectives">
+      <EntityTypeMapping TypeName="worldModel.quest_objectives">
+        <MappingFragment StoreEntitySet="quest_objectives">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QuestID" ColumnName="QuestID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="StorageIndex" ColumnName="StorageIndex" />
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="Flags2" ColumnName="Flags2" />
+          <ScalarProperty Name="ProgressBarWeight" ColumnName="ProgressBarWeight" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_objectives_locale">
+      <EntityTypeMapping TypeName="worldModel.quest_objectives_locale">
+        <MappingFragment StoreEntitySet="quest_objectives_locale">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="QuestId" ColumnName="QuestId" />
+          <ScalarProperty Name="StorageIndex" ColumnName="StorageIndex" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_offer_reward">
+      <EntityTypeMapping TypeName="worldModel.quest_offer_reward">
+        <MappingFragment StoreEntitySet="quest_offer_reward">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Emote1" ColumnName="Emote1" />
+          <ScalarProperty Name="Emote2" ColumnName="Emote2" />
+          <ScalarProperty Name="Emote3" ColumnName="Emote3" />
+          <ScalarProperty Name="Emote4" ColumnName="Emote4" />
+          <ScalarProperty Name="EmoteDelay1" ColumnName="EmoteDelay1" />
+          <ScalarProperty Name="EmoteDelay2" ColumnName="EmoteDelay2" />
+          <ScalarProperty Name="EmoteDelay3" ColumnName="EmoteDelay3" />
+          <ScalarProperty Name="EmoteDelay4" ColumnName="EmoteDelay4" />
+          <ScalarProperty Name="RewardText" ColumnName="RewardText" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_offer_reward_locale">
+      <EntityTypeMapping TypeName="worldModel.quest_offer_reward_locale">
+        <MappingFragment StoreEntitySet="quest_offer_reward_locale">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="RewardText" ColumnName="RewardText" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_poi">
+      <EntityTypeMapping TypeName="worldModel.quest_poi">
+        <MappingFragment StoreEntitySet="quest_poi">
+          <ScalarProperty Name="QuestID" ColumnName="QuestID" />
+          <ScalarProperty Name="BlobIndex" ColumnName="BlobIndex" />
+          <ScalarProperty Name="Idx1" ColumnName="Idx1" />
+          <ScalarProperty Name="ObjectiveIndex" ColumnName="ObjectiveIndex" />
+          <ScalarProperty Name="QuestObjectiveID" ColumnName="QuestObjectiveID" />
+          <ScalarProperty Name="QuestObjectID" ColumnName="QuestObjectID" />
+          <ScalarProperty Name="MapID" ColumnName="MapID" />
+          <ScalarProperty Name="WorldMapAreaId" ColumnName="WorldMapAreaId" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="WorldEffectID" ColumnName="WorldEffectID" />
+          <ScalarProperty Name="PlayerConditionID" ColumnName="PlayerConditionID" />
+          <ScalarProperty Name="WoDUnk1" ColumnName="WoDUnk1" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_poi_points">
+      <EntityTypeMapping TypeName="worldModel.quest_poi_points">
+        <MappingFragment StoreEntitySet="quest_poi_points">
+          <ScalarProperty Name="QuestID" ColumnName="QuestID" />
+          <ScalarProperty Name="Idx1" ColumnName="Idx1" />
+          <ScalarProperty Name="Idx2" ColumnName="Idx2" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_request_items">
+      <EntityTypeMapping TypeName="worldModel.quest_request_items">
+        <MappingFragment StoreEntitySet="quest_request_items">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmoteOnComplete" ColumnName="EmoteOnComplete" />
+          <ScalarProperty Name="EmoteOnIncomplete" ColumnName="EmoteOnIncomplete" />
+          <ScalarProperty Name="EmoteOnCompleteDelay" ColumnName="EmoteOnCompleteDelay" />
+          <ScalarProperty Name="EmoteOnIncompleteDelay" ColumnName="EmoteOnIncompleteDelay" />
+          <ScalarProperty Name="CompletionText" ColumnName="CompletionText" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_request_items_locale">
+      <EntityTypeMapping TypeName="worldModel.quest_request_items_locale">
+        <MappingFragment StoreEntitySet="quest_request_items_locale">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="CompletionText" ColumnName="CompletionText" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_template">
+      <EntityTypeMapping TypeName="worldModel.quest_template">
+        <MappingFragment StoreEntitySet="quest_template">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="QuestType" ColumnName="QuestType" />
+          <ScalarProperty Name="QuestLevel" ColumnName="QuestLevel" />
+          <ScalarProperty Name="QuestPackageID" ColumnName="QuestPackageID" />
+          <ScalarProperty Name="MinLevel" ColumnName="MinLevel" />
+          <ScalarProperty Name="QuestSortID" ColumnName="QuestSortID" />
+          <ScalarProperty Name="QuestInfoID" ColumnName="QuestInfoID" />
+          <ScalarProperty Name="SuggestedGroupNum" ColumnName="SuggestedGroupNum" />
+          <ScalarProperty Name="RewardNextQuest" ColumnName="RewardNextQuest" />
+          <ScalarProperty Name="RewardXPDifficulty" ColumnName="RewardXPDifficulty" />
+          <ScalarProperty Name="RewardXPMultiplier" ColumnName="RewardXPMultiplier" />
+          <ScalarProperty Name="RewardMoney" ColumnName="RewardMoney" />
+          <ScalarProperty Name="RewardMoneyDifficulty" ColumnName="RewardMoneyDifficulty" />
+          <ScalarProperty Name="RewardMoneyMultiplier" ColumnName="RewardMoneyMultiplier" />
+          <ScalarProperty Name="RewardBonusMoney" ColumnName="RewardBonusMoney" />
+          <ScalarProperty Name="RewardDisplaySpell1" ColumnName="RewardDisplaySpell1" />
+          <ScalarProperty Name="RewardDisplaySpell2" ColumnName="RewardDisplaySpell2" />
+          <ScalarProperty Name="RewardDisplaySpell3" ColumnName="RewardDisplaySpell3" />
+          <ScalarProperty Name="RewardSpell" ColumnName="RewardSpell" />
+          <ScalarProperty Name="RewardHonor" ColumnName="RewardHonor" />
+          <ScalarProperty Name="RewardKillHonor" ColumnName="RewardKillHonor" />
+          <ScalarProperty Name="StartItem" ColumnName="StartItem" />
+          <ScalarProperty Name="RewardArtifactXPDifficulty" ColumnName="RewardArtifactXPDifficulty" />
+          <ScalarProperty Name="RewardArtifactXPMultiplier" ColumnName="RewardArtifactXPMultiplier" />
+          <ScalarProperty Name="RewardArtifactCategoryID" ColumnName="RewardArtifactCategoryID" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="FlagsEx" ColumnName="FlagsEx" />
+          <ScalarProperty Name="RewardItem1" ColumnName="RewardItem1" />
+          <ScalarProperty Name="RewardAmount1" ColumnName="RewardAmount1" />
+          <ScalarProperty Name="RewardItem2" ColumnName="RewardItem2" />
+          <ScalarProperty Name="RewardAmount2" ColumnName="RewardAmount2" />
+          <ScalarProperty Name="RewardItem3" ColumnName="RewardItem3" />
+          <ScalarProperty Name="RewardAmount3" ColumnName="RewardAmount3" />
+          <ScalarProperty Name="RewardItem4" ColumnName="RewardItem4" />
+          <ScalarProperty Name="RewardAmount4" ColumnName="RewardAmount4" />
+          <ScalarProperty Name="ItemDrop1" ColumnName="ItemDrop1" />
+          <ScalarProperty Name="ItemDropQuantity1" ColumnName="ItemDropQuantity1" />
+          <ScalarProperty Name="ItemDrop2" ColumnName="ItemDrop2" />
+          <ScalarProperty Name="ItemDropQuantity2" ColumnName="ItemDropQuantity2" />
+          <ScalarProperty Name="ItemDrop3" ColumnName="ItemDrop3" />
+          <ScalarProperty Name="ItemDropQuantity3" ColumnName="ItemDropQuantity3" />
+          <ScalarProperty Name="ItemDrop4" ColumnName="ItemDrop4" />
+          <ScalarProperty Name="ItemDropQuantity4" ColumnName="ItemDropQuantity4" />
+          <ScalarProperty Name="RewardChoiceItemID1" ColumnName="RewardChoiceItemID1" />
+          <ScalarProperty Name="RewardChoiceItemQuantity1" ColumnName="RewardChoiceItemQuantity1" />
+          <ScalarProperty Name="RewardChoiceItemDisplayID1" ColumnName="RewardChoiceItemDisplayID1" />
+          <ScalarProperty Name="RewardChoiceItemID2" ColumnName="RewardChoiceItemID2" />
+          <ScalarProperty Name="RewardChoiceItemQuantity2" ColumnName="RewardChoiceItemQuantity2" />
+          <ScalarProperty Name="RewardChoiceItemDisplayID2" ColumnName="RewardChoiceItemDisplayID2" />
+          <ScalarProperty Name="RewardChoiceItemID3" ColumnName="RewardChoiceItemID3" />
+          <ScalarProperty Name="RewardChoiceItemQuantity3" ColumnName="RewardChoiceItemQuantity3" />
+          <ScalarProperty Name="RewardChoiceItemDisplayID3" ColumnName="RewardChoiceItemDisplayID3" />
+          <ScalarProperty Name="RewardChoiceItemID4" ColumnName="RewardChoiceItemID4" />
+          <ScalarProperty Name="RewardChoiceItemQuantity4" ColumnName="RewardChoiceItemQuantity4" />
+          <ScalarProperty Name="RewardChoiceItemDisplayID4" ColumnName="RewardChoiceItemDisplayID4" />
+          <ScalarProperty Name="RewardChoiceItemID5" ColumnName="RewardChoiceItemID5" />
+          <ScalarProperty Name="RewardChoiceItemQuantity5" ColumnName="RewardChoiceItemQuantity5" />
+          <ScalarProperty Name="RewardChoiceItemDisplayID5" ColumnName="RewardChoiceItemDisplayID5" />
+          <ScalarProperty Name="RewardChoiceItemID6" ColumnName="RewardChoiceItemID6" />
+          <ScalarProperty Name="RewardChoiceItemQuantity6" ColumnName="RewardChoiceItemQuantity6" />
+          <ScalarProperty Name="RewardChoiceItemDisplayID6" ColumnName="RewardChoiceItemDisplayID6" />
+          <ScalarProperty Name="POIContinent" ColumnName="POIContinent" />
+          <ScalarProperty Name="POIx" ColumnName="POIx" />
+          <ScalarProperty Name="POIy" ColumnName="POIy" />
+          <ScalarProperty Name="POIPriority" ColumnName="POIPriority" />
+          <ScalarProperty Name="RewardTitle" ColumnName="RewardTitle" />
+          <ScalarProperty Name="RewardArenaPoints" ColumnName="RewardArenaPoints" />
+          <ScalarProperty Name="RewardSkillLineID" ColumnName="RewardSkillLineID" />
+          <ScalarProperty Name="RewardNumSkillUps" ColumnName="RewardNumSkillUps" />
+          <ScalarProperty Name="PortraitGiver" ColumnName="PortraitGiver" />
+          <ScalarProperty Name="PortraitTurnIn" ColumnName="PortraitTurnIn" />
+          <ScalarProperty Name="RewardFactionID1" ColumnName="RewardFactionID1" />
+          <ScalarProperty Name="RewardFactionValue1" ColumnName="RewardFactionValue1" />
+          <ScalarProperty Name="RewardFactionOverride1" ColumnName="RewardFactionOverride1" />
+          <ScalarProperty Name="RewardFactionCapIn1" ColumnName="RewardFactionCapIn1" />
+          <ScalarProperty Name="RewardFactionID2" ColumnName="RewardFactionID2" />
+          <ScalarProperty Name="RewardFactionValue2" ColumnName="RewardFactionValue2" />
+          <ScalarProperty Name="RewardFactionOverride2" ColumnName="RewardFactionOverride2" />
+          <ScalarProperty Name="RewardFactionCapIn2" ColumnName="RewardFactionCapIn2" />
+          <ScalarProperty Name="RewardFactionID3" ColumnName="RewardFactionID3" />
+          <ScalarProperty Name="RewardFactionValue3" ColumnName="RewardFactionValue3" />
+          <ScalarProperty Name="RewardFactionOverride3" ColumnName="RewardFactionOverride3" />
+          <ScalarProperty Name="RewardFactionCapIn3" ColumnName="RewardFactionCapIn3" />
+          <ScalarProperty Name="RewardFactionID4" ColumnName="RewardFactionID4" />
+          <ScalarProperty Name="RewardFactionValue4" ColumnName="RewardFactionValue4" />
+          <ScalarProperty Name="RewardFactionOverride4" ColumnName="RewardFactionOverride4" />
+          <ScalarProperty Name="RewardFactionCapIn4" ColumnName="RewardFactionCapIn4" />
+          <ScalarProperty Name="RewardFactionID5" ColumnName="RewardFactionID5" />
+          <ScalarProperty Name="RewardFactionValue5" ColumnName="RewardFactionValue5" />
+          <ScalarProperty Name="RewardFactionOverride5" ColumnName="RewardFactionOverride5" />
+          <ScalarProperty Name="RewardFactionCapIn5" ColumnName="RewardFactionCapIn5" />
+          <ScalarProperty Name="RewardFactionFlags" ColumnName="RewardFactionFlags" />
+          <ScalarProperty Name="RewardCurrencyID1" ColumnName="RewardCurrencyID1" />
+          <ScalarProperty Name="RewardCurrencyQty1" ColumnName="RewardCurrencyQty1" />
+          <ScalarProperty Name="RewardCurrencyID2" ColumnName="RewardCurrencyID2" />
+          <ScalarProperty Name="RewardCurrencyQty2" ColumnName="RewardCurrencyQty2" />
+          <ScalarProperty Name="RewardCurrencyID3" ColumnName="RewardCurrencyID3" />
+          <ScalarProperty Name="RewardCurrencyQty3" ColumnName="RewardCurrencyQty3" />
+          <ScalarProperty Name="RewardCurrencyID4" ColumnName="RewardCurrencyID4" />
+          <ScalarProperty Name="RewardCurrencyQty4" ColumnName="RewardCurrencyQty4" />
+          <ScalarProperty Name="AcceptedSoundKitID" ColumnName="AcceptedSoundKitID" />
+          <ScalarProperty Name="CompleteSoundKitID" ColumnName="CompleteSoundKitID" />
+          <ScalarProperty Name="AreaGroupID" ColumnName="AreaGroupID" />
+          <ScalarProperty Name="TimeAllowed" ColumnName="TimeAllowed" />
+          <ScalarProperty Name="AllowableRaces" ColumnName="AllowableRaces" />
+          <ScalarProperty Name="QuestRewardID" ColumnName="QuestRewardID" />
+          <ScalarProperty Name="Expansion" ColumnName="Expansion" />
+          <ScalarProperty Name="LogTitle" ColumnName="LogTitle" />
+          <ScalarProperty Name="LogDescription" ColumnName="LogDescription" />
+          <ScalarProperty Name="QuestDescription" ColumnName="QuestDescription" />
+          <ScalarProperty Name="AreaDescription" ColumnName="AreaDescription" />
+          <ScalarProperty Name="PortraitGiverText" ColumnName="PortraitGiverText" />
+          <ScalarProperty Name="PortraitGiverName" ColumnName="PortraitGiverName" />
+          <ScalarProperty Name="PortraitTurnInText" ColumnName="PortraitTurnInText" />
+          <ScalarProperty Name="PortraitTurnInName" ColumnName="PortraitTurnInName" />
+          <ScalarProperty Name="QuestCompletionLog" ColumnName="QuestCompletionLog" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_template_addon">
+      <EntityTypeMapping TypeName="worldModel.quest_template_addon">
+        <MappingFragment StoreEntitySet="quest_template_addon">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaxLevel" ColumnName="MaxLevel" />
+          <ScalarProperty Name="AllowableClasses" ColumnName="AllowableClasses" />
+          <ScalarProperty Name="SourceSpellID" ColumnName="SourceSpellID" />
+          <ScalarProperty Name="PrevQuestID" ColumnName="PrevQuestID" />
+          <ScalarProperty Name="NextQuestID" ColumnName="NextQuestID" />
+          <ScalarProperty Name="ExclusiveGroup" ColumnName="ExclusiveGroup" />
+          <ScalarProperty Name="RewardMailTemplateID" ColumnName="RewardMailTemplateID" />
+          <ScalarProperty Name="RewardMailDelay" ColumnName="RewardMailDelay" />
+          <ScalarProperty Name="RequiredSkillID" ColumnName="RequiredSkillID" />
+          <ScalarProperty Name="RequiredSkillPoints" ColumnName="RequiredSkillPoints" />
+          <ScalarProperty Name="RequiredMinRepFaction" ColumnName="RequiredMinRepFaction" />
+          <ScalarProperty Name="RequiredMaxRepFaction" ColumnName="RequiredMaxRepFaction" />
+          <ScalarProperty Name="RequiredMinRepValue" ColumnName="RequiredMinRepValue" />
+          <ScalarProperty Name="RequiredMaxRepValue" ColumnName="RequiredMaxRepValue" />
+          <ScalarProperty Name="ProvidedItemCount" ColumnName="ProvidedItemCount" />
+          <ScalarProperty Name="SpecialFlags" ColumnName="SpecialFlags" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_template_locale">
+      <EntityTypeMapping TypeName="worldModel.quest_template_locale">
+        <MappingFragment StoreEntitySet="quest_template_locale">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="LogTitle" ColumnName="LogTitle" />
+          <ScalarProperty Name="LogDescription" ColumnName="LogDescription" />
+          <ScalarProperty Name="QuestDescription" ColumnName="QuestDescription" />
+          <ScalarProperty Name="AreaDescription" ColumnName="AreaDescription" />
+          <ScalarProperty Name="PortraitGiverText" ColumnName="PortraitGiverText" />
+          <ScalarProperty Name="PortraitGiverName" ColumnName="PortraitGiverName" />
+          <ScalarProperty Name="PortraitTurnInText" ColumnName="PortraitTurnInText" />
+          <ScalarProperty Name="PortraitTurnInName" ColumnName="PortraitTurnInName" />
+          <ScalarProperty Name="QuestCompletionLog" ColumnName="QuestCompletionLog" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="quest_visual_effect">
+      <EntityTypeMapping TypeName="worldModel.quest_visual_effect">
+        <MappingFragment StoreEntitySet="quest_visual_effect">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+          <ScalarProperty Name="VisualEffect" ColumnName="VisualEffect" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="race_expansion_requirement">
+      <EntityTypeMapping TypeName="worldModel.race_expansion_requirement">
+        <MappingFragment StoreEntitySet="race_expansion_requirement">
+          <ScalarProperty Name="raceID" ColumnName="raceID" />
+          <ScalarProperty Name="expansion" ColumnName="expansion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reference_loot_template">
+      <EntityTypeMapping TypeName="worldModel.reference_loot_template">
+        <MappingFragment StoreEntitySet="reference_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reputation_reward_rate">
+      <EntityTypeMapping TypeName="worldModel.reputation_reward_rate">
+        <MappingFragment StoreEntitySet="reputation_reward_rate">
+          <ScalarProperty Name="faction" ColumnName="faction" />
+          <ScalarProperty Name="quest_rate" ColumnName="quest_rate" />
+          <ScalarProperty Name="quest_daily_rate" ColumnName="quest_daily_rate" />
+          <ScalarProperty Name="quest_weekly_rate" ColumnName="quest_weekly_rate" />
+          <ScalarProperty Name="quest_monthly_rate" ColumnName="quest_monthly_rate" />
+          <ScalarProperty Name="quest_repeatable_rate" ColumnName="quest_repeatable_rate" />
+          <ScalarProperty Name="creature_rate" ColumnName="creature_rate" />
+          <ScalarProperty Name="spell_rate" ColumnName="spell_rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reputation_spillover_template">
+      <EntityTypeMapping TypeName="worldModel.reputation_spillover_template">
+        <MappingFragment StoreEntitySet="reputation_spillover_template">
+          <ScalarProperty Name="faction" ColumnName="faction" />
+          <ScalarProperty Name="faction1" ColumnName="faction1" />
+          <ScalarProperty Name="rate_1" ColumnName="rate_1" />
+          <ScalarProperty Name="rank_1" ColumnName="rank_1" />
+          <ScalarProperty Name="faction2" ColumnName="faction2" />
+          <ScalarProperty Name="rate_2" ColumnName="rate_2" />
+          <ScalarProperty Name="rank_2" ColumnName="rank_2" />
+          <ScalarProperty Name="faction3" ColumnName="faction3" />
+          <ScalarProperty Name="rate_3" ColumnName="rate_3" />
+          <ScalarProperty Name="rank_3" ColumnName="rank_3" />
+          <ScalarProperty Name="faction4" ColumnName="faction4" />
+          <ScalarProperty Name="rate_4" ColumnName="rate_4" />
+          <ScalarProperty Name="rank_4" ColumnName="rank_4" />
+          <ScalarProperty Name="faction5" ColumnName="faction5" />
+          <ScalarProperty Name="rate_5" ColumnName="rate_5" />
+          <ScalarProperty Name="rank_5" ColumnName="rank_5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scenario_poi">
+      <EntityTypeMapping TypeName="worldModel.scenario_poi">
+        <MappingFragment StoreEntitySet="scenario_poi">
+          <ScalarProperty Name="CriteriaTreeID" ColumnName="CriteriaTreeID" />
+          <ScalarProperty Name="BlobIndex" ColumnName="BlobIndex" />
+          <ScalarProperty Name="Idx1" ColumnName="Idx1" />
+          <ScalarProperty Name="MapID" ColumnName="MapID" />
+          <ScalarProperty Name="WorldMapAreaId" ColumnName="WorldMapAreaId" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="WorldEffectID" ColumnName="WorldEffectID" />
+          <ScalarProperty Name="PlayerConditionID" ColumnName="PlayerConditionID" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scenario_poi_points">
+      <EntityTypeMapping TypeName="worldModel.scenario_poi_points">
+        <MappingFragment StoreEntitySet="scenario_poi_points">
+          <ScalarProperty Name="CriteriaTreeID" ColumnName="CriteriaTreeID" />
+          <ScalarProperty Name="Idx1" ColumnName="Idx1" />
+          <ScalarProperty Name="Idx2" ColumnName="Idx2" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scenarios">
+      <EntityTypeMapping TypeName="worldModel.scenario">
+        <MappingFragment StoreEntitySet="scenarios">
+          <ScalarProperty Name="map" ColumnName="map" />
+          <ScalarProperty Name="difficulty" ColumnName="difficulty" />
+          <ScalarProperty Name="scenario_A" ColumnName="scenario_A" />
+          <ScalarProperty Name="scenario_H" ColumnName="scenario_H" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="scene_template">
+      <EntityTypeMapping TypeName="worldModel.scene_template">
+        <MappingFragment StoreEntitySet="scene_template">
+          <ScalarProperty Name="SceneId" ColumnName="SceneId" />
+          <ScalarProperty Name="Flags" ColumnName="Flags" />
+          <ScalarProperty Name="ScriptPackageID" ColumnName="ScriptPackageID" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="script_spline_chain_meta">
+      <EntityTypeMapping TypeName="worldModel.script_spline_chain_meta">
+        <MappingFragment StoreEntitySet="script_spline_chain_meta">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="chainId" ColumnName="chainId" />
+          <ScalarProperty Name="splineId" ColumnName="splineId" />
+          <ScalarProperty Name="expectedDuration" ColumnName="expectedDuration" />
+          <ScalarProperty Name="msUntilNext" ColumnName="msUntilNext" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="script_spline_chain_waypoints">
+      <EntityTypeMapping TypeName="worldModel.script_spline_chain_waypoints">
+        <MappingFragment StoreEntitySet="script_spline_chain_waypoints">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="chainId" ColumnName="chainId" />
+          <ScalarProperty Name="splineId" ColumnName="splineId" />
+          <ScalarProperty Name="wpId" ColumnName="wpId" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+          <ScalarProperty Name="z" ColumnName="z" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="script_waypoint">
+      <EntityTypeMapping TypeName="worldModel.script_waypoint">
+        <MappingFragment StoreEntitySet="script_waypoint">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="pointid" ColumnName="pointid" />
+          <ScalarProperty Name="location_x" ColumnName="location_x" />
+          <ScalarProperty Name="location_y" ColumnName="location_y" />
+          <ScalarProperty Name="location_z" ColumnName="location_z" />
+          <ScalarProperty Name="waittime" ColumnName="waittime" />
+          <ScalarProperty Name="point_comment" ColumnName="point_comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skill_discovery_template">
+      <EntityTypeMapping TypeName="worldModel.skill_discovery_template">
+        <MappingFragment StoreEntitySet="skill_discovery_template">
+          <ScalarProperty Name="spellId" ColumnName="spellId" />
+          <ScalarProperty Name="reqSpell" ColumnName="reqSpell" />
+          <ScalarProperty Name="reqSkillValue" ColumnName="reqSkillValue" />
+          <ScalarProperty Name="chance" ColumnName="chance" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skill_extra_item_template">
+      <EntityTypeMapping TypeName="worldModel.skill_extra_item_template">
+        <MappingFragment StoreEntitySet="skill_extra_item_template">
+          <ScalarProperty Name="spellId" ColumnName="spellId" />
+          <ScalarProperty Name="requiredSpecialization" ColumnName="requiredSpecialization" />
+          <ScalarProperty Name="additionalCreateChance" ColumnName="additionalCreateChance" />
+          <ScalarProperty Name="additionalMaxNum" ColumnName="additionalMaxNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skill_fishing_base_level">
+      <EntityTypeMapping TypeName="worldModel.skill_fishing_base_level">
+        <MappingFragment StoreEntitySet="skill_fishing_base_level">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="skill" ColumnName="skill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skill_perfect_item_template">
+      <EntityTypeMapping TypeName="worldModel.skill_perfect_item_template">
+        <MappingFragment StoreEntitySet="skill_perfect_item_template">
+          <ScalarProperty Name="spellId" ColumnName="spellId" />
+          <ScalarProperty Name="requiredSpecialization" ColumnName="requiredSpecialization" />
+          <ScalarProperty Name="perfectCreateChance" ColumnName="perfectCreateChance" />
+          <ScalarProperty Name="perfectItemType" ColumnName="perfectItemType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skill_tiers">
+      <EntityTypeMapping TypeName="worldModel.skill_tiers">
+        <MappingFragment StoreEntitySet="skill_tiers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Value1" ColumnName="Value1" />
+          <ScalarProperty Name="Value2" ColumnName="Value2" />
+          <ScalarProperty Name="Value3" ColumnName="Value3" />
+          <ScalarProperty Name="Value4" ColumnName="Value4" />
+          <ScalarProperty Name="Value5" ColumnName="Value5" />
+          <ScalarProperty Name="Value6" ColumnName="Value6" />
+          <ScalarProperty Name="Value7" ColumnName="Value7" />
+          <ScalarProperty Name="Value8" ColumnName="Value8" />
+          <ScalarProperty Name="Value9" ColumnName="Value9" />
+          <ScalarProperty Name="Value10" ColumnName="Value10" />
+          <ScalarProperty Name="Value11" ColumnName="Value11" />
+          <ScalarProperty Name="Value12" ColumnName="Value12" />
+          <ScalarProperty Name="Value13" ColumnName="Value13" />
+          <ScalarProperty Name="Value14" ColumnName="Value14" />
+          <ScalarProperty Name="Value15" ColumnName="Value15" />
+          <ScalarProperty Name="Value16" ColumnName="Value16" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skinning_loot_template">
+      <EntityTypeMapping TypeName="worldModel.skinning_loot_template">
+        <MappingFragment StoreEntitySet="skinning_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="smart_scripts">
+      <EntityTypeMapping TypeName="worldModel.smart_scripts">
+        <MappingFragment StoreEntitySet="smart_scripts">
+          <ScalarProperty Name="entryorguid" ColumnName="entryorguid" />
+          <ScalarProperty Name="source_type" ColumnName="source_type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="event_type" ColumnName="event_type" />
+          <ScalarProperty Name="event_phase_mask" ColumnName="event_phase_mask" />
+          <ScalarProperty Name="event_chance" ColumnName="event_chance" />
+          <ScalarProperty Name="event_flags" ColumnName="event_flags" />
+          <ScalarProperty Name="event_param1" ColumnName="event_param1" />
+          <ScalarProperty Name="event_param2" ColumnName="event_param2" />
+          <ScalarProperty Name="event_param3" ColumnName="event_param3" />
+          <ScalarProperty Name="event_param4" ColumnName="event_param4" />
+          <ScalarProperty Name="event_param_string" ColumnName="event_param_string" />
+          <ScalarProperty Name="action_type" ColumnName="action_type" />
+          <ScalarProperty Name="action_param1" ColumnName="action_param1" />
+          <ScalarProperty Name="action_param2" ColumnName="action_param2" />
+          <ScalarProperty Name="action_param3" ColumnName="action_param3" />
+          <ScalarProperty Name="action_param4" ColumnName="action_param4" />
+          <ScalarProperty Name="action_param5" ColumnName="action_param5" />
+          <ScalarProperty Name="action_param6" ColumnName="action_param6" />
+          <ScalarProperty Name="target_type" ColumnName="target_type" />
+          <ScalarProperty Name="target_param1" ColumnName="target_param1" />
+          <ScalarProperty Name="target_param2" ColumnName="target_param2" />
+          <ScalarProperty Name="target_param3" ColumnName="target_param3" />
+          <ScalarProperty Name="target_x" ColumnName="target_x" />
+          <ScalarProperty Name="target_y" ColumnName="target_y" />
+          <ScalarProperty Name="target_z" ColumnName="target_z" />
+          <ScalarProperty Name="target_o" ColumnName="target_o" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_area">
+      <EntityTypeMapping TypeName="worldModel.spell_area">
+        <MappingFragment StoreEntitySet="spell_area">
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="quest_start" ColumnName="quest_start" />
+          <ScalarProperty Name="quest_end" ColumnName="quest_end" />
+          <ScalarProperty Name="aura_spell" ColumnName="aura_spell" />
+          <ScalarProperty Name="racemask" ColumnName="racemask" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="autocast" ColumnName="autocast" />
+          <ScalarProperty Name="quest_start_status" ColumnName="quest_start_status" />
+          <ScalarProperty Name="quest_end_status" ColumnName="quest_end_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_areatrigger">
+      <EntityTypeMapping TypeName="worldModel.spell_areatrigger">
+        <MappingFragment StoreEntitySet="spell_areatrigger">
+          <ScalarProperty Name="SpellMiscId" ColumnName="SpellMiscId" />
+          <ScalarProperty Name="AreaTriggerId" ColumnName="AreaTriggerId" />
+          <ScalarProperty Name="MoveCurveId" ColumnName="MoveCurveId" />
+          <ScalarProperty Name="ScaleCurveId" ColumnName="ScaleCurveId" />
+          <ScalarProperty Name="MorphCurveId" ColumnName="MorphCurveId" />
+          <ScalarProperty Name="FacingCurveId" ColumnName="FacingCurveId" />
+          <ScalarProperty Name="DecalPropertiesId" ColumnName="DecalPropertiesId" />
+          <ScalarProperty Name="TimeToTarget" ColumnName="TimeToTarget" />
+          <ScalarProperty Name="TimeToTargetScale" ColumnName="TimeToTargetScale" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_areatrigger_splines">
+      <EntityTypeMapping TypeName="worldModel.spell_areatrigger_splines">
+        <MappingFragment StoreEntitySet="spell_areatrigger_splines">
+          <ScalarProperty Name="SpellMiscId" ColumnName="SpellMiscId" />
+          <ScalarProperty Name="Idx" ColumnName="Idx" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="Z" ColumnName="Z" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_custom_attr">
+      <EntityTypeMapping TypeName="worldModel.spell_custom_attr">
+        <MappingFragment StoreEntitySet="spell_custom_attr">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="attributes" ColumnName="attributes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_dbc">
+      <EntityTypeMapping TypeName="worldModel.spell_dbc">
+        <MappingFragment StoreEntitySet="spell_dbc">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Attributes" ColumnName="Attributes" />
+          <ScalarProperty Name="AttributesEx" ColumnName="AttributesEx" />
+          <ScalarProperty Name="AttributesEx2" ColumnName="AttributesEx2" />
+          <ScalarProperty Name="AttributesEx3" ColumnName="AttributesEx3" />
+          <ScalarProperty Name="AttributesEx4" ColumnName="AttributesEx4" />
+          <ScalarProperty Name="AttributesEx5" ColumnName="AttributesEx5" />
+          <ScalarProperty Name="AttributesEx6" ColumnName="AttributesEx6" />
+          <ScalarProperty Name="AttributesEx7" ColumnName="AttributesEx7" />
+          <ScalarProperty Name="AttributesEx8" ColumnName="AttributesEx8" />
+          <ScalarProperty Name="AttributesEx9" ColumnName="AttributesEx9" />
+          <ScalarProperty Name="AttributesEx10" ColumnName="AttributesEx10" />
+          <ScalarProperty Name="CastingTimeIndex" ColumnName="CastingTimeIndex" />
+          <ScalarProperty Name="DurationIndex" ColumnName="DurationIndex" />
+          <ScalarProperty Name="RangeIndex" ColumnName="RangeIndex" />
+          <ScalarProperty Name="SchoolMask" ColumnName="SchoolMask" />
+          <ScalarProperty Name="SpellAuraOptionsId" ColumnName="SpellAuraOptionsId" />
+          <ScalarProperty Name="SpellCastingRequirementsId" ColumnName="SpellCastingRequirementsId" />
+          <ScalarProperty Name="SpellCategoriesId" ColumnName="SpellCategoriesId" />
+          <ScalarProperty Name="SpellClassOptionsId" ColumnName="SpellClassOptionsId" />
+          <ScalarProperty Name="SpellEquippedItemsId" ColumnName="SpellEquippedItemsId" />
+          <ScalarProperty Name="SpellLevelsId" ColumnName="SpellLevelsId" />
+          <ScalarProperty Name="SpellTargetRestrictionsId" ColumnName="SpellTargetRestrictionsId" />
+          <ScalarProperty Name="SpellInterruptsId" ColumnName="SpellInterruptsId" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_enchant_proc_data">
+      <EntityTypeMapping TypeName="worldModel.spell_enchant_proc_data">
+        <MappingFragment StoreEntitySet="spell_enchant_proc_data">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="customChance" ColumnName="customChance" />
+          <ScalarProperty Name="procEx" ColumnName="procEx" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_group">
+      <EntityTypeMapping TypeName="worldModel.spell_group">
+        <MappingFragment StoreEntitySet="spell_group">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="spell_id" ColumnName="spell_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_group_stack_rules">
+      <EntityTypeMapping TypeName="worldModel.spell_group_stack_rules">
+        <MappingFragment StoreEntitySet="spell_group_stack_rules">
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="stack_rule" ColumnName="stack_rule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_learn_spell">
+      <EntityTypeMapping TypeName="worldModel.spell_learn_spell">
+        <MappingFragment StoreEntitySet="spell_learn_spell">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="SpellID" ColumnName="SpellID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_loot_template">
+      <EntityTypeMapping TypeName="worldModel.spell_loot_template">
+        <MappingFragment StoreEntitySet="spell_loot_template">
+          <ScalarProperty Name="Entry" ColumnName="Entry" />
+          <ScalarProperty Name="Item" ColumnName="Item" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="QuestRequired" ColumnName="QuestRequired" />
+          <ScalarProperty Name="LootMode" ColumnName="LootMode" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="MinCount" ColumnName="MinCount" />
+          <ScalarProperty Name="MaxCount" ColumnName="MaxCount" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_pet_auras">
+      <EntityTypeMapping TypeName="worldModel.spell_pet_auras">
+        <MappingFragment StoreEntitySet="spell_pet_auras">
+          <ScalarProperty Name="spell" ColumnName="spell" />
+          <ScalarProperty Name="effectId" ColumnName="effectId" />
+          <ScalarProperty Name="pet" ColumnName="pet" />
+          <ScalarProperty Name="aura" ColumnName="aura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_proc">
+      <EntityTypeMapping TypeName="worldModel.spell_proc">
+        <MappingFragment StoreEntitySet="spell_proc">
+          <ScalarProperty Name="SpellId" ColumnName="SpellId" />
+          <ScalarProperty Name="SchoolMask" ColumnName="SchoolMask" />
+          <ScalarProperty Name="SpellFamilyName" ColumnName="SpellFamilyName" />
+          <ScalarProperty Name="SpellFamilyMask0" ColumnName="SpellFamilyMask0" />
+          <ScalarProperty Name="SpellFamilyMask1" ColumnName="SpellFamilyMask1" />
+          <ScalarProperty Name="SpellFamilyMask2" ColumnName="SpellFamilyMask2" />
+          <ScalarProperty Name="SpellFamilyMask3" ColumnName="SpellFamilyMask3" />
+          <ScalarProperty Name="ProcFlags" ColumnName="ProcFlags" />
+          <ScalarProperty Name="SpellTypeMask" ColumnName="SpellTypeMask" />
+          <ScalarProperty Name="SpellPhaseMask" ColumnName="SpellPhaseMask" />
+          <ScalarProperty Name="HitMask" ColumnName="HitMask" />
+          <ScalarProperty Name="AttributesMask" ColumnName="AttributesMask" />
+          <ScalarProperty Name="ProcsPerMinute" ColumnName="ProcsPerMinute" />
+          <ScalarProperty Name="Chance" ColumnName="Chance" />
+          <ScalarProperty Name="Cooldown" ColumnName="Cooldown" />
+          <ScalarProperty Name="Charges" ColumnName="Charges" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_required">
+      <EntityTypeMapping TypeName="worldModel.spell_required">
+        <MappingFragment StoreEntitySet="spell_required">
+          <ScalarProperty Name="spell_id" ColumnName="spell_id" />
+          <ScalarProperty Name="req_spell" ColumnName="req_spell" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_target_position">
+      <EntityTypeMapping TypeName="worldModel.spell_target_position">
+        <MappingFragment StoreEntitySet="spell_target_position">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EffectIndex" ColumnName="EffectIndex" />
+          <ScalarProperty Name="MapID" ColumnName="MapID" />
+          <ScalarProperty Name="PositionX" ColumnName="PositionX" />
+          <ScalarProperty Name="PositionY" ColumnName="PositionY" />
+          <ScalarProperty Name="PositionZ" ColumnName="PositionZ" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_threat">
+      <EntityTypeMapping TypeName="worldModel.spell_threat">
+        <MappingFragment StoreEntitySet="spell_threat">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="flatMod" ColumnName="flatMod" />
+          <ScalarProperty Name="pctMod" ColumnName="pctMod" />
+          <ScalarProperty Name="apPctMod" ColumnName="apPctMod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spelleffect_dbc">
+      <EntityTypeMapping TypeName="worldModel.spelleffect_dbc">
+        <MappingFragment StoreEntitySet="spelleffect_dbc">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Effect" ColumnName="Effect" />
+          <ScalarProperty Name="EffectApplyAuraName" ColumnName="EffectApplyAuraName" />
+          <ScalarProperty Name="EffectAmplitude" ColumnName="EffectAmplitude" />
+          <ScalarProperty Name="EffectBasePoints" ColumnName="EffectBasePoints" />
+          <ScalarProperty Name="EffectChainTarget" ColumnName="EffectChainTarget" />
+          <ScalarProperty Name="EffectDieSides" ColumnName="EffectDieSides" />
+          <ScalarProperty Name="EffectItemType" ColumnName="EffectItemType" />
+          <ScalarProperty Name="EffectMechanic" ColumnName="EffectMechanic" />
+          <ScalarProperty Name="EffectMiscValue" ColumnName="EffectMiscValue" />
+          <ScalarProperty Name="EffectMiscValueB" ColumnName="EffectMiscValueB" />
+          <ScalarProperty Name="EffectRadiusIndex" ColumnName="EffectRadiusIndex" />
+          <ScalarProperty Name="EffectRadiusIndexMax" ColumnName="EffectRadiusIndexMax" />
+          <ScalarProperty Name="EffectSpellClassMaskA" ColumnName="EffectSpellClassMaskA" />
+          <ScalarProperty Name="EffectSpellClassMaskB" ColumnName="EffectSpellClassMaskB" />
+          <ScalarProperty Name="EffectSpellClassMaskC" ColumnName="EffectSpellClassMaskC" />
+          <ScalarProperty Name="EffectTriggerSpell" ColumnName="EffectTriggerSpell" />
+          <ScalarProperty Name="EffectImplicitTargetA" ColumnName="EffectImplicitTargetA" />
+          <ScalarProperty Name="EffectImplicitTargetB" ColumnName="EffectImplicitTargetB" />
+          <ScalarProperty Name="EffectSpellId" ColumnName="EffectSpellId" />
+          <ScalarProperty Name="EffectIndex" ColumnName="EffectIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="terrain_phase_info">
+      <EntityTypeMapping TypeName="worldModel.terrain_phase_info">
+        <MappingFragment StoreEntitySet="terrain_phase_info">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TerrainSwapMap" ColumnName="TerrainSwapMap" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="terrain_swap_defaults">
+      <EntityTypeMapping TypeName="worldModel.terrain_swap_defaults">
+        <MappingFragment StoreEntitySet="terrain_swap_defaults">
+          <ScalarProperty Name="MapId" ColumnName="MapId" />
+          <ScalarProperty Name="TerrainSwapMap" ColumnName="TerrainSwapMap" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="terrain_worldmap">
+      <EntityTypeMapping TypeName="worldModel.terrain_worldmap">
+        <MappingFragment StoreEntitySet="terrain_worldmap">
+          <ScalarProperty Name="TerrainSwapMap" ColumnName="TerrainSwapMap" />
+          <ScalarProperty Name="WorldMapArea" ColumnName="WorldMapArea" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trainers">
+      <EntityTypeMapping TypeName="worldModel.trainer">
+        <MappingFragment StoreEntitySet="trainer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Greeting" ColumnName="Greeting" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trainer_locale">
+      <EntityTypeMapping TypeName="worldModel.trainer_locale">
+        <MappingFragment StoreEntitySet="trainer_locale">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="locale" ColumnName="locale" />
+          <ScalarProperty Name="Greeting_lang" ColumnName="Greeting_lang" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trainer_spell">
+      <EntityTypeMapping TypeName="worldModel.trainer_spell">
+        <MappingFragment StoreEntitySet="trainer_spell">
+          <ScalarProperty Name="TrainerId" ColumnName="TrainerId" />
+          <ScalarProperty Name="SpellId" ColumnName="SpellId" />
+          <ScalarProperty Name="MoneyCost" ColumnName="MoneyCost" />
+          <ScalarProperty Name="ReqSkillLine" ColumnName="ReqSkillLine" />
+          <ScalarProperty Name="ReqSkillRank" ColumnName="ReqSkillRank" />
+          <ScalarProperty Name="ReqAbility1" ColumnName="ReqAbility1" />
+          <ScalarProperty Name="ReqAbility2" ColumnName="ReqAbility2" />
+          <ScalarProperty Name="ReqAbility3" ColumnName="ReqAbility3" />
+          <ScalarProperty Name="ReqLevel" ColumnName="ReqLevel" />
+          <ScalarProperty Name="VerifiedBuild" ColumnName="VerifiedBuild" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transports">
+      <EntityTypeMapping TypeName="worldModel.transport">
+        <MappingFragment StoreEntitySet="transports">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phaseid" ColumnName="phaseid" />
+          <ScalarProperty Name="phasegroup" ColumnName="phasegroup" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trinity_string">
+      <EntityTypeMapping TypeName="worldModel.trinity_string">
+        <MappingFragment StoreEntitySet="trinity_string">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="content_default" ColumnName="content_default" />
+          <ScalarProperty Name="content_loc1" ColumnName="content_loc1" />
+          <ScalarProperty Name="content_loc2" ColumnName="content_loc2" />
+          <ScalarProperty Name="content_loc3" ColumnName="content_loc3" />
+          <ScalarProperty Name="content_loc4" ColumnName="content_loc4" />
+          <ScalarProperty Name="content_loc5" ColumnName="content_loc5" />
+          <ScalarProperty Name="content_loc6" ColumnName="content_loc6" />
+          <ScalarProperty Name="content_loc7" ColumnName="content_loc7" />
+          <ScalarProperty Name="content_loc8" ColumnName="content_loc8" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="updates">
+      <EntityTypeMapping TypeName="worldModel.update">
+        <MappingFragment StoreEntitySet="updates">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="hash" ColumnName="hash" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="speed" ColumnName="speed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="updates_include">
+      <EntityTypeMapping TypeName="worldModel.updates_include">
+        <MappingFragment StoreEntitySet="updates_include">
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="state" ColumnName="state" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicle_accessory">
+      <EntityTypeMapping TypeName="worldModel.vehicle_accessory">
+        <MappingFragment StoreEntitySet="vehicle_accessory">
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="accessory_entry" ColumnName="accessory_entry" />
+          <ScalarProperty Name="seat_id" ColumnName="seat_id" />
+          <ScalarProperty Name="minion" ColumnName="minion" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="summontype" ColumnName="summontype" />
+          <ScalarProperty Name="summontimer" ColumnName="summontimer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicle_template_accessory">
+      <EntityTypeMapping TypeName="worldModel.vehicle_template_accessory">
+        <MappingFragment StoreEntitySet="vehicle_template_accessory">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="accessory_entry" ColumnName="accessory_entry" />
+          <ScalarProperty Name="seat_id" ColumnName="seat_id" />
+          <ScalarProperty Name="minion" ColumnName="minion" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="summontype" ColumnName="summontype" />
+          <ScalarProperty Name="summontimer" ColumnName="summontimer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="versions">
+      <EntityTypeMapping TypeName="worldModel.version">
+        <MappingFragment StoreEntitySet="version">
+          <ScalarProperty Name="core_version" ColumnName="core_version" />
+          <ScalarProperty Name="core_revision" ColumnName="core_revision" />
+          <ScalarProperty Name="db_version" ColumnName="db_version" />
+          <ScalarProperty Name="cache_id" ColumnName="cache_id" />
+          <ScalarProperty Name="hotfix_cache_id" ColumnName="hotfix_cache_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="warden_checks">
+      <EntityTypeMapping TypeName="worldModel.warden_checks">
+        <MappingFragment StoreEntitySet="warden_checks">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="str" ColumnName="str" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="result" ColumnName="result" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="waypoint_data">
+      <EntityTypeMapping TypeName="worldModel.waypoint_data">
+        <MappingFragment StoreEntitySet="waypoint_data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="point" ColumnName="point" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="delay" ColumnName="delay" />
+          <ScalarProperty Name="move_type" ColumnName="move_type" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="action_chance" ColumnName="action_chance" />
+          <ScalarProperty Name="wpguid" ColumnName="wpguid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="waypoint_scripts">
+      <EntityTypeMapping TypeName="worldModel.waypoint_scripts">
+        <MappingFragment StoreEntitySet="waypoint_scripts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="delay" ColumnName="delay" />
+          <ScalarProperty Name="command" ColumnName="command" />
+          <ScalarProperty Name="datalong" ColumnName="datalong" />
+          <ScalarProperty Name="datalong2" ColumnName="datalong2" />
+          <ScalarProperty Name="dataint" ColumnName="dataint" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+          <ScalarProperty Name="z" ColumnName="z" />
+          <ScalarProperty Name="o" ColumnName="o" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="waypoints">
+      <EntityTypeMapping TypeName="worldModel.waypoint">
+        <MappingFragment StoreEntitySet="waypoints">
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="pointid" ColumnName="pointid" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="point_comment" ColumnName="point_comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="creature_summon_groups">
+      <EntityTypeMapping TypeName="worldModel.creature_summon_groups">
+        <MappingFragment StoreEntitySet="creature_summon_groups">
+          <ScalarProperty Name="summonerId" ColumnName="summonerId" />
+          <ScalarProperty Name="summonerType" ColumnName="summonerType" />
+          <ScalarProperty Name="groupId" ColumnName="groupId" />
+          <ScalarProperty Name="entry" ColumnName="entry" />
+          <ScalarProperty Name="position_x" ColumnName="position_x" />
+          <ScalarProperty Name="position_y" ColumnName="position_y" />
+          <ScalarProperty Name="position_z" ColumnName="position_z" />
+          <ScalarProperty Name="orientation" ColumnName="orientation" />
+          <ScalarProperty Name="summonType" ColumnName="summonType" />
+          <ScalarProperty Name="summonTime" ColumnName="summonTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_scripts">
+      <EntityTypeMapping TypeName="worldModel.event_scripts">
+        <MappingFragment StoreEntitySet="event_scripts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="delay" ColumnName="delay" />
+          <ScalarProperty Name="command" ColumnName="command" />
+          <ScalarProperty Name="datalong" ColumnName="datalong" />
+          <ScalarProperty Name="datalong2" ColumnName="datalong2" />
+          <ScalarProperty Name="dataint" ColumnName="dataint" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+          <ScalarProperty Name="z" ColumnName="z" />
+          <ScalarProperty Name="o" ColumnName="o" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="game_event_arena_seasons">
+      <EntityTypeMapping TypeName="worldModel.game_event_arena_seasons">
+        <MappingFragment StoreEntitySet="game_event_arena_seasons">
+          <ScalarProperty Name="eventEntry" ColumnName="eventEntry" />
+          <ScalarProperty Name="season" ColumnName="season" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_linked_spell">
+      <EntityTypeMapping TypeName="worldModel.spell_linked_spell">
+        <MappingFragment StoreEntitySet="spell_linked_spell">
+          <ScalarProperty Name="spell_trigger" ColumnName="spell_trigger" />
+          <ScalarProperty Name="spell_effect" ColumnName="spell_effect" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_script_names">
+      <EntityTypeMapping TypeName="worldModel.spell_script_names">
+        <MappingFragment StoreEntitySet="spell_script_names">
+          <ScalarProperty Name="spell_id" ColumnName="spell_id" />
+          <ScalarProperty Name="ScriptName" ColumnName="ScriptName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="spell_scripts">
+      <EntityTypeMapping TypeName="worldModel.spell_scripts">
+        <MappingFragment StoreEntitySet="spell_scripts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="effIndex" ColumnName="effIndex" />
+          <ScalarProperty Name="delay" ColumnName="delay" />
+          <ScalarProperty Name="command" ColumnName="command" />
+          <ScalarProperty Name="datalong" ColumnName="datalong" />
+          <ScalarProperty Name="datalong2" ColumnName="datalong2" />
+          <ScalarProperty Name="dataint" ColumnName="dataint" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+          <ScalarProperty Name="z" ColumnName="z" />
+          <ScalarProperty Name="o" ColumnName="o" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
