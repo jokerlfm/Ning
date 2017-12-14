@@ -48,6 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\AuthPacket.cs" />
+    <Compile Include="Base\Packet.cs" />
+    <Compile Include="Base\PacketPart.cs" />
+    <Compile Include="Base\RealmPacket.cs" />
+    <Compile Include="Base\ReceiveBuffer.cs" />
+    <Compile Include="Business\RealmClientSession.cs" />
+    <Compile Include="Business\RealmReceiveBufferHandler.cs" />
+    <Compile Include="Business\AuthReceiveBufferHandler.cs" />
+    <Compile Include="Business\AuthClientSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime\ConfigManager.cs" />
     <Compile Include="Runtime\Store.cs" />
@@ -57,8 +66,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Base\" />
-    <Folder Include="Business\" />
     <Folder Include="Entity\" />
     <Folder Include="Script\" />
     <Folder Include="Spell\" />

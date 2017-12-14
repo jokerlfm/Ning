@@ -7,3 +7,15 @@ D:\Ning\SingleServerConsole\obj\Debug\SingleServerConsole.csprojResolveAssemblyR
 D:\Ning\SingleServerConsole\obj\Debug\SingleServerConsole.csproj.CoreCompileInputs.cache
 D:\Ning\SingleServerConsole\obj\Debug\SingleServerConsole.exe
 D:\Ning\SingleServerConsole\obj\Debug\SingleServerConsole.pdb
+D:\Ning\SingleServerConsole\bin\Debug\AuthenticationServiceCore.dll
+D:\Ning\SingleServerConsole\bin\Debug\MingCore.dll
+D:\Ning\SingleServerConsole\bin\Debug\NingCore.dll
+D:\Ning\SingleServerConsole\bin\Debug\RealmServiceCore.dll
+D:\Ning\SingleServerConsole\bin\Debug\AuthenticationServiceCore.pdb
+D:\Ning\SingleServerConsole\bin\Debug\AuthenticationServiceCore.dll.config
+D:\Ning\SingleServerConsole\bin\Debug\MingCore.pdb
+D:\Ning\SingleServerConsole\bin\Debug\MingCore.dll.config
+D:\Ning\SingleServerConsole\bin\Debug\NingCore.pdb
+D:\Ning\SingleServerConsole\bin\Debug\NingCore.dll.config
+D:\Ning\SingleServerConsole\bin\Debug\RealmServiceCore.pdb
+D:\Ning\SingleServerConsole\bin\Debug\RealmServiceCore.dll.config

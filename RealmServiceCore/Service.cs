@@ -72,7 +72,7 @@ namespace RealmServiceCore
                 Store.InitializeAllPatchStores();
 
                 this.realmClientListener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                this.realmServerIEP = new IPEndPoint(IPAddress.Any, 3724);
+                this.realmServerIEP = new IPEndPoint(IPAddress.Any, 8085);
                 this.realmClientListener.Bind(this.realmServerIEP);
                 this.realmClientListener.Listen(10);
                 WaitCallback wcb1 = new WaitCallback(this.DoAuthClientAccepting);

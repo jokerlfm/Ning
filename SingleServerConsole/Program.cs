@@ -10,6 +10,23 @@ namespace SingleServerConsole
     {
         static void Main(string[] args)
         {
+            AuthenticationServiceCore.Service authService = AuthenticationServiceCore.Service.GetService();
+            authService.Start();
+
+            RealmServiceCore.Service realmService = RealmServiceCore.Service.GetService();
+            realmService.Start();
+
+            while (true)
+            {
+                string command = Console.ReadLine();
+                if (command.ToLower() == "quit")
+                {
+                    break;
+                }
+            }
+
+            authService.Stop();
+            realmService.Stop();
         }
     }
 }

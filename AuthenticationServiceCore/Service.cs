@@ -1,4 +1,5 @@
 ﻿using MingCore;
+using NingCore.Business;
 using NingCore.Runtime;
 using System;
 using System.Collections.Generic;
@@ -55,6 +56,8 @@ namespace AuthenticationServiceCore
                 return this.working;
             }
         }
+
+        private List<AuthClientSession> clients;
         #endregion
 
         #region business
@@ -69,8 +72,10 @@ namespace AuthenticationServiceCore
                 ConfigManager.LoadConfigs(ConfigType.AUTHENTICATION_SERVER_CONFIG);
                 Store.InitializeAllPassportStores();
 
+                clients = new List<AuthClientSession>();
+
                 this.authClientListener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                this.authServerIEP = new IPEndPoint(IPAddress.Any, 3724);
+                this.authServerIEP = new IPEndPoint(IPAddress.Any, 8081);
                 this.authClientListener.Bind(this.authServerIEP);
                 this.authClientListener.Listen(10);
                 WaitCallback wcb1 = new WaitCallback(this.DoAuthClientAccepting);
@@ -89,12 +94,14 @@ namespace AuthenticationServiceCore
 
                 try
                 {
-
+                    AuthClientSession newACS = new AuthClientSession(authClientSocket);
+                    clients.Add(newACS);
+                    newACS.StartSession();
                 }
                 catch (Exception exp)
                 {
                     MLogger.NetworkLogger.Error("Authentication client accept error : " + exp.Message);
-                    FinishSocket(ref authClientSocket);
+                    MingCore.SocketOperator.FinishSocket(ref authClientSocket);
                 }
             }
         }
@@ -135,35 +142,12 @@ namespace AuthenticationServiceCore
             }
             finally
             {
-                FinishSocket(ref authClientListener);
+                MingCore.SocketOperator.FinishSocket(ref authClientListener);
             }
             
             MLogger.RuntimeLogger.Info("Authentication server Stopped.");
 
             this.working = false;
-        }
-
-        private void FinishSocket(ref Socket pmTarget)
-        {
-            if (pmTarget != null)
-            {
-                try
-                {
-                    if (pmTarget.Connected)
-                    {
-                        pmTarget.Disconnect(false);
-                    }
-                    pmTarget.Dispose();
-                }
-                catch (Exception)
-                {
-
-                }
-                finally
-                {
-                    pmTarget = null;
-                }
-            }
         }
         #endregion
     }

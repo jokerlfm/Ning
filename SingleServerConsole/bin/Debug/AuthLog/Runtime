@@ -1,0 +1,10 @@
+------ New session ------
+INFO :authentication server listener started. 0.0.0.0:3724
+INFO :authentication server started.
+INFO :Authentication server Stopped.
+------ End session ------
+------ New session ------
+INFO :authentication server listener started. 0.0.0.0:8081
+INFO :authentication server started.
+INFO :Realm server listener started. 0.0.0.0:3724
+INFO :Realm server started.

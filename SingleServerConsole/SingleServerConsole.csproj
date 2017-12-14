@@ -51,5 +51,23 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuthenticationServiceCore\AuthenticationServiceCore.csproj">
+      <Project>{b502d645-e620-49b0-a95d-1f144b0959b2}</Project>
+      <Name>AuthenticationServiceCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MingCore\MingCore.csproj">
+      <Project>{e6b6a54a-3f15-4f52-bc81-724b67f7f776}</Project>
+      <Name>MingCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NingCore\NingCore.csproj">
+      <Project>{438dfa68-c2bb-4116-92ba-29371d35e711}</Project>
+      <Name>NingCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RealmServiceCore\RealmServiceCore.csproj">
+      <Project>{6b167f10-276c-492b-9be9-155543601d78}</Project>
+      <Name>RealmServiceCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
