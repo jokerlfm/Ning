@@ -18,8 +18,10 @@ namespace MingCore
                 {
                     if (pmTarget.Connected)
                     {
+                        pmTarget.Shutdown(SocketShutdown.Both);
                         pmTarget.Disconnect(false);
                     }
+                    pmTarget.Close();
                     pmTarget.Dispose();
                 }
                 catch (Exception)

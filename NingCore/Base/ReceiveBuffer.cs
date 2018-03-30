@@ -28,12 +28,13 @@ namespace NingCore.Base
         }
         private int validLength;
 
-        public void ResetBuffer(byte[] pmLegacyBytes, UInt32 pmBufferLength)
+        public void ResetBuffer()
         {
-            bufferBytes = new byte[pmBufferLength];
-            Buffer.BlockCopy(pmLegacyBytes, 0, bufferBytes, 0, pmLegacyBytes.Length);
-            checkPosition = 0;
-            validLength = pmLegacyBytes.Length;
+            byte[] newBuffer = new byte[bufferLength];
+            validLength = validLength - checkPosition;
+            Buffer.BlockCopy(bufferBytes, checkPosition, newBuffer, 0, validLength);
+            bufferBytes = newBuffer;            
+            checkPosition = 0;            
         }
 
         public byte[] Take(int pmLength)
@@ -55,20 +56,8 @@ namespace NingCore.Base
 
             lock (bufferBytes)
             {
-                if (pmNewBytes.Length + validLength > bufferBytes.Length)
-                {
-                    byte[] legacyBytes = new byte[validLength - checkPosition];
-                    ResetBuffer(legacyBytes, bufferLength);
-                }
-                if (pmNewBytes.Length + validLength > bufferBytes.Length)
-                {
-                    result = false;
-                }
-                else
-                {
-                    Buffer.BlockCopy(pmNewBytes, 0, bufferBytes, validLength, pmNewBytes.Length);                    
-                    validLength = validLength + pmNewBytes.Length;
-                }                
+                Buffer.BlockCopy(pmNewBytes, 0, bufferBytes, validLength, pmNewBytes.Length);
+                validLength = validLength + pmNewBytes.Length;
             }
 
             return result;

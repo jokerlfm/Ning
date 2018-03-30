@@ -66,7 +66,7 @@ namespace RealmServiceCore
                 WaitCallback wcbLogging = new WaitCallback(this.DoConsoleLogging);
                 ThreadPool.QueueUserWorkItem(wcbLogging, null);
 
-                ConfigManager.LoadConfigs(ConfigType.REALM_SERVER_CONFIG);
+                ConfigManager.LoadConfigs(CONFIG_TYPE.REALM_SERVER_CONFIG);
                 Store.InitializeAllArchiveStores();
                 Store.InitializeAllWorldStores();
                 Store.InitializeAllPatchStores();
@@ -77,9 +77,9 @@ namespace RealmServiceCore
                 this.realmClientListener.Listen(10);
                 WaitCallback wcb1 = new WaitCallback(this.DoAuthClientAccepting);
                 ThreadPool.QueueUserWorkItem(wcb1, null);
-                MLogger.RuntimeLogger.Info("Realm server listener started. " + this.realmServerIEP.Address.ToString() + ":" + this.realmServerIEP.Port);
+                MLogger.RuntimeLogger.Basic("Realm server listener started. " + this.realmServerIEP.Address.ToString() + ":" + this.realmServerIEP.Port);
 
-                MLogger.RuntimeLogger.Info("Realm server started.");
+                MLogger.RuntimeLogger.Basic("Realm server started.");
             }
         }
 
@@ -140,7 +140,7 @@ namespace RealmServiceCore
                 FinishSocket(ref realmClientListener);
             }
 
-            MLogger.RuntimeLogger.Info("Realm server Stopped.");
+            MLogger.RuntimeLogger.Basic("Realm server Stopped.");
 
             this.working = false;
         }

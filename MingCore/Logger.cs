@@ -6,6 +6,43 @@ using System.Threading.Tasks;
 
 namespace MingCore
 {
+    public enum LOG_LEVEL
+    {
+        ERROR,
+        DEBUG,
+        DETAIL,
+        BASIC
+    }
+
+    public class LogEntry
+    {
+        public LogEntry(LOG_LEVEL pmLogLevel, string pmLogContent)
+        {
+            logLevel = pmLogLevel;
+            logContent = pmLogContent;
+        }
+
+        #region declaration
+        private LOG_LEVEL logLevel;
+        public LOG_LEVEL LogLevel
+        {
+            get
+            {
+                return LogLevel;
+            }
+        }
+
+        private string logContent;
+        public string LogContent
+        {
+            get
+            {
+                return logContent;
+            }
+        }
+        #endregion
+    }
+
     public class MLogger
     {
         public static void InitLoggers(string pmLogPath)
@@ -46,7 +83,7 @@ namespace MingCore
         {
             this.logPath = pmLogPath;
             this.logName = pmLogName;
-            this.logQueue = new BlockQueue<string>(1000);
+            this.logQueue = new BlockQueue<LogEntry>(1000);
             this.logger = log4net.LogManager.GetLogger(this.GenerateCurrentLog4NetRepository(), pmLogName);
         }
 
@@ -78,7 +115,7 @@ namespace MingCore
             }
         }
 
-        private BlockQueue<string> logQueue = null;
+        private BlockQueue<LogEntry> logQueue = null;
         #endregion
 
         #region business
@@ -115,40 +152,40 @@ namespace MingCore
             return result;
         }
 
-        private void EnqueueLog(string pmContent)
+        private void EnqueueLog(LOG_LEVEL pmLogLevel, string pmLogContent)
         {
             if (this.logQueue.Count > 500)
             {
-                this.logQueue.Dequeue();
+                this.logQueue.Clear();
             }
-            this.logQueue.Enqueue(pmContent);
+            this.logQueue.Enqueue(new LogEntry(pmLogLevel, pmLogContent));
         }
 
         public void Debug(string pmContent)
         {
-            this.logger.Debug(pmContent);
-            this.EnqueueLog(pmContent);
+            this.logger.Info(pmContent);
+            this.EnqueueLog(LOG_LEVEL.DEBUG, pmContent);
         }
 
-        public void Info(string pmContent)
+        public void Basic(string pmContent)
         {
             this.logger.Info(pmContent);
-            this.EnqueueLog(pmContent);
+            this.EnqueueLog(LOG_LEVEL.BASIC, pmContent);
         }
 
-        public void Warn(string pmContent)
+        public void Detail(string pmContent)
         {
-            this.logger.Warn(pmContent);
-            this.EnqueueLog(pmContent);
+            this.logger.Info(pmContent);
+            this.EnqueueLog(LOG_LEVEL.DETAIL, pmContent);
         }
 
         public void Error(string pmContent)
         {
             this.logger.Error(pmContent);
-            this.EnqueueLog(pmContent);
+            this.EnqueueLog(LOG_LEVEL.ERROR, pmContent);
         }
 
-        public string DequeueLog()
+        public LogEntry DequeueLog()
         {
             return this.logQueue.Dequeue();
         }

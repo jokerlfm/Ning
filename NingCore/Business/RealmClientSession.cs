@@ -45,20 +45,20 @@ namespace NingCore.Business
                     {
                         if (!realmReceiveBuffer.Append(buffer.Take(receivedLength).ToArray()))
                         {
-                            MLogger.NetworkLogger.Warn("Receive buffer appending error occured : " + this.clientSocket.Handle);
+                            MLogger.NetworkLogger.Error("Receive buffer appending error occured : " + this.clientSocket.Handle);
                             this.StopSession();
                         }
                     }
                     else
                     {
-                        MLogger.NetworkLogger.Warn("Realm client socket disconnected : " + this.clientSocket.Handle);
+                        MLogger.NetworkLogger.Error("Realm client socket disconnected : " + this.clientSocket.Handle);
                         this.StopSession();
                     }
                 }
             }
             catch (Exception exp)
             {
-                MLogger.NetworkLogger.Warn("Realm client receiving exp :" + this.clientSocket.Handle + " " + exp.Message);
+                MLogger.NetworkLogger.Error("Realm client receiving exp :" + this.clientSocket.Handle + " " + exp.Message);
                 this.StopSession();
             }            
         }
@@ -75,7 +75,7 @@ namespace NingCore.Business
                         int sentLength = clientSocket.Send(rp.GetPacketBuffer());
                         if (sentLength < 1)
                         {
-                            MLogger.NetworkLogger.Warn("Realm client socket sent 0 bytes : " + this.clientSocket.Handle);
+                            MLogger.NetworkLogger.Error("Realm client socket sent 0 bytes : " + this.clientSocket.Handle);
                             this.StopSession();
                         }
                     }
@@ -84,7 +84,7 @@ namespace NingCore.Business
             }
             catch (Exception exp)
             {
-                MLogger.NetworkLogger.Warn("Realm client sending exp :" + this.clientSocket.Handle + " " + exp.Message);
+                MLogger.NetworkLogger.Error("Realm client sending exp :" + this.clientSocket.Handle + " " + exp.Message);
                 this.StopSession();
             }
         }
@@ -106,7 +106,7 @@ namespace NingCore.Business
             }
             catch (Exception exp)
             {
-                MLogger.NetworkLogger.Warn("Realm client receive buffer handling exp :" + this.clientSocket.Handle + " " + exp.Message);
+                MLogger.NetworkLogger.Error("Realm client receive buffer handling exp :" + this.clientSocket.Handle + " " + exp.Message);
                 this.StopSession();
             }
         }

@@ -739,7 +739,7 @@ namespace NingCore.Business
 
             if (!singletonHandle.handlerDic[pmOpcode](pmTargetSession))
             {
-                MLogger.RuntimeLogger.Warn(pmOpcode.ToString() + " handle failed.");
+                MLogger.RuntimeLogger.Error(pmOpcode.ToString() + " handle failed.");
             }
         }
 

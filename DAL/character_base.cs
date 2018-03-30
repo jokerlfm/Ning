@@ -12,11 +12,19 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class account
+    public partial class character_base
     {
         public int entry { get; set; }
         public int account_id { get; set; }
-        public string account_name { get; set; }
-        public string account_password { get; set; }
+        public int character_guid { get; set; }
+        public string character_name { get; set; }
+        public int character_race { get; set; }
+        public int character_class { get; set; }
+        public int character_skin { get; set; }
+        public int character_face { get; set; }
+        public int character_hair_style { get; set; }
+        public int character_hair_color { get; set; }
+        public int character_facial_hair { get; set; }
+        public int character_outfit { get; set; }
     }
 }

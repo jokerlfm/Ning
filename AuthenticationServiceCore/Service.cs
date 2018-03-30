@@ -17,6 +17,9 @@ namespace AuthenticationServiceCore
         private Service()
         {
             MLogger.InitLoggers("AuthLog");
+            clients = null;
+            loggingThread = null;
+            clientAcceptingThread = null;
         }
 
         private Service(string pmLogPath)
@@ -58,6 +61,8 @@ namespace AuthenticationServiceCore
         }
 
         private List<AuthClientSession> clients;
+        private Thread clientAcceptingThread;
+        private Thread loggingThread;
         #endregion
 
         #region business
@@ -66,10 +71,12 @@ namespace AuthenticationServiceCore
             if (!this.working)
             {
                 this.working = true;
-                WaitCallback wcbLogging = new WaitCallback(this.DoConsoleLogging);
-                ThreadPool.QueueUserWorkItem(wcbLogging, null);
 
-                ConfigManager.LoadConfigs(ConfigType.AUTHENTICATION_SERVER_CONFIG);
+                loggingThread = new Thread(new ThreadStart(DoConsoleLogging));
+                loggingThread.IsBackground = true;
+                loggingThread.Start();
+                
+                ConfigManager.LoadConfigs(CONFIG_TYPE.AUTHENTICATION_SERVER_CONFIG);
                 Store.InitializeAllPassportStores();
 
                 clients = new List<AuthClientSession>();
@@ -78,15 +85,17 @@ namespace AuthenticationServiceCore
                 this.authServerIEP = new IPEndPoint(IPAddress.Any, 8081);
                 this.authClientListener.Bind(this.authServerIEP);
                 this.authClientListener.Listen(10);
-                WaitCallback wcb1 = new WaitCallback(this.DoAuthClientAccepting);
-                ThreadPool.QueueUserWorkItem(wcb1, null);
-                MLogger.RuntimeLogger.Info("authentication server listener started. " + this.authServerIEP.Address.ToString() + ":" + this.authServerIEP.Port);
 
-                MLogger.RuntimeLogger.Info("authentication server started.");
+                clientAcceptingThread = new Thread(new ThreadStart(DoAuthClientAccepting));
+                clientAcceptingThread.IsBackground = true;
+                clientAcceptingThread.Start();                
+                MLogger.RuntimeLogger.Basic("authentication server listener started. " + this.authServerIEP.Address.ToString() + ":" + this.authServerIEP.Port);
+
+                MLogger.RuntimeLogger.Basic("authentication server started.");
             }
         }
 
-        private void DoAuthClientAccepting(object pmMain = null)
+        private void DoAuthClientAccepting()
         {
             while (this.working)
             {
@@ -106,7 +115,7 @@ namespace AuthenticationServiceCore
             }
         }
 
-        private void DoConsoleLogging(object pmMain = null)
+        private void DoConsoleLogging()
         {
             while (this.working)
             {
@@ -123,31 +132,38 @@ namespace AuthenticationServiceCore
 
         public void Stop()
         {
+            this.working = false;
+
+            SocketOperator.FinishSocket(ref this.authClientListener);
+            MLogger.RuntimeLogger.Basic("Client listener Stopped.");
+
             try
             {
-                if (this.authClientListener != null)
+                if(clientAcceptingThread!=null)
                 {
-                    if (this.authClientListener.Connected)
-                    {
-                        this.authClientListener.Shutdown(SocketShutdown.Both);
-                        this.authClientListener.Disconnect(false);
-                    }
-                    this.authClientListener.Close();
-                    this.authClientListener.Dispose();
+                    clientAcceptingThread.Abort();
                 }
             }
-            catch (Exception exp)
+            catch (Exception)
             {
-                MLogger.RuntimeLogger.Error("Authentication client listener closing exp : " + exp.Message);
+                
             }
-            finally
-            {
-                MingCore.SocketOperator.FinishSocket(ref authClientListener);
-            }
-            
-            MLogger.RuntimeLogger.Info("Authentication server Stopped.");
+            clientAcceptingThread = null;
+            MLogger.RuntimeLogger.Basic("Client accepting thread aborted.");
+            MLogger.RuntimeLogger.Basic("Authentication server Stopped.");
 
-            this.working = false;
+            try
+            {
+                if (loggingThread != null)
+                {
+                    loggingThread.Abort();
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            loggingThread = null;
         }
         #endregion
     }

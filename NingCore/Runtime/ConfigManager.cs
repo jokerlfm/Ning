@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NingCore.Runtime
 {
-    public enum ConfigType
+    public enum CONFIG_TYPE
     {
         AUTHENTICATION_SERVER_CONFIG,
         REALM_SERVER_CONFIG
@@ -15,10 +15,10 @@ namespace NingCore.Runtime
 
     public class ConfigManager
     {
-        private static ConfigType ct;
+        private static CONFIG_TYPE ct;
         private static Dictionary<string, string> configs;
 
-        public static void LoadConfigs(ConfigType pmCT)
+        public static void LoadConfigs(CONFIG_TYPE pmCT)
         {
             if (configs == null)
             {

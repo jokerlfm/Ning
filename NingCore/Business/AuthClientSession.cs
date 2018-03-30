@@ -16,7 +16,10 @@ namespace NingCore.Business
         {
             this.clientSocket = pmSocket;
             authReceiveBuffer = new ReceiveBuffer(1048576);
-            outAPQueue = new Queue<AuthPacket>();
+            outAPQueue = new BlockQueue<AuthPacket>(1000);
+            receiveThread = null;
+            sendThread = null;
+            handleThread = null;
             this.working = false;
         }
 
@@ -31,9 +34,12 @@ namespace NingCore.Business
         }
 
         private ReceiveBuffer authReceiveBuffer;
-        private Queue<AuthPacket> outAPQueue;        
+        private BlockQueue<AuthPacket> outAPQueue;
+        private Thread receiveThread;
+        private Thread sendThread;
+        private Thread handleThread;
 
-        private void ClientReceiving(object pmMain = null)
+        private void DoReceiving()
         {
             try
             {
@@ -45,87 +51,120 @@ namespace NingCore.Business
                     {
                         if (!authReceiveBuffer.Append(buffer.Take(receivedLength).ToArray()))
                         {
-                            MLogger.NetworkLogger.Warn("Receive buffer appending error occured : " + this.clientSocket.Handle);
+                            MLogger.NetworkLogger.Error("Receive buffer appending error occured : " + this.clientSocket.Handle);
                             this.StopSession();
                         }
                     }
                     else
                     {
-                        MLogger.NetworkLogger.Warn("Auth client socket disconnected : " + this.clientSocket.Handle);
+                        MLogger.NetworkLogger.Error("Auth client socket disconnected : " + this.clientSocket.Handle);
                         this.StopSession();
                     }
                 }
             }
             catch (Exception exp)
             {
-                MLogger.NetworkLogger.Warn("Auth client receiving exp :" + this.clientSocket.Handle + " " + exp.Message);
+                MLogger.NetworkLogger.Error("Auth client receiving exp :" + this.clientSocket.Handle + " " + exp.Message);
                 this.StopSession();
             }            
         }
 
-        private void ClientSending(object pmMain = null)
+        private void DoSending()
         {
-            try
+            while (this.working)
             {
-                while (this.working)
+                AuthPacket ap = outAPQueue.Dequeue();
+                if (ap != null)
                 {
-                    AuthPacket ap = outAPQueue.Dequeue();
-                    if (ap != null)
+                    int sentLength = clientSocket.Send(ap.GetPacketBuffer());
+                    if (sentLength < 1)
                     {
-                        int sentLength = clientSocket.Send(ap.GetPacketBuffer());
-                        if (sentLength < 1)
-                        {
-                            MLogger.NetworkLogger.Warn("Auth client socket sent 0 bytes : " + this.clientSocket.Handle);
-                            this.StopSession();
-                        }
+                        MLogger.NetworkLogger.Error("Auth client socket sent 0 bytes : " + this.clientSocket.Handle);
+                        this.StopSession();
                     }
-                    Thread.Sleep(10);
                 }
-            }
-            catch (Exception exp)
-            {
-                MLogger.NetworkLogger.Warn("Auth client sending exp :" + this.clientSocket.Handle + " " + exp.Message);
-                this.StopSession();
+                Thread.Sleep(10);
             }
         }
 
-        private void ClientReceiveBufferHandling(object pmMain = null)
+        private void DoHandling()
         {
-            try
+            while (this.working)
             {
-                while (this.working)
+                byte[] headBytes = GetBuffer(4);
+                if (headBytes != null)
                 {
-                    byte[] headBytes = authReceiveBuffer.Take(4);
-                    if (headBytes != null)
-                    {
-                        AUTH_OPCODE currentOpcode = (AUTH_OPCODE)headBytes[0];
-                        AuthReceiveBufferHandler.HandleAuthOpcode(this, currentOpcode);
-                    }
-                    Thread.Sleep(10);
+                    AUTH_OPCODE currentOpcode = (AUTH_OPCODE)headBytes[0];
+                    AuthReceiveBufferHandler.HandleAuthOpcode(this, currentOpcode);
+                    authReceiveBuffer.ResetBuffer();
                 }
+                Thread.Sleep(10);
             }
-            catch (Exception exp)
-            {
-                MLogger.NetworkLogger.Warn("Auth client receive buffer handling exp :" + this.clientSocket.Handle + " " + exp.Message);
-                this.StopSession();
-            }
+        }
+
+        public byte[] GetBuffer(int pmCount)
+        {
+            return authReceiveBuffer.Take(4);
         }
 
         public void StartSession()
         {
             this.working = true;
-            WaitCallback wcb1 = new WaitCallback(this.ClientReceiving);
-            ThreadPool.QueueUserWorkItem(wcb1, null);
-            WaitCallback wcb2 = new WaitCallback(this.ClientSending);
-            ThreadPool.QueueUserWorkItem(wcb2, null);
-            WaitCallback wcb3 = new WaitCallback(this.ClientReceiveBufferHandling);
-            ThreadPool.QueueUserWorkItem(wcb3, null);
+            receiveThread = new Thread(new ThreadStart(DoReceiving));
+            receiveThread.IsBackground = true;
+            receiveThread.Start();
+            sendThread = new Thread(new ThreadStart(DoSending));
+            sendThread.IsBackground = true;
+            sendThread.Start();
+            handleThread = new Thread(new ThreadStart(DoHandling));
+            handleThread.IsBackground = true;
+            handleThread.Start();
         }
 
         public void StopSession()
         {
-            MingCore.SocketOperator.FinishSocket(ref clientSocket);
-            this.working = false;
+            if (this.working)
+            {
+                this.working = false;
+                SocketOperator.FinishSocket(ref clientSocket);
+                try
+                {
+                    if (receiveThread != null)
+                    {
+                        receiveThread.Abort();
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+                receiveThread = null;
+                try
+                {
+                    if (sendThread != null)
+                    {
+                        sendThread.Abort();
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+                sendThread = null;
+                try
+                {
+                    if (handleThread != null)
+                    {
+                        handleThread.Abort();
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+                handleThread = null;
+                this.outAPQueue.Clear();                
+            }
         }
     }
 }
